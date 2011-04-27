@@ -11,11 +11,6 @@ ifeq ($(QC_PROP),true)
     HAVE_ADRENO200_FIRMWARE := true
     BOARD_USES_GENERIC_AUDIO := true
     BOARD_USE_QCOM_TESTONLY := true
-    USE_CAMERA_STUB := true
-
-    ifneq ($(BUILD_TINY_ANDROID), true)
-    USE_CAMERA_STUB := true
-    endif   # !BUILD_TINY_ANDROID
 
 else
     BOARD_USES_GENERIC_AUDIO := true
