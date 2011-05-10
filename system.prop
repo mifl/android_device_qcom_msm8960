@@ -77,3 +77,4 @@ ro.qualcomm.bluetooth.dun=true
 # Disable boot animation
 #
 debug.sf.nobootanimation=1
+
