@@ -78,3 +78,6 @@ ro.qualcomm.bluetooth.dun=true
 #
 debug.sf.nobootanimation=1
 
+#System prop to keep the screen always on
+ro.alwayson=true
+
