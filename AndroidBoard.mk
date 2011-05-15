@@ -43,3 +43,14 @@ file := $(TARGET_OUT)/etc/init.qcom.modem_links.sh
 ALL_PREBUILT += $(file)
 $(file) : $(LOCAL_PATH)/init.qcom.modem_links.sh | $(ACP)
 	$(transform-prebuilt-to-target)
+
+file := $(TARGET_OUT_KEYLAYOUT)/keypad_8960.kl
+ALL_PREBUILT += $(file)
+$(file) : $(LOCAL_PATH)/keypad_8960.kl | $(ACP)
+	$(transform-prebuilt-to-target)
+
+include $(CLEAR_VARS)
+LOCAL_SRC_FILES := keypad_8960_qwerty.kcm
+LOCAL_MODULE_TAGS := optional
+include $(BUILD_KEY_CHAR_MAP)
+
