@@ -9,7 +9,7 @@ ifeq ($(QC_PROP),true)
     HAVE_ADRENO200_SOURCE := true
     HAVE_ADRENO200_SC_SOURCE := true
     HAVE_ADRENO200_FIRMWARE := true
-    BOARD_USES_GENERIC_AUDIO := true
+    BOARD_USES_ALSA_AUDIO := true
     BOARD_USE_QCOM_TESTONLY := true
 
     ifneq ($(BUILD_TINY_ANDROID), true)
