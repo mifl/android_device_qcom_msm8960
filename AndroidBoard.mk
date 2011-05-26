@@ -44,6 +44,13 @@ ALL_PREBUILT += $(file)
 $(file) : $(LOCAL_PATH)/init.qcom.modem_links.sh | $(ACP)
 	$(transform-prebuilt-to-target)
 
+ifeq ($(strip $(BOARD_HAS_QCOM_WLAN)),true)
+file := $(TARGET_OUT)/etc/wifi/wpa_supplicant.conf
+ALL_PREBUILT += $(file)
+$(file) : $(LOCAL_PATH)/wpa_supplicant.conf | $(ACP)
+	$(transform-prebuilt-to-target)
+endif
+
 file := $(TARGET_OUT_KEYLAYOUT)/keypad_8960.kl
 ALL_PREBUILT += $(file)
 $(file) : $(LOCAL_PATH)/keypad_8960.kl | $(ACP)
