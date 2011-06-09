@@ -73,6 +73,9 @@ ro.opengles.version=131072
 #
 ro.qualcomm.bluetooth.dun=true
 
+#system prop for Bluetooth hci transport
+ro.qualcomm.bt.hci_transport=smd
+
 #System prop to keep the screen always on
 ro.alwayson=true
 
