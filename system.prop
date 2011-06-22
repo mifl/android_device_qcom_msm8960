@@ -44,6 +44,7 @@ persist.cne.be.wlan.sqi.min=0
 persist.cne.be.wlan.sqi.max=100
 ro.hdmi.enable=true
 lpa.decode=false
+lpa.use-stagefright=false
 
 #system props for the MM modules
 
@@ -51,6 +52,7 @@ media.stagefright.enable-player=true
 media.stagefright.enable-http=true
 media.stagefright.enable-aac=true
 media.stagefright.enable-qcp=true
+media.stagefright.enable-fma2dp=true
 #
 # system props for the data modules
 #
