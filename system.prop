@@ -80,6 +80,10 @@ ro.qualcomm.bluetooth.dun=true
 # system prop for Bluetooth FTP profile
 ro.qualcomm.bluetooth.ftp=true
 #
+# system property for Bluetooth Handsfree Profile Wide Band Speech
+#
+ro.qualcomm.bluetooth.hfp.wbs=true
+#
 #system prop for Bluetooth hci transport
 ro.qualcomm.bt.hci_transport=smd
 #
