@@ -26,6 +26,10 @@
 # IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 #
 #
+#start camera server as daemon
+service qcamerasvr /system/bin/mm-qcamera-daemon
+	user system
+	group system camera
 
 # on emmc mount the partition containing firmware
 on emmc-fs
