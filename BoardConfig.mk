@@ -11,6 +11,7 @@ ifeq ($(QC_PROP),true)
     HAVE_ADRENO200_FIRMWARE := true
     BOARD_USES_ALSA_AUDIO := true
     BOARD_USE_QCOM_TESTONLY := true
+    BOARD_VENDOR_QCOM_GPS_LOC_API_HARDWARE := default
 
     ifneq ($(BUILD_TINY_ANDROID), true)
     BOARD_HAS_QCOM_WLAN := true
