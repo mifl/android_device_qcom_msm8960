@@ -57,6 +57,11 @@ $(file) : $(LOCAL_PATH)/keypad_8960.kl | $(ACP)
 	$(transform-prebuilt-to-target)
 
 include $(CLEAR_VARS)
+file := $(TARGET_OUT_KEYLAYOUT)/msm8960-snd-card_Button_Jack.kl
+ALL_PREBUILT += $(file)
+$(file) : $(LOCAL_PATH)/msm8960-snd-card_Button_Jack.kl | $(ACP)
+	$(transform-prebuilt-to-target)
+
 LOCAL_SRC_FILES := keypad_8960_qwerty.kcm
 LOCAL_MODULE_TAGS := optional
 include $(BUILD_KEY_CHAR_MAP)
