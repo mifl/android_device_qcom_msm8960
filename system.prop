@@ -62,6 +62,7 @@ persist.timed.enable=true
 # System props for audio
 persist.audio.fluence.mode=endfire
 persist.audio.vr.enable=false
+persist.audio.handset.mic=digital
 
 #
 # system prop for opengles version
