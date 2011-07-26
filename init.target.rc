@@ -29,7 +29,7 @@
 #start camera server as daemon
 service qcamerasvr /system/bin/mm-qcamera-daemon
 	user system
-	group system camera
+	group system camera inet
 
 # on emmc mount the partition containing firmware
 on emmc-fs
