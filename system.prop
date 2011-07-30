@@ -94,3 +94,6 @@ debug.bt.discoverable_time=0
 
 #system prop for switching gps driver to qmi
 persist.gps.qmienabled=true
+
+# System property for cabl
+ro.qualcomm.cabl=1
