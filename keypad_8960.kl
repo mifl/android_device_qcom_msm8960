@@ -112,5 +112,5 @@ key 231   CALL              WAKE_DROPPED
 # R+ Mapping
 key 142   HOME              WAKE_DROPPED
 # Camera Keys
-key 528   FOCUS
-key 766   CAMERA
+key 766   FOCUS
+key 528   CAMERA
