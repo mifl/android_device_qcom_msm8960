@@ -44,3 +44,5 @@ on emmc-fs
    mount vfat /dev/block/mmcblk0p1 /firmware ro shortname=lower
    exec /system/bin/sh /system/etc/init.qcom.modem_links.sh
 
+on boot
+   write /sys/devices/i2c-3/3-0024/cyttsp_update_fw 1
