@@ -15,6 +15,7 @@ ifeq ($(QC_PROP),true)
     TARGET_AVOID_DRAW_TEXTURE_EXTENSION := true
     BOARD_VENDOR_QCOM_GPS_LOC_API_HARDWARE := default
     WEBCORE_INPAGE_VIDEO := true
+    BOARD_USES_SRS_TRUEMEDIA := true
 
     ifneq ($(BUILD_TINY_ANDROID), true)
     BOARD_HAS_QCOM_WLAN := true
