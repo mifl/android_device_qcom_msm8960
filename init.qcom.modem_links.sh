@@ -39,12 +39,14 @@ cd /firmware/image
 # for which sym links have to be created
 
 fwfiles=`ls modem* q6* wcnss* dsps*`
+modem_fwfiles=`ls modem_fw.mdt`
 
 # Check if the links with similar names
 # have been created in /system/etc/firmware
 
 cd /system/etc/firmware
 linksNeeded=0
+fixModemFirmware=0
 
 # For everyfile in fwfiles check if
 # the corresponding file exists
@@ -70,12 +72,45 @@ for fwfile in $fwfiles; do
 
 done
 
+case `ls $modem_fwfiles` in
+   $modem_fwfiles)
+      break;;
+   *)
+      # file with $fwfile does not exist
+      # need to rename the right set of firmware based on chip version
+      fixModemFirmware=1
+      break;;
+esac
+
 # if links are needed mount the FS as read write
 case $linksNeeded in
    1)
       cd /firmware/image
       mount -t ext4 -o remount,rw,barrier=0 /dev/block/mmcblk0p12 /system
 
+      # Check if need to select modem firmware and do rename in first boot
+      case $fixModemFirmware in
+      1)
+        # Check chip version
+        case `cat /sys/devices/system/soc/soc0/version 2>/dev/null` in
+          "1.1")
+            for file in modem_f1.* ; do
+              newname=modem_fw.${file##*.}
+              ln -s /firmware/image/$file /system/etc/firmware/$newname 2>/dev/null
+            done
+            break;;
+
+          *)
+            for file in modem_f2.* ; do
+              newname=modem_fw.${file##*.}
+              ln -s /firmware/image/$file /system/etc/firmware/$newname 2>/dev/null
+            done
+         esac;;
+
+      *)
+        # Nothing to do.
+        break;;
+      esac
 
       case `ls modem.mdt 2>/dev/null` in
          modem.mdt)
@@ -87,15 +122,6 @@ case $linksNeeded in
             # trying to log here but nothing will be logged since it is
             # early in the boot process. Is there a way to log this message?
             log -p w -t PIL 8960 device but no modem image found;;
-      esac
-
-      case `ls modem_fw.mdt 2>/dev/null` in
-         modem_fw.mdt)
-                # just checking for error case. If modem_fw is present
-                # then soft links should get created as part of modem check
-            break;;
-         *)
-            log -p w -t PIL 8960 device but no modem_fw image found;;
       esac
 
       case `ls q6.mdt 2>/dev/null` in
@@ -138,5 +164,4 @@ case $linksNeeded in
 esac
 
 cd /
-
 
