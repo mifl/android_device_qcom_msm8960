@@ -18,6 +18,7 @@ DEVICE_PROVISIONED=1
 debug.sf.hw=1
 debug.egl.hw=1
 debug.composition.type=c2d
+ro.sf.lcd_density=240
 dalvik.vm.heapsize=36m
 
 #
