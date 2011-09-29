@@ -93,7 +93,7 @@ case $linksNeeded in
       1)
         # Check chip version
         case `cat /sys/devices/system/soc/soc0/version 2>/dev/null` in
-          "1.1")
+          "1.0" | "1.1")
             for file in modem_f1.* ; do
               newname=modem_fw.${file##*.}
               ln -s /firmware/image/$file /system/etc/firmware/$newname 2>/dev/null
