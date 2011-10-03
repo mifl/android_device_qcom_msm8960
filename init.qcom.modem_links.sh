@@ -38,7 +38,7 @@ cd /firmware/image
 # Get the list of files in /firmware/image
 # for which sym links have to be created
 
-fwfiles=`ls modem* q6* wcnss* dsps*`
+fwfiles=`ls modem* q6* wcnss* dsps* tzapps*`
 modem_fwfiles=`ls modem_fw.mdt`
 
 # Check if the links with similar names
@@ -152,6 +152,16 @@ case $linksNeeded in
             break;;
          *)
             log -p w -t PIL 8960 device but no dsps image found;;
+      esac
+
+      case `ls tzapps.mdt 2>/dev/null` in
+         tzapps.mdt)
+            for imgfile in tzapps*; do
+               ln -s /firmware/image/$imgfile /system/etc/firmware/$imgfile 2>/dev/null
+            done
+            break;;
+         *)
+            log -p w -t PIL 8960 device but no tzapps image found;;
       esac
 
       #remount file system as read only
