@@ -17,6 +17,7 @@ ifeq ($(QC_PROP),true)
     BOARD_VENDOR_QCOM_GPS_LOC_API_HARDWARE := default
     WEBCORE_INPAGE_VIDEO := true
     BOARD_USES_SRS_TRUEMEDIA := true
+    BOARD_USES_QCNE := true
 
     ifneq ($(BUILD_TINY_ANDROID), true)
     BOARD_HAS_QCOM_WLAN := true
