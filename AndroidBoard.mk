@@ -66,3 +66,13 @@ LOCAL_SRC_FILES := keypad_8960_qwerty.kcm
 LOCAL_MODULE_TAGS := optional
 include $(BUILD_KEY_CHAR_MAP)
 
+#----------------------------------------------------------------------
+# Radio image
+#----------------------------------------------------------------------
+ifeq ($(ADD_RADIO_FILES), true)
+radio_dir := $(LOCAL_PATH)/radio
+RADIO_FILES := $(shell cd $(radio_dir) ; ls)
+$(foreach f, $(RADIO_FILES), \
+    $(call add-radio-file,radio/$(f)))
+endif
+

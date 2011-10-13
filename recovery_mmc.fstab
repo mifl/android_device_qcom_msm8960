@@ -27,10 +27,18 @@
 
 # mount point	fstype		device			[device2]
 
-/boot		emmc		/dev/block/mmcblk0p8
+modem		emmc		/dev/block/mmcblk0p1
+sbl1		emmc		/dev/block/mmcblk0p2
+sbl2		emmc		/dev/block/mmcblk0p3
+sbl3		emmc		/dev/block/mmcblk0p4
+tz			emmc		/dev/block/mmcblk0p8
+rpm			emmc		/dev/block/mmcblk0p6
+aboot		emmc		/dev/block/mmcblk0p5
+
+/boot		emmc		/dev/block/mmcblk0p7
 /cache		ext4		/dev/block/mmcblk0p15
 /data		ext4		/dev/block/mmcblk0p13
-/misc		mtd		misc
-/recovery	emmc		/dev/block/mmcblk0p16
+/misc		mtd			misc
+/recovery	emmc		/dev/block/mmcblk0p17
 /sdcard		vfat		/dev/block/mmcblk1p1	/dev/block/mmcblk1
 /system		ext4		/dev/block/mmcblk0p12
