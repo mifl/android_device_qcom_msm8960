@@ -94,7 +94,7 @@ ro.bluetooth.request.master=true
 ro.bluetooth.remote.autoconnect=true
 # system property for Bluetooth discoverability time out in seconds
 # 0: Always discoverable
-debug.bt.discoverable_time=0
+#debug.bt.discoverable_time=0
 
 #system prop for switching gps driver to qmi
 persist.gps.qmienabled=true
