@@ -1,3 +1,4 @@
+#!/system/bin/sh
 # Copyright (c) 2011, Code Aurora Forum. All rights reserved.
 #
 # Redistribution and use in source and binary forms, with or without
@@ -26,43 +27,25 @@
 # IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 #
 #
-#start camera server as daemon
-service qcamerasvr /system/bin/mm-qcamera-daemon
-	user system
-	group system camera inet
 
-#start GNSS/Sensor interface daemon
-service gsiff_daemon /system/bin/gsiff_daemon
-    user system
-    group qcom_oncrpc
+# No path is set up at this point so we have to do it here.
+PATH=/sbin:/system/sbin:/system/bin:/system/xbin
+export PATH
 
-# on emmc mount the partition containing firmware
-on emmc-fs
-   mkdir /tombstones 0771 system system
-   mount ext4 /dev/block/mmcblk0p16 /tombstones nosuid nodev barrier=1
-   mkdir /tombstones/modem 0771 system system
-   mkdir /tombstones/lpass 0771 system system
-   mkdir /tombstones/wcnss 0771 system system
-   mkdir /tombstones/dsps 0771 system system
-   mkdir /firmware 0771 system system
-   wait /dev/block/mmcblk0p1
-   mount vfat /dev/block/mmcblk0p1 /firmware ro shortname=lower
-   exec /system/bin/sh /system/etc/init.qcom.modem_links.sh
+mount -t ext4 -o remount,rw,barrier=0 /dev/block/mmcblk0p12 /system
 
-on boot
-   write /sys/devices/i2c-3/3-0024/cyttsp_update_fw 1
+MDM_IMAGES=/firmware/image
+cd $MDM_IMAGES
+ln -s $MDM_IMAGES/apps.mbn /system/etc/firmware/apps.mbn 2>/dev/null
+ln -s $MDM_IMAGES/dsp1.mbn /system/etc/firmware/dsp1.mbn 2>/dev/null
+ln -s $MDM_IMAGES/dsp2.mbn /system/etc/firmware/dsp2.mbn 2>/dev/null
+ln -s $MDM_IMAGES/dsp3.mbn /system/etc/firmware/dsp3.mbn 2>/dev/null
+ln -s $MDM_IMAGES/rpm.mbn  /system/etc/firmware/rpm.mbn  2>/dev/null
+ln -s $MDM_IMAGES/sbl1.mbn /system/etc/firmware/sbl1.mbn 2>/dev/null
+ln -s $MDM_IMAGES/sbl2.mbn /system/etc/firmware/sbl2.mbn 2>/dev/null
 
-service mpdecision /system/bin/mpdecision --no_sleep --avg_comp
-   user root
-   disabled
+mount -t ext4 -o remount,ro,barrier=0 /dev/block/mmcblk0p12 /system
 
-service kickstart /system/bin/qcks l
-    oneshot
-    disabled
+cd /
 
-# Start kickstart if mdm is detected
-on property:ro.baseband=mdm
-    mkdir /data/qcks 0770 system system
-    exec /system/bin/sh /system/etc/init.qcom.mdm_links.sh
-    start kickstart
 
