@@ -44,6 +44,11 @@ ALL_PREBUILT += $(file)
 $(file) : $(LOCAL_PATH)/init.qcom.modem_links.sh | $(ACP)
 	$(transform-prebuilt-to-target)
 
+file := $(TARGET_OUT)/etc/init.qcom.mdm_links.sh
+ALL_PREBUILT += $(file)
+$(file) : $(LOCAL_PATH)/init.qcom.mdm_links.sh | $(ACP)
+	$(transform-prebuilt-to-target)
+
 ifeq ($(strip $(BOARD_HAS_QCOM_WLAN)),true)
 file := $(TARGET_OUT)/etc/wifi/wpa_supplicant.conf
 ALL_PREBUILT += $(file)
