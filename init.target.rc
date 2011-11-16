@@ -51,6 +51,7 @@ on emmc-fs
 
 on boot
    write /sys/devices/i2c-3/3-0024/cyttsp_update_fw 1
+   start qcamerasvr
 
 service mpdecision /system/bin/mpdecision --no_sleep --avg_comp
    user root
