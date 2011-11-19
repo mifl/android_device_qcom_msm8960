@@ -19,6 +19,7 @@ ifeq ($(QC_PROP),true)
     WEBCORE_INPAGE_VIDEO := true
     BOARD_USES_SRS_TRUEMEDIA := true
     BOARD_USES_QCNE := true
+    TARGET_HAVE_BYPASS := true
 
     ifneq ($(BUILD_TINY_ANDROID), true)
     BOARD_HAS_QCOM_WLAN := true
