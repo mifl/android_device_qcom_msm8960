@@ -30,6 +30,9 @@ ifeq ($(QC_PROP),true)
     WPA_SUPPLICANT_VERSION := VER_0_8_X
     HOSTAPD_VERSION := VER_0_8_X
     HAVE_QC_TIME_SERVICES := true
+    WIFI_DRIVER_FW_PATH_STA := "sta"
+    WIFI_DRIVER_FW_PATH_AP  := "ap"
+    WIFI_DRIVER_FW_PATH_P2P := "p2p"
     endif   # !BUILD_TINY_ANDROID
 else
     BOARD_USES_GENERIC_AUDIO := true
