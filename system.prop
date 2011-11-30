@@ -101,3 +101,6 @@ persist.gps.qmienabled=true
 
 # System property for cabl
 ro.qualcomm.cabl=1
+
+# system property for thermald
+persist.thermal.monitor=true
