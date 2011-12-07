@@ -33,6 +33,7 @@ service qcamerasvr /system/bin/mm-qcamera-daemon
 
 #start GNSS/Sensor interface daemon
 service gsiff_daemon /system/bin/gsiff_daemon
+    class late_start
     user system
     group qcom_oncrpc
 
