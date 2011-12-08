@@ -104,3 +104,8 @@ ro.qualcomm.cabl=1
 
 # system property for thermald
 persist.thermal.monitor=true
+
+#
+# System prop for sending transmit power request to RIL during WiFi hotspot on/off
+#
+ro.ril.transmitpower=true
