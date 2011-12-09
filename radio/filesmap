@@ -25,12 +25,13 @@
 # OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN
 # IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
-# mount point	fstype		device			[device2]
+#filename				device
 
-/boot		emmc		/dev/block/platform/msm_sdcc.1/boot
-/cache		ext4		/dev/block/platform/msm_sdcc.1/cache
-/data		ext4		/dev/block/platform/msm_sdcc.1/userdata
-/misc		mtd			misc
-/recovery	emmc		/dev/block/platform/msm_sdcc.1/recovery
-/sdcard		vfat		/dev/block/mmcblk1p1	/dev/block/mmcblk1
-/system		ext4		/dev/block/platform/msm_sdcc.1/system
+NON-HLOS.bin			/dev/block/platform/msm_sdcc.1/by-name/modem
+sbl1.mbn				/dev/block/platform/msm_sdcc.1/by-name/sbl1
+sbl2.mbn				/dev/block/platform/msm_sdcc.1/by-name/sbl2
+sbl3.mbn				/dev/block/platform/msm_sdcc.1/by-name/sbl3
+tz.mbn					/dev/block/platform/msm_sdcc.1/by-name/tz
+rpm.mbn					/dev/block/platform/msm_sdcc.1/by-name/rpm
+emmc_appsboot.mbn		/dev/block/platform/msm_sdcc.1/by-name/aboot
+
