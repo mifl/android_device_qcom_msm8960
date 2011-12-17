@@ -3,9 +3,6 @@ $(call inherit-product, device/qcom/common/common.mk)
 PRODUCT_NAME := msm8960
 PRODUCT_DEVICE := msm8960
 
-PRODUCT_PROPERTY_OVERRIDES += \
- ro.com.google.clientidbase=android-qualcomm
-
 PRODUCT_COPY_FILES += \
     frameworks/base/data/etc/android.hardware.sensor.accelerometer.xml:system/etc/permissions/android.hardware.sensor.accelerometer.xml \
     frameworks/base/data/etc/android.hardware.sensor.compass.xml:system/etc/permissions/android.hardware.sensor.compass.xml \
