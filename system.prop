@@ -109,3 +109,8 @@ persist.thermal.monitor=true
 # System prop for sending transmit power request to RIL during WiFi hotspot on/off
 #
 ro.ril.transmitpower=true
+
+#
+#Simulate sdcard on /data/media
+#
+persist.fuse_sdcard=false
