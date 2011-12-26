@@ -20,3 +20,10 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     battery_monitor \
     battery_shutdown
+
+# Wallpapers
+PRODUCT_PACKAGES += Galaxy4
+PRODUCT_PACKAGES += HoloSpiralWallpaper
+PRODUCT_PACKAGES += MagicSmokeWallpapers
+PRODUCT_PACKAGES += NoiseField
+PRODUCT_PACKAGES += PhaseBeam
