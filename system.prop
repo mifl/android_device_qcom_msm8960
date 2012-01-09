@@ -63,6 +63,9 @@ persist.audio.fluence.mode=endfire
 persist.audio.vr.enable=false
 persist.audio.handset.mic=digital
 
+# System prop to select audio resampler quality
+af.resampler.quality=255
+
 #
 # system prop for opengles version
 #
