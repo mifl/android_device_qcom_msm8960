@@ -35,6 +35,8 @@ ifeq ($(QC_PROP),true)
     WIFI_DRIVER_FW_PATH_STA := "sta"
     WIFI_DRIVER_FW_PATH_AP  := "ap"
     WIFI_DRIVER_FW_PATH_P2P := "p2p"
+    WIFI_DRIVER_DEF_CONF_FILE := "/persist/WCNSS_qcom_cfg.ini"
+    WIFI_DRIVER_CONF_FILE := "/data/misc/wifi/WCNSS_qcom_cfg.ini"
     BOARD_WLAN_DEVICE := qcwcn
     endif   # !BUILD_TINY_ANDROID
 else
