@@ -19,7 +19,6 @@ debug.sf.hw=1
 debug.egl.hw=1
 debug.composition.type=dyn
 ro.sf.compbypass.enable=1
-ro.sf.lcd_density=240
 dalvik.vm.heapsize=36m
 dev.pm.dyn_samplingrate=1
 
