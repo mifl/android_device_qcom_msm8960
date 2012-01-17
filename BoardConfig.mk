@@ -94,3 +94,7 @@ ADD_RADIO_FILES ?= false
 
 TARGET_RECOVERY_PIXEL_FORMAT := "RGBX_8888"
 TARGET_RECOVERY_UI_LIB := librecovery_ui_qcom
+
+# Use QCOM LLVM for RenderScript
+BOARD_USE_QCOM_LLVM_CLANG_RS := true
+
