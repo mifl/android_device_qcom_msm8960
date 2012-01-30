@@ -23,6 +23,7 @@ ifeq ($(QC_PROP),true)
     BOARD_USES_QCNE := true
     TARGET_HAVE_BYPASS := true
     TARGET_HAS_S3D_SUPPORT := true
+    BOARD_USE_QCOM_LLVM_CLANG_RS := true
 
     ifneq ($(BUILD_TINY_ANDROID), true)
     BOARD_HAS_QCOM_WLAN := true
@@ -101,6 +102,4 @@ ADD_RADIO_FILES ?= false
 TARGET_RECOVERY_PIXEL_FORMAT := "RGBX_8888"
 TARGET_RECOVERY_UI_LIB := librecovery_ui_qcom
 
-# Use QCOM LLVM for RenderScript
-BOARD_USE_QCOM_LLVM_CLANG_RS := true
 
