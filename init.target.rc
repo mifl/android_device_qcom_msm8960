@@ -50,6 +50,10 @@ on emmc-fs
    wait /dev/block/mmcblk0p1
    mount vfat /dev/block/mmcblk0p1 /firmware ro shortname=lower
    exec /system/bin/sh /system/etc/init.qcom.modem_links.sh
+   exec /system/bin/sh /system/etc/init.qcom.mdm_links.sh
+
+on post-fs:
+   mount ext4 /dev/block/mmcblk0p12 /system ro remount barrier=1
 
 on boot
    write /sys/devices/i2c-3/3-0024/cyttsp_update_fw 1
@@ -71,6 +75,5 @@ service kickstart /system/bin/qcks l
 # Start kickstart if mdm is detected
 on property:ro.baseband=mdm
     mkdir /data/qcks 0770 system system
-    exec /system/bin/sh /system/etc/init.qcom.mdm_links.sh
     start kickstart
 
