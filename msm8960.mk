@@ -16,6 +16,7 @@ PRODUCT_COPY_FILES += \
     system/bluetooth/data/auto_pairing.conf:system/etc/bluetooth/auto_pairing.conf \
     system/bluetooth/data/blacklist.conf:system/etc/bluetooth/blacklist.conf \
     system/bluetooth/data/main.le.conf:system/etc/bluetooth/main.conf \
+    system/bluetooth/data/iop_device_list.conf:system/etc/bluetooth/iop_device_list.conf \
 
 PRODUCT_PACKAGES += \
     battery_monitor \
