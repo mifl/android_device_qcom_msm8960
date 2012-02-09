@@ -32,8 +32,6 @@
 PATH=/sbin:/system/sbin:/system/bin:/system/xbin
 export PATH
 
-mount -t ext4 -o remount,rw,barrier=0 /dev/block/mmcblk0p12 /system
-
 MDM_IMAGES=/firmware/image
 cd $MDM_IMAGES
 ln -s $MDM_IMAGES/apps.mbn /system/etc/firmware/apps.mbn 2>/dev/null
@@ -46,8 +44,6 @@ ln -s $MDM_IMAGES/sbl2.mbn /system/etc/firmware/sbl2.mbn 2>/dev/null
 ln -s $MDM_IMAGES/efs1.mbn /system/etc/firmware/efs1.mbn 2>/dev/null
 ln -s $MDM_IMAGES/efs2.mbn /system/etc/firmware/efs2.mbn 2>/dev/null
 ln -s $MDM_IMAGES/efs3.mbn /system/etc/firmware/efs3.mbn 2>/dev/null
-
-mount -t ext4 -o remount,ro,barrier=0 /dev/block/mmcblk0p12 /system
 
 cd /
 
