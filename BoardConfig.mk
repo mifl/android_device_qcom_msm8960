@@ -23,6 +23,7 @@ ifeq ($(QC_PROP),true)
     BOARD_USES_QCNE := true
     TARGET_HAVE_BYPASS := true
     BOARD_USE_QCOM_LLVM_CLANG_RS := true
+    TARGET_HAS_S3D_SUPPORT := true
 
     ifneq ($(BUILD_TINY_ANDROID), true)
     BOARD_HAS_QCOM_WLAN := true
