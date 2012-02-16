@@ -36,7 +36,7 @@ persist.cne.snsr.based.rat.mgt=false
 persist.cne.bat.based.rat.mgt=false
 persist.cne.rat.acq.time.out=30000
 persist.cne.rat.acq.retry.tout=0
-persist.cne.sync.swim.mode=false
+persist.cne.nsrm.mode=false
 
 ro.hdmi.enable=true
 lpa.decode=true
