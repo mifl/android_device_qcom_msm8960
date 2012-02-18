@@ -59,6 +59,11 @@ on boot
    write /sys/devices/i2c-3/3-0024/cyttsp_update_fw 1
    start qcamerasvr
 
+service thermald /system/bin/thermald
+   class main
+   user root
+   group root
+
 service mpdecision /system/bin/mpdecision --no_sleep --avg_comp
    user root
    disabled
