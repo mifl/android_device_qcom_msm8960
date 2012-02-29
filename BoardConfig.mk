@@ -24,6 +24,7 @@ ifeq ($(QC_PROP),true)
     TARGET_HAS_S3D_SUPPORT := true
     BOARD_USE_QCOM_LLVM_CLANG_RS := true
     TARGET_USES_POST_PROCESSING := true
+    PROTEUS_DEVICE_API := true
 
     ifneq ($(BUILD_TINY_ANDROID), true)
     BOARD_HAS_QCOM_WLAN := true
