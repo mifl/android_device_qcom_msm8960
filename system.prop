@@ -86,9 +86,9 @@ ro.qualcomm.bluetooth.sap=true
 # system prop for Bluetooth FTP profile
 ro.qualcomm.bluetooth.ftp=true
 #
-# system property for Bluetooth Handsfree Profile Wide Band Speech
+# system property for Bluetooth Handsfree Profile version
 #
-ro.qualcomm.bluetooth.hfp.wbs=true
+ro.bluetooth.hfp.ver=1.6
 #
 #system prop for Bluetooth hci transport
 ro.qualcomm.bt.hci_transport=smd
