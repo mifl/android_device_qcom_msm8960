@@ -78,6 +78,11 @@ ro.opengles.version=131072
 #
 ro.qualcomm.bluetooth.dun=true
 
+#
+# system prop for Bluetooth SAP Profile
+#
+ro.qualcomm.bluetooth.sap=true
+
 # system prop for Bluetooth FTP profile
 ro.qualcomm.bluetooth.ftp=true
 #
