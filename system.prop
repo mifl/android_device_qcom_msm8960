@@ -113,3 +113,4 @@ ro.ril.transmitpower=true
 #Simulate sdcard on /data/media
 #
 persist.fuse_sdcard=false
+ro.hwui.text_cache_width=2048
