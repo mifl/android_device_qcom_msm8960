@@ -78,7 +78,7 @@ BOARD_KERNEL_PAGESIZE := 2048
 
 TARGET_USERIMAGES_USE_EXT4 := true
 
-BOARD_KERNEL_CMDLINE := androidboot.hardware=qcom user_debug=31
+BOARD_KERNEL_CMDLINE := androidboot.hardware=qcom user_debug=31 msm_rtb.filter=0x3F
 BOARD_EGL_CFG := device/qcom/$(TARGET_PRODUCT)/egl.cfg
 
 BOARD_BOOTIMAGE_PARTITION_SIZE := 0x00A00000
