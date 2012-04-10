@@ -36,7 +36,7 @@ service qcamerasvr /system/bin/mm-qcamera-daemon
 service gsiff_daemon /system/bin/gsiff_daemon
     class late_start
     user system
-    group qcom_oncrpc
+    group qcom_oncrpc gps
 
 # on emmc mount the partition containing firmware
 on emmc-fs
