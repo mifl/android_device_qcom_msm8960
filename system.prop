@@ -122,3 +122,8 @@ ro.ril.transmitpower=true
 #
 persist.fuse_sdcard=false
 ro.hwui.text_cache_width=2048
+
+#
+# Supports warmboot capabilities
+#
+ro.warmboot.capability=1
