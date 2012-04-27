@@ -66,6 +66,8 @@ persist.audio.handset.mic=digital
 
 # System prop to select audio resampler quality
 af.resampler.quality=255
+# System prop to select MPQAudioPlayer by default on mpq8064
+mpq.audio.decode=true
 
 #
 # system prop for opengles version
