@@ -78,18 +78,6 @@ mpq.audio.decode=true
 ro.opengles.version=131072
 
 #
-# system prop for Bluetooth Dialup Networking
-#
-ro.qualcomm.bluetooth.dun=true
-
-#
-# system prop for Bluetooth SAP Profile
-#
-ro.qualcomm.bluetooth.sap=true
-
-# system prop for Bluetooth FTP profile
-ro.qualcomm.bluetooth.ftp=true
-#
 # system property for Bluetooth Handsfree Profile version
 #
 ro.bluetooth.hfp.ver=1.6
