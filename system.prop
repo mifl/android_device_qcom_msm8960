@@ -25,8 +25,6 @@ debug.enable.wl_log=1
 #
 # system props for the cne module
 #
-persist.cne.UseCne=vendor
-persist.cne.UseSwim=false
 persist.cne.bat.range.low.med=30
 persist.cne.bat.range.med.high=60
 persist.cne.loc.policy.op=/system/etc/OperatorPolicy.xml
@@ -36,7 +34,7 @@ persist.cne.snsr.based.rat.mgt=false
 persist.cne.bat.based.rat.mgt=false
 persist.cne.rat.acq.time.out=30000
 persist.cne.rat.acq.retry.tout=0
-persist.cne.nsrm.mode=false
+persist.cne.feature=1
 
 ro.hdmi.enable=true
 lpa.decode=true
