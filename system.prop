@@ -21,6 +21,7 @@ debug.composition.type=dyn
 debug.compbypass.enable=1
 dalvik.vm.heapsize=36m
 dev.pm.dyn_samplingrate=1
+debug.enable.wl_log=1
 
 #
 # system props for the cne module
