@@ -1,5 +1,5 @@
 #!/system/bin/sh
-# Copyright (c) 2011, Code Aurora Forum. All rights reserved.
+# Copyright (c) 2011-2012, Code Aurora Forum. All rights reserved.
 #
 # Redistribution and use in source and binary forms, with or without
 # modification, are permitted provided that the following conditions are
@@ -31,27 +31,28 @@
 trigger_file=/data/usf/form_factor.cfg
 
 if [ ! -e $trigger_file ]; then
-    # Configurations select upon the current platform
-    platform=`cat /sys/devices/system/soc/soc0/hw_platform`
+   # Configurations select upon the current platform
+   platform=`cat /sys/devices/system/soc/soc0/hw_platform`
+   type=""
 
-    case $platform in
-        "Liquid")
-            ln -s /data/usf/form_factor_liquid.cfg /data/usf/form_factor.cfg
-            ln -s /data/usf/tester/cfg_liquid /data/usf/tester/cfg
-            ln -s /data/usf/epos/cfg_liquid /data/usf/epos/cfg
-            ln -s /data/usf/hovering/cfg_liquid /data/usf/hovering/cfg
-            ln -s /data/usf/p2p/cfg_liquid /data/usf/p2p/cfg
-            ln -s /data/usf/gesture/cfg_liquid /data/usf/gesture/cfg
-        ;;
-        "Fluid")
-            ln -s /data/usf/form_factor_fluid.cfg /data/usf/form_factor.cfg
-            ln -s /data/usf/tester/cfg_fluid /data/usf/tester/cfg
-            ln -s /data/usf/epos/cfg_fluid /data/usf/epos/cfg
-            ln -s /data/usf/hovering/cfg_fluid /data/usf/hovering/cfg
-            ln -s /data/usf/p2p/cfg_fluid /data/usf/p2p/cfg
-            ln -s /data/usf/gesture/cfg_fluid /data/usf/gesture/cfg
-        ;;
-    esac
+   case $platform in
+       "Liquid")
+           type="liquid"
+       ;;
+       "Fluid")
+           type="fluid"
+       ;;
+       "MTP")
+           type="mtp"
+       ;;
+   esac
+
+   ln -s /data/usf/form_factor_"$type".cfg /data/usf/form_factor.cfg
+   ln -s /data/usf/tester/cfg_"$type" /data/usf/tester/cfg
+   ln -s /data/usf/epos/cfg_"$type" /data/usf/epos/cfg
+   ln -s /data/usf/hovering/cfg_"$type" /data/usf/hovering/cfg
+   ln -s /data/usf/p2p/cfg_"$type" /data/usf/p2p/cfg
+   ln -s /data/usf/gesture/cfg_"$type" /data/usf/gesture/cfg
 
    # The USF based calculators have system permissions
    chown system /data/usf/*
@@ -63,5 +64,5 @@ chown system /dev/usf1
 
 # Post-boot start of selected USF based calculators
 for i in $(cat /data/usf/auto_start.txt); do
-    start $i
+   start $i
 done
