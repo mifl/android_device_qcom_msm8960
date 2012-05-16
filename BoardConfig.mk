@@ -29,19 +29,30 @@ ifeq ($(QC_PROP),true)
 
     ifneq ($(BUILD_TINY_ANDROID), true)
     BOARD_HAS_QCOM_WLAN := true
+    BOARD_HAS_ATH_WLAN_AR6004 := true
     BOARD_HAVE_QCOM_FM := true
     BOARD_HAVE_BLUETOOTH := true
+    HAVE_QC_TIME_SERVICES := true
+
+    ifeq ($(findstring true,$(BOARD_HAS_ATH_WLAN_AR6004) $(BOARD_HAS_QCOM_WLAN)),true)
     BOARD_WPA_SUPPLICANT_DRIVER := NL80211
     BOARD_HOSTAPD_DRIVER := NL80211
     WPA_SUPPLICANT_VERSION := VER_2_0_DEV
     HOSTAPD_VERSION := VER_2_0_DEV
-    HAVE_QC_TIME_SERVICES := true
+    WIFI_CFG80211_DRIVER_MODULE_PATH := "/system/lib/modules/cfg80211.ko"
+    WIFI_CFG80211_DRIVER_MODULE_NAME := "cfg80211"
+    WIFI_CFG80211_DRIVER_MODULE_ARG  := ""
     WIFI_DRIVER_FW_PATH_STA := "sta"
     WIFI_DRIVER_FW_PATH_AP  := "ap"
     WIFI_DRIVER_FW_PATH_P2P := "p2p"
+    endif
+
+    ifeq ($(BOARD_HAS_QCOM_WLAN), true)
     WIFI_DRIVER_DEF_CONF_FILE := "/persist/WCNSS_qcom_cfg.ini"
     WIFI_DRIVER_CONF_FILE := "/data/misc/wifi/WCNSS_qcom_cfg.ini"
     BOARD_WLAN_DEVICE := qcwcn
+    endif
+
     endif   # !BUILD_TINY_ANDROID
 else
     BOARD_USES_GENERIC_AUDIO := true
