@@ -42,11 +42,15 @@ fi
 # create symlink to target-specific config file
 platformid=`cat /sys/devices/system/soc/soc0/id`
 case "$platformid" in
-    "109") #APQ8064
+    "109" | "130") #APQ/MPQ8064
     ln -s /etc/thermald-8064.conf $THERMALD_CONF_SYMLINK 2>/dev/null
     ;;
 
-    *) #MSM8960/8x30
+    "116" | "117" | "118" | "119") #MSM8930
+    ln -s /etc/thermald-8930.conf $THERMALD_CONF_SYMLINK 2>/dev/null
+    ;;
+
+    *) #MSM8960, etc
     ln -s /etc/thermald-8960.conf $THERMALD_CONF_SYMLINK 2>/dev/null
     ;;
 esac
