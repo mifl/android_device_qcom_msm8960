@@ -106,6 +106,9 @@ HAVE_MXT_CFG := true
 # Add NON-HLOS files for ota upgrade
 ADD_RADIO_FILES ?= false
 
+# Add building support AR8151 ALX ethernet driver
+BOARD_HAS_ATH_ETH_ALX := true
+
 TARGET_RECOVERY_PIXEL_FORMAT := "RGBX_8888"
 TARGET_RECOVERY_UI_LIB := librecovery_ui_qcom
 
