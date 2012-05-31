@@ -93,6 +93,10 @@ on property:ro.baseband=mdm
     mkdir /data/qcks 0770 system system
     start kickstart
 
+# Load SMUX line discipline for Fusion 4
+on property:ro.baseband=sglte
+    exec /system/bin/n_smux /dev/ttyHS1
+
 service usf_tester /system/bin/usf_tester
     user system
     group system inet
