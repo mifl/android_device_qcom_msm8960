@@ -78,6 +78,11 @@ service kickstart /system/bin/qcks l
     oneshot
     disabled
 
+service mdm_helper /system/bin/mdm_helper
+    class main
+    oneshot
+    disabled
+
 service qrngd /system/bin/qrngd -f
    class main
    user system
@@ -96,6 +101,10 @@ on property:ro.baseband=mdm
 # Load SMUX line discipline for Fusion 4
 on property:ro.baseband=sglte
     exec /system/bin/n_smux /dev/ttyHS1
+
+# Start up mdm_helper if sglte detected
+on property:ro.baseband=sglte
+    start mdm_helper
 
 service usf_tester /system/bin/usf_tester
     user system
