@@ -53,7 +53,7 @@ on emmc-fs
    exec /system/bin/sh /system/etc/init.qcom.mdm_links.sh
    exec /system/bin/sh /system/etc/init.qcom.thermald_conf.sh
 
-on post-fs:
+on post-fs
    mount ext4 /dev/block/mmcblk0p12 /system ro remount barrier=1
 
 on boot
