@@ -28,7 +28,14 @@
 #
 #
 
-trigger_file=/data/usf/form_factor.cfg
+dir0=/data/usf
+h_dir=$dir0/hovering
+g_dir=$dir0/gesture
+t_dir=$dir0/tester
+e_dir=$dir0/epos
+p2p_dir=$dir0/p2p
+
+trigger_file=$dir0/form_factor.cfg
 
 if [ ! -e $trigger_file ]; then
    # Configurations select upon the current platform
@@ -47,22 +54,51 @@ if [ ! -e $trigger_file ]; then
        ;;
    esac
 
-   ln -s /data/usf/form_factor_"$type".cfg /data/usf/form_factor.cfg
-   ln -s /data/usf/tester/cfg_"$type" /data/usf/tester/cfg
-   ln -s /data/usf/epos/cfg_"$type" /data/usf/epos/cfg
-   ln -s /data/usf/hovering/cfg_"$type" /data/usf/hovering/cfg
-   ln -s /data/usf/p2p/cfg_"$type" /data/usf/p2p/cfg
-   ln -s /data/usf/gesture/cfg_"$type" /data/usf/gesture/cfg
+   ln -s $dir0/form_factor_"$type".cfg $dir0/form_factor.cfg
+   ln -s $t_dir/cfg_"$type" $t_dir/cfg
+   ln -s $e_dir/cfg_"$type" $e_dir/cfg
+   ln -s $h_dir/cfg_"$type" $h_dir/cfg
+   ln -s $p2p_dir/cfg_"$type" $p2p_dir/cfg
+   ln -s $g_dir/cfg_"$type" $g_dir/cfg
+
+   ln -s $t_dir/usf_tester_"$type".lcfg $t_dir/usf_tester.lcfg
+   ln -s $e_dir/usf_epos_"$type".lcfg $e_dir/usf_epos.lcfg
+   ln -s $h_dir/usf_hovering_"$type".lcfg $h_dir/usf_hovering.lcfg
+   ln -s $p2p_dir/usf_p2p_"$type".lcfg $p2p_dir/usf_p2p.lcfg
+   ln -s $g_dir/usf_gesture_"$type".lcfg $g_dir/usf_gesture.lcfg
+
+   # Form factor oriented PCM ports definition
+   pcm_list=`cat /proc/asound/pcm`
+   tx_rx_patterns="tabla_tx2- tabla_rx3-"
+   result=""
+
+   for pattern in $tx_rx_patterns; do
+       echo $pattern
+       ind="${pcm_list##*"$pattern"}"
+
+       case "$pcm_list" in
+           "$ind")
+           ind="0"
+           ;;
+
+           *)
+           ind="${ind/ *}"
+           ;;
+       esac
+       result=$result$ind" "
+   done
+   echo $result>$dir0/pcm_inds.txt
 
    # The USF based calculators have system permissions
-   chown system /data/usf/*
-   chown system /data/usf/*/*
-   chown system /data/usf/*/*/*
+   chown system $dir0/*
+   chown system $dir0/*/*
+   chown system $dir0/*/*/*
 fi
 
 chown system /dev/usf1
 
+
 # Post-boot start of selected USF based calculators
-for i in $(cat /data/usf/auto_start.txt); do
+for i in $(cat $dir0/auto_start.txt); do
    start $i
 done
