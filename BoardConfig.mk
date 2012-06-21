@@ -10,7 +10,7 @@ ifeq ($(QC_PROP),true)
     HAVE_ADRENO200_SOURCE := true
     HAVE_ADRENO200_SC_SOURCE := true
     HAVE_ADRENO200_FIRMWARE := true
-    BOARD_USES_ALSA_AUDIO := true
+    #BOARD_USES_ALSA_AUDIO := true
     BOARD_USE_QCOM_TESTONLY := true
     TARGET_USES_C2D_COMPOSITION := true
     TARGET_USES_SF_BYPASS := true
@@ -23,16 +23,16 @@ ifeq ($(QC_PROP),true)
     TARGET_HAVE_BYPASS := true
     TARGET_MAX_BYPASS := 4
     TARGET_HAS_S3D_SUPPORT := true
-    BOARD_USE_QCOM_LLVM_CLANG_RS := true
+    #BOARD_USE_QCOM_LLVM_CLANG_RS := true
     TARGET_USES_POST_PROCESSING := true
     PROTEUS_DEVICE_API := true
     ENABLE_WEBGL := true
 
     ifneq ($(BUILD_TINY_ANDROID), true)
-    BOARD_HAS_QCOM_WLAN := true
+    BOARD_HAS_QCOM_WLAN := false
     BOARD_HAS_ATH_WLAN_AR6004 := true
     BOARD_HAVE_QCOM_FM := true
-    BOARD_HAVE_BLUETOOTH := true
+    #BOARD_HAVE_BLUETOOTH := true
     HAVE_QC_TIME_SERVICES := true
 
     ifeq ($(findstring true,$(BOARD_HAS_ATH_WLAN_AR6004) $(BOARD_HAS_QCOM_WLAN)),true)
@@ -73,6 +73,9 @@ ifeq ($(TARGET_USE_HDMI_AS_PRIMARY),true)
 else
     TARGET_HAVE_HDMI_OUT := true
 endif # TARGET_USE_HDMI_AS_PRIMARY
+#TODO: Fix-me: Setting TARGET_HAVE_HDMI_OUT to false
+# to get rid of compilation error.
+TARGET_HAVE_HDMI_OUT := false
 TARGET_USES_OVERLAY := true
 TARGET_NO_BOOTLOADER := false
 TARGET_NO_KERNEL := false
@@ -128,7 +131,8 @@ ADD_RADIO_FILES ?= false
 # Add building support AR8151 ALX ethernet driver
 BOARD_HAS_ATH_ETH_ALX := true
 
-TARGET_RECOVERY_PIXEL_FORMAT := "RGBX_8888"
-TARGET_RECOVERY_UI_LIB := librecovery_ui_qcom
+#TARGET_RECOVERY_PIXEL_FORMAT := "RGBX_8888"
+#TARGET_RECOVERY_UI_LIB := librecovery_ui_qcom
 
+TARGET_USES_ION := true
 
