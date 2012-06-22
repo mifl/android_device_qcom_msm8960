@@ -75,7 +75,7 @@ service qosmgrd /system/bin/qosmgr /system/etc/qosmgr_rules.xml
    group system
    disabled
 
-service kickstart /system/bin/qcks l
+service kickstart /system/bin/qcks -i /firmware/image/
     oneshot
     disabled
 
