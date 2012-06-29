@@ -27,6 +27,7 @@ ifeq ($(QC_PROP),true)
     TARGET_USES_POST_PROCESSING := true
     PROTEUS_DEVICE_API := true
     ENABLE_WEBGL := true
+    BOARD_USES_QCOM_RESAMPLER := true
 
     ifneq ($(BUILD_TINY_ANDROID), true)
     BOARD_HAS_QCOM_WLAN := true
