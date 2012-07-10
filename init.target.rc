@@ -29,6 +29,8 @@
 
 on early-init
     mkdir /firmware 0771 system system
+    mkdir /vendor 0771 system system
+    symlink /firmware/image /vendor/firmware
 
 on fs
     mount_all fstab.msm8960
