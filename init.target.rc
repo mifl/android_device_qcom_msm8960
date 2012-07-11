@@ -49,6 +49,14 @@ on boot
    write /sys/devices/i2c-3/3-0024/cyttsp_update_fw 1
    write /sys/devices/i2c-3/3-005b/update_fw 1
    start qcamerasvr
+   start qcmodemlink
+
+#Create modem links
+service qcmodemlink /system/bin/sh /system/etc/init.qcom.modem_links.sh
+    class main
+    user root
+    disabled
+    oneshot
 
 #start camera server as daemon
 service qcamerasvr /system/bin/mm-qcamera-daemon
