@@ -111,6 +111,7 @@ on property:ro.baseband=mdm
 
 # Start up mdm_helper if sglte detected
 on property:ro.baseband=sglte
+    mkdir /data/misc/mdmhelperdata 0700
     start mdm_helper
 
 service usf_tester /system/bin/usf_tester
