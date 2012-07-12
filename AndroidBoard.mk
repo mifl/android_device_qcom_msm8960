@@ -209,3 +209,7 @@ LOCAL_SRC_FILES    := $(LOCAL_MODULE)
 LOCAL_MODULE_PATH  := $(TARGET_OUT_ETC)
 include $(BUILD_PREBUILT)
 
+#----------------------------------------------------------------------
+# extra images
+#----------------------------------------------------------------------
+include device/qcom/common/generate_extra_images.mk
