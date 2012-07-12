@@ -42,6 +42,9 @@ on fs
     wait /dev/block/platform/msm_sdcc.1/by-name/cache
     mount ext4 /dev/block/platform/msm_sdcc.1/by-name/cache /cache nosuid nodev barrier=1
 
+    wait /dev/block/platform/msm_sdcc.1/by-name/persist
+    mount ext4 /dev/block/platform/msm_sdcc.1/by-name/persist /persist nosuid nodev barrier=1
+
     wait /dev/block/platform/msm_sdcc.1/by-name/modem
     mount vfat /dev/block/platform/msm_sdcc.1/by-name/modem /firmware ro shortname=lower dmask=177 fmask=177
 
