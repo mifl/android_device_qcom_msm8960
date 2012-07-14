@@ -37,7 +37,7 @@ ifeq ($(QC_PROP),true)
     BOARD_HAS_QCOM_WLAN := false
     BOARD_HAS_ATH_WLAN_AR6004 := true
     BOARD_HAVE_QCOM_FM := true
-    #BOARD_HAVE_BLUETOOTH := true
+    BOARD_HAVE_BLUETOOTH := true
     HAVE_QC_TIME_SERVICES := true
 
     ifeq ($(findstring true,$(BOARD_HAS_ATH_WLAN_AR6004) $(BOARD_HAS_QCOM_WLAN)),true)
