@@ -35,8 +35,8 @@ ifeq ($(QC_PROP),true)
     ENABLE_WEBGL := true
 
     ifneq ($(BUILD_TINY_ANDROID), true)
-    BOARD_HAS_QCOM_WLAN := false
-    BOARD_HAS_ATH_WLAN_AR6004 := true
+    BOARD_HAS_QCOM_WLAN := true
+    BOARD_HAS_ATH_WLAN_AR6004 := false
     BOARD_HAVE_QCOM_FM := true
     BOARD_HAVE_BLUETOOTH := true
     HAVE_QC_TIME_SERVICES := true
@@ -46,6 +46,9 @@ ifeq ($(QC_PROP),true)
     BOARD_HOSTAPD_DRIVER := NL80211
     WPA_SUPPLICANT_VERSION := VER_0_8_X
     HOSTAPD_VERSION := VER_0_8_X
+    WIFI_DRIVER_MODULE_PATH := "/system/lib/modules/wlan.ko"
+    WIFI_DRIVER_MODULE_NAME := "wlan"
+    WIFI_DRIVER_MODULE_ARG := ""
     WIFI_CFG80211_DRIVER_MODULE_PATH := "/system/lib/modules/cfg80211.ko"
     WIFI_CFG80211_DRIVER_MODULE_NAME := "cfg80211"
     WIFI_CFG80211_DRIVER_MODULE_ARG  := ""
