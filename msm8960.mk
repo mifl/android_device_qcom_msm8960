@@ -3,6 +3,8 @@ $(call inherit-product, device/qcom/common/common.mk)
 PRODUCT_NAME := msm8960
 PRODUCT_DEVICE := msm8960
 
+DEVICE_PACKAGE_OVERLAYS := device/qcom/msm8960/overlay
+
 #PRODUCT_COPY_FILES += \
 #    frameworks/base/data/etc/android.hardware.sensor.accelerometer.xml:system/etc/permissions/android.hardware.sensor.accelerometer.xml \
 #    frameworks/base/data/etc/android.hardware.sensor.compass.xml:system/etc/permissions/android.hardware.sensor.compass.xml \
