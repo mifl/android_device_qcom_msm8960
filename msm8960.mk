@@ -31,5 +31,5 @@ PRODUCT_PACKAGES += MagicSmokeWallpapers
 PRODUCT_PACKAGES += NoiseField
 PRODUCT_PACKAGES += PhaseBeam
 
-#fstab.msm8960
-PRODUCT_PACKAGES += fstab.msm8960
+#fstab.qcom
+PRODUCT_PACKAGES += fstab.qcom
