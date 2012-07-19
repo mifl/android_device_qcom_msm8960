@@ -29,8 +29,7 @@
 
 on early-init
     mkdir /firmware 0771 system system
-    mkdir /vendor 0771 system system
-    symlink /firmware/image /vendor/firmware
+    symlink /data/tombstones /tombstones
 
 on fs
     mount_all fstab.msm8960
@@ -52,7 +51,16 @@ on boot
    write /sys/devices/i2c-3/3-0024/cyttsp_update_fw 1
    write /sys/devices/i2c-3/3-005b/update_fw 1
    start qcamerasvr
+
+on post-fs
    start qcmodemlink
+
+on post-fs-data
+   mkdir /data/tombstones 0771 system system
+   mkdir /tombstones/modem 0771 system system
+   mkdir /tombstones/lpass 0771 system system
+   mkdir /tombstones/wcnss 0771 system system
+   mkdir /tombstones/dsps 0771 system system
 
 #Create modem links
 service qcmodemlink /system/bin/sh /system/etc/init.qcom.modem_links.sh

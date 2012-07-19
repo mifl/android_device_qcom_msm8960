@@ -84,6 +84,7 @@ esac
 
 case $linksNeeded in
    1)
+      mount -t ext4 -o rw,remount,barrier=1 /dev/block/platform/msm_sdcc.1/by-name/system  /system
       cd /firmware/image
 
       # Check if need to select modem firmware and do rename in first boot
@@ -171,7 +172,7 @@ case $linksNeeded in
          *)
             log -p w -t No gss image found;;
       esac
-
+      mount -t ext4 -o ro,remount,barrier=1 /dev/block/platform/msm_sdcc.1/by-name/system  /system
       break;;
 
    *)
