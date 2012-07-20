@@ -36,7 +36,7 @@ ifeq ($(QC_PROP),true)
 
     ifneq ($(BUILD_TINY_ANDROID), true)
     BOARD_HAS_QCOM_WLAN := true
-    BOARD_HAS_ATH_WLAN_AR6004 := false
+    BOARD_HAS_ATH_WLAN_AR6004 := true
     BOARD_HAVE_QCOM_FM := true
     BOARD_HAVE_BLUETOOTH := true
     HAVE_QC_TIME_SERVICES := true
