@@ -121,3 +121,4 @@ ro.warmboot.capability=1
 
 #snapdragon value add features
 ro.qcom.audio.ssr=true
+ro.qc.sdk.camera.facialproc=false
