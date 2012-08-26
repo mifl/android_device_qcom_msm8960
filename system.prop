@@ -120,6 +120,8 @@ ro.hwui.text_cache_width=2048
 ro.warmboot.capability=1
 
 #snapdragon value add features
-ro.qcom.audio.ssr=true
+ro.qc.sdk.audio.ssr=false
+##fluencetype can be "fluence" or "fluencepro" or "none"
+ro.qc.sdk.audio.fluencetype=none
 ro.qc.sdk.camera.facialproc=false
 ro.qc.sdk.sensors.gestures=false
