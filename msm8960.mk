@@ -14,11 +14,7 @@ DEVICE_PACKAGE_OVERLAYS := device/qcom/msm8960/overlay
 
 # Bluetooth configuration files
 PRODUCT_COPY_FILES += \
-    system/bluetooth/data/audio.conf:system/etc/bluetooth/audio.conf \
-    system/bluetooth/data/auto_pairing.conf:system/etc/bluetooth/auto_pairing.conf \
-    system/bluetooth/data/blacklist.conf:system/etc/bluetooth/blacklist.conf \
     system/bluetooth/data/main.le.conf:system/etc/bluetooth/main.conf \
-    #system/bluetooth/data/iop_device_list.conf:system/etc/bluetooth/iop_device_list.conf \
 
 PRODUCT_PACKAGES += \
     battery_monitor \
