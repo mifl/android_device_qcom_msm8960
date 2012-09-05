@@ -81,6 +81,11 @@ service mpdecision /system/bin/mpdecision --no_sleep --avg_comp
    user root
    disabled
 
+service rf4ce /system/bin/rf4ce
+   class main
+   user root
+   group root
+
 service qosmgrd /system/bin/qosmgr /system/etc/qosmgr_rules.xml
    user system
    group system
