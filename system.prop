@@ -121,3 +121,5 @@ ro.qc.sdk.camera.facialproc=false
 #snapdragon value add features
 #
 ro.qc.sdk.gestures.camera=false
+#property to force camera shutter sound on speaker
+ro.camera.sound.forced=1
