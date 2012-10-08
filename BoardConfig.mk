@@ -3,80 +3,11 @@
 # Product-specific compile-time definitions.
 #
 
-ifeq ($(QC_PROP),true)
-    BOARD_USES_QCOM_HARDWARE := true
-    DYNAMIC_SHARED_LIBV8SO := true
-    BOARD_USES_ADRENO_200 := true
-    HAVE_ADRENO200_SOURCE := true
-    HAVE_ADRENO200_SC_SOURCE := true
-    HAVE_ADRENO200_FIRMWARE := true
-    BOARD_USES_ALSA_AUDIO := true
-    TARGET_USES_QCOM_MM_AUDIO := true
-    MM_AUDIO_OMX_ADEC_EVRC_DISABLED := false
-    MM_AUDIO_OMX_ADEC_QCELP13_DISABLED := false
-    MM_AUDIO_FTM_DISABLED := false
-    MM_AUDIO_MEASUREMENT_DISABLED := false
-    MM_AUDIO_VOEM_DISABLED := false
-    MM_AUDIO_SRS_DISABLED := true
-    BOARD_USE_QCOM_TESTONLY := true
-    TARGET_USES_C2D_COMPOSITION := true
-    TARGET_USES_SF_BYPASS := true
-    TARGET_USES_ION := true
-    USE_OPENGL_RENDERER := true
-    TARGET_AVOID_DRAW_TEXTURE_EXTENSION := true
-    BOARD_VENDOR_QCOM_GPS_LOC_API_HARDWARE := default
-    BOARD_USES_SRS_TRUEMEDIA := false
-    BOARD_USES_QCNE := true
-    TARGET_HAVE_BYPASS := true
-    TARGET_MAX_BYPASS := 4
-    TARGET_HAS_S3D_SUPPORT := true
-    #BOARD_USE_QCOM_LLVM_CLANG_RS := true
-    TARGET_USES_POST_PROCESSING := true
-    PROTEUS_DEVICE_API := true
-    ENABLE_WEBGL := true
+BOARD_USES_GENERIC_AUDIO := true
+USE_CAMERA_STUB := true
 
-    ifneq ($(BUILD_TINY_ANDROID), true)
-    BOARD_HAS_QCOM_WLAN := true
-    BOARD_HAS_ATH_WLAN_AR6004 := true
-    BOARD_HAVE_QCOM_FM := true
-    BOARD_HAVE_BLUETOOTH := true
-    BOARD_HAS_QCA_BT_AR3002 := true
-    HAVE_QC_TIME_SERVICES := true
+-include vendor/qcom/proprietary/common/msm8960/BoardConfigVendor.mk
 
-    ifeq ($(findstring true,$(BOARD_HAS_ATH_WLAN_AR6004) $(BOARD_HAS_QCOM_WLAN)),true)
-    BOARD_WPA_SUPPLICANT_DRIVER := NL80211
-    BOARD_HOSTAPD_DRIVER := NL80211
-    WPA_SUPPLICANT_VERSION := VER_0_8_X
-    HOSTAPD_VERSION := VER_0_8_X
-    WIFI_DRIVER_MODULE_PATH := "/system/lib/modules/wlan.ko"
-    WIFI_DRIVER_MODULE_NAME := "wlan"
-    WIFI_DRIVER_MODULE_ARG := ""
-    WIFI_CFG80211_DRIVER_MODULE_PATH := "/system/lib/modules/cfg80211.ko"
-    WIFI_CFG80211_DRIVER_MODULE_NAME := "cfg80211"
-    WIFI_CFG80211_DRIVER_MODULE_ARG  := ""
-    WIFI_DRIVER_FW_PATH_STA := "sta"
-    WIFI_DRIVER_FW_PATH_AP  := "ap"
-    WIFI_DRIVER_FW_PATH_P2P := "p2p"
-    endif
-
-    ifeq ($(BOARD_HAS_QCOM_WLAN), true)
-    WIFI_DRIVER_DEF_CONF_FILE := "/persist/WCNSS_qcom_cfg.ini"
-    WIFI_DRIVER_CONF_FILE := "/data/misc/wifi/WCNSS_qcom_cfg.ini"
-    BOARD_WLAN_DEVICE := qcwcn
-    endif
-
-    endif   # !BUILD_TINY_ANDROID
-else
-    BOARD_USES_GENERIC_AUDIO := true
-    USE_CAMERA_STUB := true
-
-endif # QC_PROP
-
-BOARD_USES_ADRENO_200 := true
-HAVE_ADRENO200_SOURCE := true
-HAVE_ADRENO200_SC_SOURCE := true
-HAVE_ADRENO200_FIRMWARE := true
-TARGET_HAVE_TSLIB := false
 TARGET_USE_HDMI_AS_PRIMARY := false
 
 ifeq ($(TARGET_USE_HDMI_AS_PRIMARY),true)
