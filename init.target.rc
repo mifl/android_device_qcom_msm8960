@@ -145,6 +145,11 @@ service usf_hovering /system/bin/usf_hovering
     group system inet
     disabled
 
+service usf_proximity /system/bin/usf_proximity
+    user system
+    group system inet
+    disabled
+
 service usf-post-boot /system/bin/sh /system/etc/usf_post_boot.sh
     class late_start
     user root
