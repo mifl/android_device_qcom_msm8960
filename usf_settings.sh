@@ -35,6 +35,7 @@ t_dir=$dir0/tester
 e_dir=$dir0/epos
 p2p_dir=$dir0/p2p
 prox_dir=$dir0/proximity
+ucm_dir=$dir0/ucm
 
 trigger_file=$dir0/form_factor.cfg
 
@@ -69,6 +70,9 @@ if [ ! -e $trigger_file ]; then
    ln -s $p2p_dir/usf_p2p_"$type".lcfg $p2p_dir/usf_p2p.lcfg
    ln -s $g_dir/usf_gesture_"$type".lcfg $g_dir/usf_gesture.lcfg
    ln -s $prox_dir/usf_proximity_"$type".lcfg $prox_dir/usf_proximity.lcfg
+
+   rm /system/etc/snd_soc_msm/us_soc_msm
+   ln -s $ucm_dir/us_soc_msm_"$type" /system/etc/snd_soc_msm/us_soc_msm
 
    # Form factor oriented PCM ports definition
    pcm_list=`cat /proc/asound/pcm`
