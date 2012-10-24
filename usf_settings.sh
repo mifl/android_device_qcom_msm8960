@@ -47,12 +47,30 @@ if [ ! -e $trigger_file ]; then
    case $platform in
        "Liquid")
            type="liquid"
+           ln -s $e_dir/cfg/usf_epos_apq_4.cfg $e_dir/usf_epos.cfg
+           ln -s $t_dir/cfg/usf_tester_epos_4.cfg $t_dir/usf_tester.cfg
+           ln -s $h_dir/cfg/usf_hovering_4.cfg $h_dir/usf_hovering.cfg
+           ln -s $p2p_dir/cfg/usf_p2p_4.cfg $p2p_dir/usf_p2p.cfg
+           ln -s $g_dir/cfg/usf_gesture_4_192.cfg $g_dir/usf_gesture.cfg
+           ln -s $prox_dir/cfg/usf_proximity_liquid.cfg $prox_dir/usf_proximity.cfg
        ;;
        "Fluid")
            type="fluid"
+           ln -s $e_dir/cfg/usf_epos.cfg $e_dir/usf_epos.cfg
+           ln -s $t_dir/cfg/usf_tester_epos.cfg $t_dir/usf_tester.cfg
+           ln -s $h_dir/cfg/usf_hovering.cfg $h_dir/usf_hovering.cfg
+           ln -s $p2p_dir/cfg/usf_p2p.cfg $p2p_dir/usf_p2p.cfg
+           ln -s $g_dir/cfg/usf_gesture_192.cfg $g_dir/usf_gesture.cfg
+           ln -s $prox_dir/cfg/usf_proximity.cfg $prox_dir/usf_proximity.cfg
        ;;
        "MTP")
            type="mtp"
+           ln -s $e_dir/cfg/usf_epos_mtp.cfg $e_dir/usf_epos.cfg
+           ln -s $t_dir/cfg/usf_tester_epos_mtp.cfg $t_dir/usf_tester.cfg
+           ln -s $h_dir/cfg/usf_hovering_mtp.cfg $h_dir/usf_hovering.cfg
+           ln -s $p2p_dir/cfg/usf_p2p_mtp.cfg $p2p_dir/usf_p2p.cfg
+           ln -s $g_dir/cfg/usf_gesture_mtp.cfg $g_dir/usf_gesture.cfg
+           ln -s $prox_dir/cfg/usf_proximity_mtp.cfg $prox_dir/usf_proximity.cfg
        ;;
    esac
 
@@ -63,13 +81,6 @@ if [ ! -e $trigger_file ]; then
    ln -s $p2p_dir/cfg_"$type" $p2p_dir/cfg
    ln -s $g_dir/cfg_"$type" $g_dir/cfg
    ln -s $prox_dir/cfg_"$type" $prox_dir/cfg
-
-   ln -s $t_dir/usf_tester_"$type".lcfg $t_dir/usf_tester.lcfg
-   ln -s $e_dir/usf_epos_"$type".lcfg $e_dir/usf_epos.lcfg
-   ln -s $h_dir/usf_hovering_"$type".lcfg $h_dir/usf_hovering.lcfg
-   ln -s $p2p_dir/usf_p2p_"$type".lcfg $p2p_dir/usf_p2p.lcfg
-   ln -s $g_dir/usf_gesture_"$type".lcfg $g_dir/usf_gesture.lcfg
-   ln -s $prox_dir/usf_proximity_"$type".lcfg $prox_dir/usf_proximity.lcfg
 
    rm /system/etc/snd_soc_msm/us_soc_msm
    ln -s $ucm_dir/us_soc_msm_"$type" /system/etc/snd_soc_msm/us_soc_msm
