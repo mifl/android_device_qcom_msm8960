@@ -95,6 +95,8 @@ if [ ! -e $trigger_file ]; then
        result=$result$ind" "
    done
    echo $result>$dir0/pcm_inds.txt
+   # Change permission for pcm_inds so that it could be only read by everyone
+   chmod 0444 $dir0/pcm_inds.txt
 
    # The USF based calculators have system permissions
    chown system $dir0/*
