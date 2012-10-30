@@ -1,9 +1,9 @@
+DEVICE_PACKAGE_OVERLAYS := device/qcom/msm8960/overlay
+
 $(call inherit-product, device/qcom/common/common.mk)
 
 PRODUCT_NAME := msm8960
 PRODUCT_DEVICE := msm8960
-
-DEVICE_PACKAGE_OVERLAYS += device/qcom/msm8960/overlay
 
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.sensor.barometer.xml:system/etc/permissions/android.hardware.sensor.barometer.xml \
