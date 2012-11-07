@@ -29,3 +29,6 @@ key 114   VOLUME_DOWN       WAKE_DROPPED
 key 102   HOME              WAKE_DROPPED
 key 528   FOCUS             WAKE_DROPPED
 key 766   CAMERA            WAKE_DROPPED
+key 105   DPAD_LEFT         WAKE_DROPPED
+key 106   DPAD_RIGHT        WAKE_DROPPED
+key 28    DPAD_CENTER       WAKE_DROPPED
