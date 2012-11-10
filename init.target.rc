@@ -114,6 +114,10 @@ on property:ro.baseband=sglte
     mkdir /data/misc/mdmhelperdata 0700
     start mdm_helper
 
+on property:ro.baseband=dsda
+    mkdir /data/misc/mdmhelperdata 0700
+    start mdm_helper
+
 service usf_tester /system/bin/usf_tester
     user system
     group system inet
