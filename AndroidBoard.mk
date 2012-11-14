@@ -194,6 +194,7 @@ LOCAL_SRC_FILES    := $(LOCAL_MODULE)
 LOCAL_MODULE_PATH  := $(TARGET_OUT_KEYLAYOUT)
 include $(BUILD_PREBUILT)
 
+
 include $(CLEAR_VARS)
 LOCAL_SRC_FILES := keypad_8960_qwerty.kcm
 LOCAL_MODULE_TAGS := optional
@@ -216,6 +217,62 @@ LOCAL_MODULE_CLASS := ETC
 LOCAL_SRC_FILES    := $(LOCAL_MODULE)
 LOCAL_MODULE_PATH  := $(TARGET_OUT_ETC)
 include $(BUILD_PREBUILT)
+
+#AMEYA : Prebuilt's from mako
+LOCAL_PATH := \
+	vendor/qcom/proprietary/prebuilt/target/product/msm8960/system
+
+include $(CLEAR_VARS)
+LOCAL_MODULE := libmm-color-convertor
+LOCAL_MODULE_OWNER := qcom
+LOCAL_SRC_FILES :=  lib/libmm-color-convertor.so
+LOCAL_MODULE_TAGS := optional
+LOCAL_MODULE_SUFFIX := .so
+LOCAL_MODULE_CLASS := SHARED_LIBRARIES
+LOCAL_MODULE_PATH := $(TARGET_OUT)/lib
+include $(BUILD_PREBUILT)
+
+include $(CLEAR_VARS)
+LOCAL_MODULE := libmmcamera_hdr_lib
+LOCAL_MODULE_OWNER := qcom
+LOCAL_SRC_FILES :=  lib/libmmcamera_hdr_lib.so
+LOCAL_MODULE_TAGS := optional
+LOCAL_MODULE_SUFFIX := .so
+LOCAL_MODULE_CLASS := SHARED_LIBRARIES
+LOCAL_MODULE_PATH := $(TARGET_OUT)/lib
+include $(BUILD_PREBUILT)
+
+include $(CLEAR_VARS)
+LOCAL_MODULE := libmmcamera_wavelet_lib
+LOCAL_MODULE_OWNER := qcom
+LOCAL_SRC_FILES :=  lib/libmmcamera_wavelet_lib.so
+LOCAL_MODULE_TAGS := optional
+LOCAL_MODULE_SUFFIX := .so
+LOCAL_MODULE_CLASS := SHARED_LIBRARIES
+LOCAL_MODULE_PATH := $(TARGET_OUT)/lib
+include $(BUILD_PREBUILT)
+
+include $(CLEAR_VARS)
+LOCAL_MODULE := libmmcamera_image_stab
+LOCAL_MODULE_OWNER := qcom
+LOCAL_SRC_FILES :=  lib/libmmcamera_image_stab.so
+LOCAL_MODULE_TAGS := optional
+LOCAL_MODULE_SUFFIX := .so
+LOCAL_MODULE_CLASS := SHARED_LIBRARIES
+LOCAL_MODULE_PATH := $(TARGET_OUT)/lib
+include $(BUILD_PREBUILT)
+
+include $(CLEAR_VARS)
+LOCAL_MODULE := libQSEEComAPI
+LOCAL_MODULE_OWNER := qcom
+LOCAL_SRC_FILES :=  lib/libQSEEComAPI.so
+LOCAL_MODULE_TAGS := optional
+LOCAL_MODULE_SUFFIX := .so
+LOCAL_MODULE_CLASS := SHARED_LIBRARIES
+LOCAL_MODULE_PATH := $(TARGET_OUT)/lib
+include $(BUILD_PREBUILT)
+
+LOCAL_PATH := $(call my-dir)
 
 #----------------------------------------------------------------------
 # extra images
