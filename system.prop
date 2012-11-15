@@ -22,6 +22,8 @@ dalvik.vm.heapsize=36m
 debug.enable.wl_log=1
 debug.mdpcomp.maxlayer=3
 debug.mdpcomp.logs=0
+# Enables UI+Video mirroring on HDMI
+hw.true_mirror=1
 
 #
 # system props for the cne module
