@@ -12,6 +12,10 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
     system/bluetooth/data/main.le.conf:system/etc/bluetooth/main.conf \
 
+# Audio configuration file
+PRODUCT_COPY_FILES += \
+    device/qcom/msm8960/audio_policy.conf:system/etc/audio_policy.conf \
+
 PRODUCT_PACKAGES += \
     battery_monitor \
     battery_shutdown
