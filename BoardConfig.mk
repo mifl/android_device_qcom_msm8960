@@ -149,3 +149,7 @@ BOARD_HAS_ATH_ETH_ALX := true
 #TARGET_RECOVERY_UI_LIB := librecovery_ui_qcom
 
 TARGET_USES_ION := true
+
+# Add support for kernel user helpers and gettimeofday()
+# in bionic
+KERNEL_HAS_GETTIMEOFDAY_HELPER := true
