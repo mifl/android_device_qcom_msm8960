@@ -223,16 +223,6 @@ LOCAL_PATH := \
 	vendor/qcom/proprietary/prebuilt/target/product/msm8960/system
 
 include $(CLEAR_VARS)
-LOCAL_MODULE := libmm-color-convertor
-LOCAL_MODULE_OWNER := qcom
-LOCAL_SRC_FILES :=  lib/libmm-color-convertor.so
-LOCAL_MODULE_TAGS := optional
-LOCAL_MODULE_SUFFIX := .so
-LOCAL_MODULE_CLASS := SHARED_LIBRARIES
-LOCAL_MODULE_PATH := $(TARGET_OUT)/lib
-include $(BUILD_PREBUILT)
-
-include $(CLEAR_VARS)
 LOCAL_MODULE := libQSEEComAPI
 LOCAL_MODULE_OWNER := qcom
 LOCAL_SRC_FILES :=  lib/libQSEEComAPI.so
