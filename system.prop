@@ -125,3 +125,5 @@ ro.qc.sdk.audio.ssr=false
 ro.qc.sdk.audio.fluencetype=none
 ro.qc.sdk.camera.facialproc=false
 ro.qc.sdk.sensors.gestures=false
+#property to force camera shutter sound on speaker
+ro.camera.sound.forced=1
