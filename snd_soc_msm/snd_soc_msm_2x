@@ -5274,17 +5274,15 @@ SectionDevice
 	Comment "Speaker Tx device"
 
 	EnableSequence
-		'AIF1_CAP Mixer SLIM TX7':1:1
 		'SLIM_0_TX Channels':0:One
-		'SLIM TX7 MUX':0:DEC7
-		'DEC7 MUX':0:DMIC1
+		'SLIM TX7 MUX':0:DEC1
+		'DEC1 MUX':0:DMIC1
 		'MICBIAS1 CAPLESS Switch':1:1
 	EndSequence
 
 	DisableSequence
-		'AIF1_CAP Mixer SLIM TX7':1:0
 		'SLIM TX7 MUX':0:ZERO
-		'DEC7 MUX':0:ZERO
+		'DEC1 MUX':0:ZERO
 		'MICBIAS1 CAPLESS Switch':1:0
 	EndSequence
 
