@@ -55,7 +55,7 @@ on fs
 on boot
    write /sys/devices/i2c-3/3-0024/cyttsp_update_fw 1
    write /sys/devices/i2c-3/3-005b/update_fw 1
-#   start qcamerasvr
+   start qcamerasvr
 
 on post-fs-data
    mkdir /data/tombstones 0771 system system
@@ -66,10 +66,10 @@ on post-fs-data
    mkdir /tombstones/mdm 0771 system system
 
 #start camera server as daemon
-#service qcamerasvr /system/bin/mm-qcamera-daemon
-#        class late_start
-#        user camera
-#        group camera system inet input graphics
+service qcamerasvr /system/bin/mm-qcamera-daemon
+        class late_start
+        user camera
+        group camera system inet input graphics
 
 #start GNSS/Sensor interface daemon
 service gsiff_daemon /system/bin/gsiff_daemon
