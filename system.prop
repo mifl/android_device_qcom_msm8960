@@ -20,7 +20,7 @@ debug.egl.hw=1
 debug.composition.type=gpu
 dalvik.vm.heapsize=36m
 debug.enable.wl_log=1
-debug.mdpcomp.maxlayer=3
+persist.hwc.mdpcomp.enable=true
 debug.mdpcomp.logs=0
 
 #
