@@ -218,19 +218,6 @@ LOCAL_SRC_FILES    := $(LOCAL_MODULE)
 LOCAL_MODULE_PATH  := $(TARGET_OUT_ETC)
 include $(BUILD_PREBUILT)
 
-#AMEYA : Prebuilt's from mako
-LOCAL_PATH := \
-	vendor/qcom/proprietary/prebuilt/target/product/msm8960/system
-
-include $(CLEAR_VARS)
-LOCAL_MODULE := libQSEEComAPI
-LOCAL_MODULE_OWNER := qcom
-LOCAL_SRC_FILES :=  lib/libQSEEComAPI.so
-LOCAL_MODULE_TAGS := optional
-LOCAL_MODULE_SUFFIX := .so
-LOCAL_MODULE_CLASS := SHARED_LIBRARIES
-LOCAL_MODULE_PATH := $(TARGET_OUT)/lib
-include $(BUILD_PREBUILT)
 
 LOCAL_PATH := $(call my-dir)
 
