@@ -120,6 +120,13 @@ LOCAL_MODULE_PATH  := $(TARGET_OUT_DATA)/hostapd
 LOCAL_SRC_FILES    := hostapd.deny
 include $(BUILD_PREBUILT)
 
+#Create symbolic links
+$(shell mkdir -p $(TARGET_OUT_ETC)/firmware/wlan/prima; \
+	ln -sf /data/misc/wifi/WCNSS_qcom_wlan_nv.bin \
+	$(TARGET_OUT_ETC)/firmware/wlan/prima/WCNSS_qcom_wlan_nv.bin; \
+	ln -sf /data/misc/wifi/WCNSS_qcom_cfg.ini \
+	$(TARGET_OUT_ETC)/firmware/wlan/prima/WCNSS_qcom_cfg.ini)
+
 endif
 
 include $(CLEAR_VARS)
