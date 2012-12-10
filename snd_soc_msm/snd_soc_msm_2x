@@ -6183,7 +6183,7 @@ SectionDevice
 	DisableSequence
 	EndSequence
 
-	ACDBID	0:1
+	ACDBID	20:1
 	EffectsMixerCTL "SRS TruMedia"
 
 EndSection
