@@ -32,6 +32,13 @@ on early-init
     symlink /data/tombstones /tombstones
     mount debugfs debugfs /sys/kernel/debug
 
+# execute the script that sets up basic infrastructure for mpq components
+# this script is expected to get executed before /system/bin/mediaserver starts
+service mpq-setup /system/bin/sh /init.qcom.mpq.sh
+    class core
+    user root
+    oneshot
+
 service ril-qmi /system/bin/sh /init.qcom.ril.sh
     class main
     user root
