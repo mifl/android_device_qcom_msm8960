@@ -88,3 +88,6 @@ TARGET_USES_ION := true
 # Add support for kernel user helpers and gettimeofday()
 # in bionic
 KERNEL_HAS_GETTIMEOFDAY_HELPER := true
+
+# Compile tiny android by default
+BUILD_TINY_ANDROID := true
