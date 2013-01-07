@@ -149,3 +149,4 @@ BOARD_HAS_ATH_ETH_ALX := true
 #TARGET_RECOVERY_UI_LIB := librecovery_ui_qcom
 
 TARGET_USES_ION := true
+TARGET_USES_ASHMEM := true
