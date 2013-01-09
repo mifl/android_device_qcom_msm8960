@@ -61,6 +61,10 @@ if [ ! -h $THERMALD_CONF_SYMLINK ]; then
      ln -s /etc/thermald-8930.conf $THERMALD_CONF_SYMLINK 2>/dev/null
      ;;
 
+     "154" | "155" | "156" | "157") #MSM8930ab
+     ln -s /etc/thermald-8930ab.conf $THERMALD_CONF_SYMLINK 2>/dev/null
+     ;;
+
      "138" | "139" | "140" | "141") #MSM8960ab
      ln -s /etc/thermald-8960ab.conf $THERMALD_CONF_SYMLINK 2>/dev/null
      ;;
