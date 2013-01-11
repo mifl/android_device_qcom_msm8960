@@ -1,0 +1,2 @@
+require board=MSM8960|J1TM
+
