@@ -50,6 +50,10 @@ case "$platformid" in
     ln -s /etc/thermald-8930.conf $THERMALD_CONF_SYMLINK 2>/dev/null
     ;;
 
+    "138" | "139" | "140" | "141") #MSM8960ab
+    ln -s /etc/thermald-8960ab.conf $THERMALD_CONF_SYMLINK 2>/dev/null
+    ;;
+
     *) #MSM8960, etc
     ln -s /etc/thermald-8960.conf $THERMALD_CONF_SYMLINK 2>/dev/null
     ;;
