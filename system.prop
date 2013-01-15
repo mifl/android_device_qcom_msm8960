@@ -121,3 +121,6 @@ ro.qc.sdk.gestures.camera=false
 ro.qc.sdk.sensors.gestures=false
 #property to force camera shutter sound on speaker
 ro.camera.sound.forced=1
+
+#property to check if dynamic resolution change is supported in framework
+ro.streaming.video.drs=true
