@@ -30,6 +30,8 @@ PRODUCT_MODEL := Full JellyBean
 PRODUCT_MANUFACTURER := Qualcomm
 #PRODUCT_RESTRICT_VENDOR_FILES := true
 
+QCOM_BOARD_PLATFORMS := msm8960
+
 # Inherit from hardware-specific part of the product configuration
 $(call inherit-product, device/qcom/msm8960/device.mk)
 $(call inherit-product-if-exists, vendor/qcom/msm8960/device-vendor.mk)
