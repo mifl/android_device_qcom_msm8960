@@ -15,4 +15,4 @@
 #
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/full_msm8960.mk
+    $(LOCAL_DIR)/msm8960.mk

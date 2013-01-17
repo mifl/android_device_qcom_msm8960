@@ -14,4 +14,4 @@
 # limitations under the License.
 #
 
-add_lunch_combo full_msm8960-userdebug
+add_lunch_combo msm8960-userdebug
