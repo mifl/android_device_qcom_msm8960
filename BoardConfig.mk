@@ -79,6 +79,9 @@ HAVE_MXT_CFG := true
 # Add NON-HLOS files for ota upgrade
 ADD_RADIO_FILES ?= false
 
+# Added to indicate that protobuf-c is supported in this build
+PROTOBUF_SUPPORTED := true
+
 # Add building support AR8151 ALX ethernet driver
 BOARD_HAS_ATH_ETH_ALX := true
 
