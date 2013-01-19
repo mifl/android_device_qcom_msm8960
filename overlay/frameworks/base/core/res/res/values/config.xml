@@ -250,4 +250,7 @@
     <!-- The default iface on which to monitor data use -->
     <string name="config_datause_iface" translatable="false">rmnet_usb0</string>
 
+    <!-- If this is true, the screen will come on when you plug/unplug usb/power/whatever. -->
+    <bool name="config_unplugTurnsOnScreen">true</bool>
+
 </resources>
