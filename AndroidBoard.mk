@@ -16,9 +16,6 @@
 #----------------------------------------------------------------------
 # Compile (L)ittle (K)ernel bootloader
 #----------------------------------------------------------------------
-ifneq ($(strip $(TARGET_NO_BOOTLOADER)),true)
-
-# Compile
 include bootable/bootloader/lk/AndroidBoot.mk
 
 $(INSTALLED_BOOTLOADER_MODULE): $(TARGET_EMMC_BOOTLOADER) | $(ACP)
@@ -26,14 +23,11 @@ $(INSTALLED_BOOTLOADER_MODULE): $(TARGET_EMMC_BOOTLOADER) | $(ACP)
 $(BUILT_TARGET_FILES_PACKAGE): $(INSTALLED_BOOTLOADER_MODULE)
 
 droidcore: $(INSTALLED_BOOTLOADER_MODULE)
-endif
 
 #----------------------------------------------------------------------
 # Compile Linux Kernel
 #----------------------------------------------------------------------
-ifeq ($(KERNEL_DEFCONFIG),)
-	KERNEL_DEFCONFIG := full_msm8960-perf_defconfig
-endif
+KERNEL_DEFCONFIG ?= full_msm8960-perf_defconfig
 
 include kernel/AndroidKernel.mk
 
