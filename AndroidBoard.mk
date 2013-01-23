@@ -79,6 +79,13 @@ LOCAL_MODULE_CLASS := ETC
 LOCAL_SRC_FILES    := $(LOCAL_MODULE)
 include $(BUILD_PREBUILT)
 
+include $(CLEAR_VARS)
+LOCAL_MODULE       := init.qcom.sensor.sh
+LOCAL_MODULE_TAGS  := optional
+LOCAL_MODULE_CLASS := ETC
+LOCAL_SRC_FILES    := $(LOCAL_MODULE)
+include $(BUILD_PREBUILT)
+
 ifeq ($(strip $(BOARD_HAS_QCOM_WLAN)),true)
 include $(CLEAR_VARS)
 LOCAL_MODULE       := wpa_supplicant.conf
@@ -92,15 +99,7 @@ include $(CLEAR_VARS)
 LOCAL_MODULE       := hostapd_default.conf
 LOCAL_MODULE_TAGS  := optional
 LOCAL_MODULE_CLASS := ETC
-LOCAL_MODULE_PATH  := $(PRODUCT_OUT)/persist/qcom/softap
-LOCAL_SRC_FILES    := hostapd.conf
-include $(BUILD_PREBUILT)
-
-include $(CLEAR_VARS)
-LOCAL_MODULE       := hostapd.conf
-LOCAL_MODULE_TAGS  := optional
-LOCAL_MODULE_CLASS := ETC
-LOCAL_MODULE_PATH  := $(TARGET_OUT_DATA)/misc/wifi
+LOCAL_MODULE_PATH  := $(TARGET_OUT_ETC)/hostapd
 LOCAL_SRC_FILES    := hostapd.conf
 include $(BUILD_PREBUILT)
 
@@ -108,7 +107,7 @@ include $(CLEAR_VARS)
 LOCAL_MODULE       := hostapd.accept
 LOCAL_MODULE_TAGS  := optional
 LOCAL_MODULE_CLASS := ETC
-LOCAL_MODULE_PATH  := $(TARGET_OUT_DATA)/hostapd
+LOCAL_MODULE_PATH  := $(TARGET_OUT_ETC)/hostapd
 LOCAL_SRC_FILES    := hostapd.accept
 include $(BUILD_PREBUILT)
 
@@ -116,7 +115,7 @@ include $(CLEAR_VARS)
 LOCAL_MODULE       := hostapd.deny
 LOCAL_MODULE_TAGS  := optional
 LOCAL_MODULE_CLASS := ETC
-LOCAL_MODULE_PATH  := $(TARGET_OUT_DATA)/hostapd
+LOCAL_MODULE_PATH  := $(TARGET_OUT_ETC)/hostapd
 LOCAL_SRC_FILES    := hostapd.deny
 include $(BUILD_PREBUILT)
 

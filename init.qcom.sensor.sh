@@ -1,4 +1,5 @@
-# Copyright (c) 2011, The Linux Foundation. All rights reserved.
+#!/system/bin/sh
+# Copyright (c) 2012, The Linux Foundation. All rights reserved.
 #
 # Redistribution and use in source and binary forms, with or without
 # modification, are permitted provided that the following conditions are
@@ -9,7 +10,7 @@
 #       copyright notice, this list of conditions and the following
 #       disclaimer in the documentation and/or other materials provided
 #       with the distribution.
-#     * Neither the name of The Linux Foundation nor the names of its
+#     * Neither the name of Code Aurora Forum, Inc. nor the names of its
 #       contributors may be used to endorse or promote products derived
 #       from this software without specific prior written permission.
 #
@@ -24,14 +25,27 @@
 # WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE
 # OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN
 # IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+#
+#
 
-#filename				device
+# No path is set up at this point so we have to do it here.
+PATH=/sbin:/system/sbin:/system/bin:/system/xbin
+export PATH
 
-NON-HLOS.bin			/dev/block/platform/msm_sdcc.1/by-name/modem
-sbl1.mbn				/dev/block/platform/msm_sdcc.1/by-name/sbl1
-sbl2.mbn				/dev/block/platform/msm_sdcc.1/by-name/sbl2
-sbl3.mbn				/dev/block/platform/msm_sdcc.1/by-name/sbl3
-tz.mbn					/dev/block/platform/msm_sdcc.1/by-name/tz
-rpm.mbn					/dev/block/platform/msm_sdcc.1/by-name/rpm
-emmc_appsboot.mbn		/dev/block/platform/msm_sdcc.1/by-name/aboot
+SENSOR_HAL_SYMLINK=/system/lib/hw/sensors.qcom.so
 
+# symlink already exists, exit
+if [ -h $SENSOR_HAL_SYMLINK ]; then
+	exit 0
+fi
+
+# create symlink to target-specific config file
+platformid=`cat /sys/devices/system/soc/soc0/id`
+case "$platformid" in
+    "116" | "142" | "154") #msm8930
+    ln -s /system/lib/hw/sensors.msm8930.so $SENSOR_HAL_SYMLINK 2>/dev/null
+    ;;
+
+    *)
+    ;;
+esac
