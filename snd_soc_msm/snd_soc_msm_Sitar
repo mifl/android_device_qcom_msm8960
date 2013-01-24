@@ -3998,19 +3998,6 @@ SectionModifier
 
         EnableSequence
                 'SLIMBUS_0_RX Audio Mixer MultiMedia1':1:1
-                'SLIM_0_RX Channels':0:Two
-                'RX1 MIX1 INP1':0:RX1
-                'RX1 MIX1 INP2':0:RX6
-                'RX2 MIX1 INP1':0:RX2
-                'RX2 MIX1 INP2':0:RX7
-                'HPHL DAC Switch':1:1
-                'HPHR DAC Switch':1:1
-                'RX1 Digital Volume':1:68
-                'RX2 Digital Volume':1:68
-                'HPHL Volume':1:50
-                'HPHR Volume':1:50
-                'SLIM TX3 MUX':0:RMIX1
-                'SLIM TX5 MUX':0:RMIX2
         EndSequence
 
         DisableSequence
