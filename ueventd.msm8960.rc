@@ -42,3 +42,4 @@
 /dev/ttyUSB0              0660   system     system
 /dev/block/mmcblk0p8      0660   system     system
 /dev/block/mmcblk0p9      0660   system     system
+/dev/gss                  0660   gps        gps
