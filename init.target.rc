@@ -138,6 +138,11 @@ on property:ro.baseband=sglte
     mkdir /data/misc/mdmhelperdata 0700
     start mdm_helper
 
+# Start up mdm_helper if dsda2 detected
+on property:ro.baseband=dsda2
+    mkdir /data/misc/mdmhelperdata 0700
+    start mdm_helper
+
 service usf_tester /system/bin/usf_tester
     user system
     group system inet
