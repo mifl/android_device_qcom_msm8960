@@ -230,3 +230,8 @@ PRODUCT_COPY_FILES += \
 $(call inherit-product, frameworks/native/build/phone-hdpi-dalvik-heap.mk)
 
 PRODUCT_LOCALES := en_US es_US de_DE zh_CN
+
+PRODUCT_PACKAGES += \
+	ks \
+	qcks \
+	efsks
