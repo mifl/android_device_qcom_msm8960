@@ -219,7 +219,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
         debug.egl.recordable.rgba8888=1
 
 PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
-	persist.sys.usb.config=mtp
+	persist.sys.usb.config=diag
 
 # for bugmailer
 PRODUCT_PACKAGES += send_bug
@@ -230,4 +230,3 @@ PRODUCT_COPY_FILES += \
 $(call inherit-product, frameworks/native/build/phone-hdpi-dalvik-heap.mk)
 
 PRODUCT_LOCALES := en_US es_US de_DE zh_CN
-
