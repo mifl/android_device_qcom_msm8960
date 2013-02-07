@@ -22,7 +22,7 @@ debug.egl.hw=1
 debug.composition.type=dyn
 dalvik.vm.heapsize=36m
 debug.enable.wl_log=1
-debug.mdpcomp.maxlayer=4
+debug.mdpcomp.maxlayer=3
 debug.mdpcomp.logs=0
 
 #
