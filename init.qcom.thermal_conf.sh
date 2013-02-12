@@ -53,7 +53,11 @@ if [ ! -h $THERMALD_CONF_SYMLINK ]; then
      ln -s /etc/thermald-8064.conf $THERMALD_CONF_SYMLINK 2>/dev/null
      ;;
 
-     "116" | "117" | "118" | "119" | "142" | "143" | "144" | "154" | "155" | "156" | "157" | "179" | "180" | "181") #MSM8X30
+     "153") #APQ/MPQ8064ab
+     ln -s /etc/thermald-8064ab.conf $THERMALD_CONF_SYMLINK 2>/dev/null
+     ;;
+
+     "116" | "117" | "118" | "119") #MSM8930
      ln -s /etc/thermald-8930.conf $THERMALD_CONF_SYMLINK 2>/dev/null
      ;;
 
