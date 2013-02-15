@@ -1,5 +1,5 @@
 #!/system/bin/sh
-# Copyright (c) 2012, The Linux Foundation. All rights reserved.
+# Copyright (c) 2012-2013, The Linux Foundation. All rights reserved.
 #
 # Redistribution and use in source and binary forms, with or without
 # modification, are permitted provided that the following conditions are met:
@@ -36,3 +36,25 @@ if [ "$dsds" = "dsds" ]; then
     start ril-daemon
     start ril-daemon1
 fi
+
+    #To allow interfaces to get v6 address when tethering is enabled
+    echo 2 > /proc/sys/net/ipv6/conf/rmnet0/accept_ra
+    echo 2 > /proc/sys/net/ipv6/conf/rmnet1/accept_ra
+    echo 2 > /proc/sys/net/ipv6/conf/rmnet2/accept_ra
+    echo 2 > /proc/sys/net/ipv6/conf/rmnet3/accept_ra
+    echo 2 > /proc/sys/net/ipv6/conf/rmnet4/accept_ra
+    echo 2 > /proc/sys/net/ipv6/conf/rmnet5/accept_ra
+    echo 2 > /proc/sys/net/ipv6/conf/rmnet6/accept_ra
+    echo 2 > /proc/sys/net/ipv6/conf/rmnet7/accept_ra
+    echo 2 > /proc/sys/net/ipv6/conf/rmnet_sdio0/accept_ra
+    echo 2 > /proc/sys/net/ipv6/conf/rmnet_sdio1/accept_ra
+    echo 2 > /proc/sys/net/ipv6/conf/rmnet_sdio2/accept_ra
+    echo 2 > /proc/sys/net/ipv6/conf/rmnet_sdio3/accept_ra
+    echo 2 > /proc/sys/net/ipv6/conf/rmnet_sdio4/accept_ra
+    echo 2 > /proc/sys/net/ipv6/conf/rmnet_sdio5/accept_ra
+    echo 2 > /proc/sys/net/ipv6/conf/rmnet_sdio6/accept_ra
+    echo 2 > /proc/sys/net/ipv6/conf/rmnet_sdio7/accept_ra
+    echo 2 > /proc/sys/net/ipv6/conf/rmnet_usb0/accept_ra
+    echo 2 > /proc/sys/net/ipv6/conf/rmnet_usb1/accept_ra
+    echo 2 > /proc/sys/net/ipv6/conf/rmnet_usb2/accept_ra
+    echo 2 > /proc/sys/net/ipv6/conf/rmnet_usb3/accept_ra
