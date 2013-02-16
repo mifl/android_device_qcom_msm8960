@@ -49,6 +49,7 @@ PRODUCT_COPY_FILES += \
 
 PRODUCT_COPY_FILES += \
 	device/qcom/msm8960/snd_soc_msm_2x_Fusion3:system/etc/snd_soc_msm/snd_soc_msm_2x_Fusion3 \
+	device/qcom/msm8960/snd_soc_msm_2x:system/etc/snd_soc_msm/snd_soc_msm_2x \
 	device/qcom/msm8960/audio_policy.conf:system/etc/audio_policy.conf
 
 PRODUCT_COPY_FILES += \
