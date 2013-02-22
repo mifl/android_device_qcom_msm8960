@@ -121,9 +121,9 @@ ro.warmboot.capability=1
 ro.qc.sdk.audio.ssr=false
 ##fluencetype can be "fluence" or "fluencepro" or "none"
 ro.qc.sdk.audio.fluencetype=none
-ro.qc.sdk.camera.facialproc=false
+ro.qc.sdk.camera.facialproc=true
 ro.qc.sdk.gestures.camera=false
-ro.qc.sdk.sensors.gestures=false
+ro.qc.sdk.sensors.gestures=true
 #property to force camera shutter sound on speaker
 ro.camera.sound.forced=1
 
