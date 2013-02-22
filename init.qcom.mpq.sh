@@ -61,6 +61,10 @@ soc_id=`cat /sys/devices/system/soc/soc0/id`
          chown media /sys/class/gpio/gpio257/direction
          chown media /sys/class/gpio/gpio258/direction
          chown media /sys/class/gpio/gpio259/direction
+         # Enable SATA power management
+         echo auto > /sys/devices/platform/msm_sata.0/ahci.0/power/control
+         echo auto > /sys/devices/platform/msm_sata.0/ahci.0/ata1/power/control
+         echo auto > /sys/devices/platform/msm_sata.0/ahci.0/ata1/host0/target0:0:0/0:0:0:0/power/control
          echo 0 > /sys/module/rpm_resources/enable_low_power/vdd_dig
          echo 0 > /sys/module/rpm_resources/enable_low_power/vdd_mem
          hrd_plat=`cat /sys/devices/system/soc/soc0/hw_platform`
