@@ -37,7 +37,7 @@
 
     <!-- Flag indicating whether the we should enable the automatic brightness in Settings.
          Software implementation will be used if config_hardware_auto_brightness_available is not set -->
-    <bool name="config_automatic_brightness_available">true</bool>
+    <bool name="config_automatic_brightness_available">false</bool>
 
     <!-- Array of light sensor LUX values to define our levels for auto backlight brightness support.
          The N entries of this array define N  1 zones as follows:
@@ -50,7 +50,6 @@
 
          Must be overridden in platform specific overlays -->
     <integer-array name="config_autoBrightnessLevels">
-        <item>10</item>
         <item>50</item>
         <item>100</item>
         <item>200</item>
@@ -68,8 +67,7 @@
          than the size of the config_autoBrightnessLevels array.
          This must be overridden in platform specific overlays -->
     <integer-array name="config_autoBrightnessLcdBacklightValues">
-        <item>14</item>   <!-- 0-10 -->
-        <item>28</item>   <!-- 10-50 -->
+        <item>28</item>   <!-- 0-50 -->
         <item>37</item>   <!-- 50-100 -->
         <item>51</item>   <!-- 100-200 -->
         <item>71</item>   <!-- 200-400 -->
@@ -98,7 +96,6 @@
         <item>0</item>
         <item>0</item>
         <item>0</item>
-        <item>0</item>
     </integer-array>
 
     <!-- Minimum screen brightness allowed by the power manager. -->
@@ -106,11 +103,11 @@
 
     <!-- Default screen brightness setting.
          Must be in the range specified by minimum and maximum. -->
-    <integer name="config_screenBrightnessSettingDefault">87</integer>
+    <integer name="config_screenBrightnessSettingDefault">100</integer>
 
     <!-- Minimum screen brightness setting allowed by the power manager.
          The user is forbidden from setting the brightness below this level. -->
-    <integer name="config_screenBrightnessSettingMinimum">1</integer>
+    <integer name="config_screenBrightnessSettingMinimum">15</integer>
 
     <!-- The duration (in milliseconds) that the radio will scan for a signal
          when there's no network connection. If the scan doesn't timeout, use zero -->
@@ -237,7 +234,7 @@
          If the span is equal to or greater than this size, a scaling gesture
          will begin, where supported. (See android.view.ScaleGestureDetector)
 
-         This value has been tuned for the "msm8960" device. -->
+         This value has been tuned for the "mako" device. -->
     <dimen name="config_minScalingSpan">35mm</dimen>
 
     <!-- Setting this true forces the headset jack switches to use the/dev/input/event subsystem
