@@ -185,3 +185,31 @@ service time_daemon /system/bin/time_daemon
    class late_start
    user root
    group root
+
+service imsqmidaemon /system/bin/imsqmidaemon
+    class main
+    user system
+    group radio net_raw log qcom_diag
+    disabled
+
+on boot
+    start imsqmidaemon
+
+# imsdatadaemon starts with root and UID will be downgraded to SYSTEM.
+service imsdatadaemon /system/bin/imsdatadaemon
+    class main
+    user root
+    group radio net_raw log qcom_diag net_admin
+    disabled
+
+on property:sys.ims.QMI_DAEMON_STATUS=1
+    start imsdatadaemon
+
+service ims_rtp_daemon /system/bin/ims_rtp_daemon
+   class main
+   user system
+   group radio net_raw diag qcom_diag log
+   disabled
+
+on property:sys.ims.DATA_DAEMON_STATUS=1
+    start ims_rtp_daemon
