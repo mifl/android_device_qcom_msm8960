@@ -7,9 +7,6 @@ ifeq ($(TARGET_ARCH),)
 TARGET_ARCH := arm
 endif
 
-BOARD_USES_GENERIC_AUDIO := true
-USE_CAMERA_STUB := true
-
 -include vendor/qcom/proprietary/common/msm8960/BoardConfigVendor.mk
 
 TARGET_USE_HDMI_AS_PRIMARY := false
@@ -89,5 +86,3 @@ TARGET_USES_ION := true
 # in bionic
 KERNEL_HAS_GETTIMEOFDAY_HELPER := true
 
-# Compile tiny android by default
-BUILD_TINY_ANDROID := true
