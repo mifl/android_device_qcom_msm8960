@@ -294,7 +294,7 @@ service kickstart /system/bin/qcks -i /firmware/image/ -r /data/tombstones/mdm/
 
 service netmgrd /system/bin/netmgrd
     class main
-
+    disabled
 
 service sensors /system/bin/sensors.qcom
     class late_start
@@ -417,6 +417,8 @@ on property:ro.boot.baseband=mdm
     chmod 0660 /dev/block/mmcblk0p19
     start kickstart
     setprop persist.sys.usb.config diag,mdm,adb
+    setprop ro.use_data_netmgrd true
+    start netmgrd
 
 on property:ro.boot.baseband=apq
     setprop ro.radio.noril yes
