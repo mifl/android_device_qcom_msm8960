@@ -228,6 +228,11 @@ PRODUCT_COPY_FILES += \
 	system/extras/bugmailer/bugmailer.sh:system/bin/bugmailer.sh \
 	system/extras/bugmailer/send_bug:system/bin/send_bug
 
+# for wfd
+PRODUCT_PROPERTY_OVERRIDES += \
+	persist.debug.wfd.enable=1 \
+	persisst.sys.wfd.virtual=0
+
 $(call inherit-product, frameworks/native/build/tablet-7in-hdpi-1024-dalvik-heap.mk)
 
 PRODUCT_LOCALES := en_US es_US de_DE zh_CN
