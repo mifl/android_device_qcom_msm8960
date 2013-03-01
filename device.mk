@@ -166,7 +166,8 @@ PRODUCT_PACKAGES += \
 	power.msm8960
 
 PRODUCT_COPY_FILES += \
-	device/qcom/msm8960/init.msm8960.bt.sh:system/etc/init.msm8960.bt.sh
+	device/qcom/msm8960/init.msm8960.bt.sh:system/etc/init.msm8960.bt.sh \
+	device/qcom/msm8960/init.qcom.post_boot.sh:system/etc/init.qcom.post_boot.sh
 
 PRODUCT_PROPERTY_OVERRIDES += \
 	ro.qualcomm.bt.hci_transport=smd
