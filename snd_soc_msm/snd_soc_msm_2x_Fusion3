@@ -1685,7 +1685,7 @@ SectionVerb
 	EndSequence
 
 	DisableSequence
-		'Internal BTSCO SampleRate':1:8000
+		'SLIM_1 SampleRate':1:8000
 		'Voice Stub Tx Mixer INTERNAL_BT_SCO_TX':1:0
 		'SLIMBUS_1_RX Mixer Voice Stub':1:0
 		'Voice Stub Tx Mixer SLIM_1_TX':1:0
@@ -1706,7 +1706,8 @@ SectionVerb
 	Name "Voice CallBT SCO Tx"
 
 	EnableSequence
-		'Internal BTSCO SampleRate':1:8000
+		'SLIM_1 SampleRate':1:8000
+		'SLIM_1_TX Channels':0:One
 		'Voice Stub Tx Mixer INTERNAL_BT_SCO_TX':1:1
 		'SLIMBUS_1_RX Mixer Voice Stub':1:1
 		'Voice Stub Tx Mixer SLIM_1_TX':1:1
@@ -1734,7 +1735,7 @@ SectionVerb
 	EndSequence
 
 	DisableSequence
-		'Internal BTSCO SampleRate':1:8000
+		'SLIM_1 SampleRate':1:8000
 		'Voice Stub Tx Mixer INTERNAL_BT_SCO_TX':1:0
 		'SLIMBUS_1_RX Mixer Voice Stub':1:0
 		'Voice Stub Tx Mixer SLIM_1_TX':1:0
@@ -1755,7 +1756,8 @@ SectionVerb
 	Name "Voice CallBT SCO WB Tx"
 
 	EnableSequence
-		'Internal BTSCO SampleRate':1:16000
+		'SLIM_1 SampleRate':1:16000
+		'SLIM_1_TX Channels':0:One
 		'Voice Stub Tx Mixer INTERNAL_BT_SCO_TX':1:1
 		'SLIMBUS_1_RX Mixer Voice Stub':1:1
 		'Voice Stub Tx Mixer SLIM_1_TX':1:1
@@ -1783,12 +1785,15 @@ SectionVerb
 	EndSequence
 
 	DisableSequence
+		'SLIM_1 SampleRate':1:8000
+		'SLIM_1_TX Channels':0:One
                 'Voice Stub Tx Mixer AFE_PCM_TX':1:0
                 'SLIMBUS_1_RX Mixer Voice Stub':1:0
                 'Voice Stub Tx Mixer SLIM_1_TX':1:0
                 'AFE_PCM_RX_Voice Mixer Voice Stub':1:0
                 'SLIMBUS_1_RX Port Mixer AFE_PCM_TX':1:0
                 'AFE_PCM_RX Port Mixer SLIM_1_TX':1:0
+		'SLIM_3_RX Channels':0:One
                 'SLIMBUS_3_RX_Voice Mixer Voice Stub':1:0
                 'SLIMBUS_3_RX Port Mixer AFE_PCM_RX':1:0
 	EndSequence
@@ -1803,12 +1808,15 @@ SectionVerb
 	Name "Voice CallUSB PROXY Tx"
 
 	EnableSequence
+		'SLIM_1 SampleRate':1:48000
+		'SLIM_1_TX Channels':0:Two
                 'Voice Stub Tx Mixer AFE_PCM_TX':1:1
                 'SLIMBUS_1_RX Mixer Voice Stub':1:1
                 'Voice Stub Tx Mixer SLIM_1_TX':1:1
                 'AFE_PCM_RX_Voice Mixer Voice Stub':1:1
                 'SLIMBUS_1_RX Port Mixer AFE_PCM_TX':1:1
                 'AFE_PCM_RX Port Mixer SLIM_1_TX':1:1
+		'SLIM_3_RX Channels':0:Two
                 'SLIMBUS_3_RX_Voice Mixer Voice Stub':1:1
                 'SLIMBUS_3_RX Port Mixer AFE_PCM_RX':1:1
 	EndSequence
@@ -4666,7 +4674,7 @@ SectionDevice
 	DisableSequence
 	EndSequence
 
-	ACDBID	22:1
+	ACDBID	45:1
 	EffectsMixerCTL "SRS TruMedia"
 
 EndSection
@@ -4681,7 +4689,7 @@ SectionDevice
 	DisableSequence
 	EndSequence
 
-	ACDBID	21:2
+	ACDBID	44:2
 	EffectsMixerCTL "SRS TruMedia"
 
 EndSection
@@ -5938,7 +5946,7 @@ SectionModifier
 	EndSequence
 
 	DisableSequence
-		'Internal BTSCO SampleRate':1:8000
+		'SLIM_1 SampleRate':1:8000
 		'Voice Stub Tx Mixer INTERNAL_BT_SCO_TX':1:0
 		'SLIMBUS_1_RX Mixer Voice Stub':1:0
 		'Voice Stub Tx Mixer SLIM_1_TX':1:0
@@ -5959,7 +5967,8 @@ SectionModifier
 	Name "Play VoiceBT SCO Tx"
 
 	EnableSequence
-		'Internal BTSCO SampleRate':1:8000
+		'SLIM_1 SampleRate':1:8000
+		'SLIM_1_TX Channels':0:One
 		'Voice Stub Tx Mixer INTERNAL_BT_SCO_TX':1:1
 		'SLIMBUS_1_RX Mixer Voice Stub':1:1
 		'Voice Stub Tx Mixer SLIM_1_TX':1:1
@@ -5987,7 +5996,7 @@ SectionModifier
 	EndSequence
 
 	DisableSequence
-		'Internal BTSCO SampleRate':1:8000
+		'SLIM_1 SampleRate':1:8000
 		'Voice Stub Tx Mixer INTERNAL_BT_SCO_TX':1:0
 		'SLIMBUS_1_RX Mixer Voice Stub':1:0
 		'Voice Stub Tx Mixer SLIM_1_TX':1:0
@@ -6008,7 +6017,8 @@ SectionModifier
 	Name "Play VoiceBT SCO WB Tx"
 
 	EnableSequence
-		'Internal BTSCO SampleRate':1:16000
+		'SLIM_1 SampleRate':1:16000
+		'SLIM_1_TX Channels':0:One
 		'Voice Stub Tx Mixer INTERNAL_BT_SCO_TX':1:1
 		'SLIMBUS_1_RX Mixer Voice Stub':1:1
 		'Voice Stub Tx Mixer SLIM_1_TX':1:1
@@ -6036,12 +6046,15 @@ SectionModifier
 	EndSequence
 
 	DisableSequence
+		'SLIM_1 SampleRate':1:8000
+		'SLIM_1_TX Channels':0:One
                 'Voice Stub Tx Mixer AFE_PCM_TX':1:0
                 'SLIMBUS_1_RX Mixer Voice Stub':1:0
                 'Voice Stub Tx Mixer SLIM_1_TX':1:0
                 'AFE_PCM_RX_Voice Mixer Voice Stub':1:0
                 'SLIMBUS_1_RX Port Mixer AFE_PCM_TX':1:0
                 'AFE_PCM_RX Port Mixer SLIM_1_TX':1:0
+		'SLIM_3_RX Channels':0:One
                 'SLIMBUS_3_RX_Voice Mixer Voice Stub':1:0
                 'SLIMBUS_3_RX Port Mixer AFE_PCM_RX':1:0
 	EndSequence
@@ -6056,12 +6069,15 @@ SectionModifier
 	Name "Play VoiceUSB PROXY Tx"
 
 	EnableSequence
+		'SLIM_1 SampleRate':1:48000
+		'SLIM_1_TX Channels':0:Two
 		'Voice Stub Tx Mixer AFE_PCM_TX':1:1
                 'SLIMBUS_1_RX Mixer Voice Stub':1:1
                 'Voice Stub Tx Mixer SLIM_1_TX':1:1
                 'AFE_PCM_RX_Voice Mixer Voice Stub':1:1
                 'SLIMBUS_1_RX Port Mixer AFE_PCM_TX':1:1
                 'AFE_PCM_RX Port Mixer SLIM_1_TX':1:1
+		'SLIM_3_RX Channels':0:Two
                 'SLIMBUS_3_RX_Voice Mixer Voice Stub':1:1
                 'SLIMBUS_3_RX Port Mixer AFE_PCM_RX':1:1
 	EndSequence
