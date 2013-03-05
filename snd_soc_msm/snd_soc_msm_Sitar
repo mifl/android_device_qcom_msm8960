@@ -2696,6 +2696,40 @@ SectionVerb
 	capturePCM 12
 
 EndSection
+
+SectionVerb
+        Name "VoLTEUSB PROXY Rx"
+
+        EnableSequence
+        EndSequence
+
+        DisableSequence
+                'AFE_PCM_RX_Voice Mixer VoLTE':1:0
+                'VoLTE_Tx Mixer AFE_PCM_TX_VoLTE':1:0
+        EndSequence
+
+        # ALSA PCMs
+        PlaybackPCM 12
+        CapturePCM 12
+
+EndSection
+
+SectionVerb
+        Name "VoLTEUSB PROXY Tx"
+
+        EnableSequence
+                'AFE_PCM_RX_Voice Mixer VoLTE':1:1
+                'VoLTE_Tx Mixer AFE_PCM_TX_VoLTE':1:1
+        EndSequence
+
+        DisableSequence
+        EndSequence
+
+        # ALSA PCMs
+        PlaybackPCM 12
+        CapturePCM 12
+
+EndSection
 }
 
 SectionDevice
@@ -6288,6 +6322,40 @@ SectionModifier
 	# ALSA PCMs
 	PlaybackPCM 12
 	capturePCM 12
+
+EndSection
+
+SectionModifier
+        Name "Play VoLTEUSB PROXY Rx"
+
+        EnableSequence
+        EndSequence
+
+        DisableSequence
+                'AFE_PCM_RX_Voice Mixer VoLTE':1:0
+                'VoLTE_Tx Mixer AFE_PCM_TX_VoLTE':1:0
+        EndSequence
+
+        # ALSA PCMs
+        PlaybackPCM 12
+        CapturePCM 12
+
+EndSection
+
+SectionModifier
+        Name "Play VoLTEUSB PROXY Tx"
+
+        EnableSequence
+                'AFE_PCM_RX_Voice Mixer VoLTE':1:1
+                'VoLTE_Tx Mixer AFE_PCM_TX_VoLTE':1:1
+        EndSequence
+
+        DisableSequence
+        EndSequence
+
+        # ALSA PCMs
+        PlaybackPCM 12
+        CapturePCM 12
 
 EndSection
 
