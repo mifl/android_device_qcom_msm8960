@@ -36,4 +36,3 @@ QCOM_BOARD_PLATFORMS := msm8960
 $(call inherit-product, device/qcom/msm8960/device.mk)
 $(call inherit-product-if-exists, vendor/qcom/msm8960/device-vendor.mk)
 $(call inherit-product-if-exists, vendor/qcom/proprietary/common/config/device-vendor.mk)
-$(call inherit-product-if-exists, vendor/widevine/proprietary/Android.mk)
