@@ -26,7 +26,7 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 PRODUCT_NAME := msm8960
 PRODUCT_DEVICE := msm8960
 PRODUCT_BRAND := Android
-PRODUCT_MODEL := Full JellyBean
+PRODUCT_MODEL := msm8960
 PRODUCT_MANUFACTURER := Qualcomm
 #PRODUCT_RESTRICT_VENDOR_FILES := true
 
