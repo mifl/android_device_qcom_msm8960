@@ -125,8 +125,8 @@ service qrngd /system/bin/qrngd -f
 
 service qseecomd /system/bin/qseecomd
    class late_start
-   user system
-   group system
+   user root
+   group root
 
 # Start kickstart if mdm is detected
 on property:ro.baseband=mdm
