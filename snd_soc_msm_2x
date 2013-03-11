@@ -1865,24 +1865,38 @@ SectionDevice
 	Comment "Speaker Rx device"
 
 	EnableSequence
-		'SLIM_0_RX Channels':0:One
+		'SLIM_0_RX Channels':0:Two
 		'RX3 MIX1 INP1':0:RX1
 		'RX3 MIX1 INP2':0:RX6
+		'RX5 MIX1 INP1':0:RX2
+		'RX5 MIX1 INP2':0:RX7
 		'RX4 DSM MUX':0:DSM_INV
+		'RX6 DSM MUX':0:DSM_INV
 		'RX3 Digital Volume':1:68
+		'RX5 Digital Volume':1:68
 		'LINEOUT1 Volume':1:100
+		'LINEOUT2 Volume':1:100
 		'LINEOUT3 Volume':1:100
+		'LINEOUT4 Volume':1:100
 		'SLIM TX3 MUX':0:RMIX3
+		'SLIM TX5 MUX':0:RMIX5
 	EndSequence
 
 	DisableSequence
 		'RX3 MIX1 INP1':0:ZERO
 		'RX3 MIX1 INP2':0:ZERO
+		'RX5 MIX1 INP1':0:ZERO
+		'RX5 MIX1 INP2':0:ZERO
 		'RX4 DSM MUX':0:CIC_OUT
+		'RX6 DSM MUX':0:CIC_OUT
 		'RX3 Digital Volume':1:68
+		'RX5 Digital Volume':1:68
 		'LINEOUT1 Volume':1:0
+		'LINEOUT2 Volume':1:0
 		'LINEOUT3 Volume':1:0
+		'LINEOUT4 Volume':1:0
 		'SLIM TX3 MUX':0:ZERO
+		'SLIM TX5 MUX':0:ZERO
 	EndSequence
 
 	ACDBID	14:1
@@ -1895,24 +1909,38 @@ SectionDevice
 	Comment "Speaker for voice call"
 
 	EnableSequence
-		'SLIM_0_RX Channels':0:One
+		'SLIM_0_RX Channels':0:Two
 		'RX3 MIX1 INP1':0:RX1
 		'RX3 MIX1 INP2':0:RX6
+		'RX5 MIX1 INP1':0:RX2
+		'RX5 MIX1 INP2':0:RX7
 		'RX4 DSM MUX':0:DSM_INV
+		'RX6 DSM MUX':0:DSM_INV
 		'RX3 Digital Volume':1:68
+		'RX5 Digital Volume':1:68
 		'LINEOUT1 Volume':1:100
+		'LINEOUT2 Volume':1:100
 		'LINEOUT3 Volume':1:100
+		'LINEOUT4 Volume':1:100
 		'SLIM TX3 MUX':0:RMIX3
+		'SLIM TX5 MUX':0:RMIX5
 	EndSequence
 
 	DisableSequence
 		'RX3 MIX1 INP1':0:ZERO
 		'RX3 MIX1 INP2':0:ZERO
+		'RX5 MIX1 INP1':0:ZERO
+		'RX5 MIX1 INP2':0:ZERO
 		'RX4 DSM MUX':0:CIC_OUT
+		'RX6 DSM MUX':0:CIC_OUT
 		'RX3 Digital Volume':1:68
+		'RX5 Digital Volume':1:68
 		'LINEOUT1 Volume':1:0
+		'LINEOUT2 Volume':1:0
 		'LINEOUT3 Volume':1:0
+		'LINEOUT4 Volume':1:0
 		'SLIM TX3 MUX':0:ZERO
+		'SLIM TX5 MUX':0:ZERO
 	EndSequence
 
 	ACDBID	14:1
@@ -2011,8 +2039,11 @@ SectionDevice
 		'RX4 DSM MUX':0:DSM_INV
 		'RX6 DSM MUX':0:DSM_INV
 		'RX3 Digital Volume':1:68
+		'RX5 Digital Volume':1:68
 		'LINEOUT1 Volume':1:66
+		'LINEOUT2 Volume':1:66
 		'LINEOUT3 Volume':1:66
+		'LINEOUT4 Volume':1:66
 		'RX1 MIX1 INP1':0:RX1
 		'RX1 MIX1 INP2':0:RX6
 		'RX2 MIX1 INP1':0:RX2
@@ -2035,8 +2066,11 @@ SectionDevice
 		'RX4 DSM MUX':0:CIC_OUT
 		'RX6 DSM MUX':0:CIC_OUT
 		'RX3 Digital Volume':1:68
+		'RX5 Digital Volume':1:68
 		'LINEOUT1 Volume':1:0
+		'LINEOUT2 Volume':1:0
 		'LINEOUT3 Volume':1:0
+		'LINEOUT4 Volume':1:0
 		'RX1 MIX1 INP1':0:ZERO
 		'RX1 MIX1 INP2':0:ZERO
 		'RX2 MIX1 INP1':0:ZERO
@@ -2924,24 +2958,38 @@ SectionDevice
         Comment "HDMI Speaker Rx device"
 
         EnableSequence
-                'SLIM_0_RX Channels':0:One
-                'RX3 MIX1 INP1':0:RX1
-                'RX3 MIX1 INP2':0:RX6
-                'RX4 DSM MUX':0:DSM_INV
-                'RX3 Digital Volume':1:68
-                'LINEOUT1 Volume':1:100
-                'LINEOUT3 Volume':1:100
-                'SLIM TX3 MUX':0:RMIX3
+		'SLIM_0_RX Channels':0:Two
+		'RX3 MIX1 INP1':0:RX1
+		'RX3 MIX1 INP2':0:RX6
+		'RX5 MIX1 INP1':0:RX2
+		'RX5 MIX1 INP2':0:RX7
+		'RX4 DSM MUX':0:DSM_INV
+		'RX6 DSM MUX':0:DSM_INV
+		'RX3 Digital Volume':1:68
+		'RX5 Digital Volume':1:68
+		'LINEOUT1 Volume':1:100
+		'LINEOUT2 Volume':1:100
+		'LINEOUT3 Volume':1:100
+		'LINEOUT4 Volume':1:100
+		'SLIM TX3 MUX':0:RMIX3
+		'SLIM TX5 MUX':0:RMIX5
         EndSequence
 
         DisableSequence
-                'RX3 MIX1 INP1':0:ZERO
-                'RX3 MIX1 INP2':0:ZERO
-                'RX4 DSM MUX':0:CIC_OUT
-                'RX3 Digital Volume':1:68
-                'LINEOUT1 Volume':1:0
-                'LINEOUT3 Volume':1:0
-                'SLIM TX3 MUX':0:ZERO
+		'RX3 MIX1 INP1':0:ZERO
+		'RX3 MIX1 INP2':0:ZERO
+		'RX5 MIX1 INP1':0:ZERO
+		'RX5 MIX1 INP2':0:ZERO
+		'RX4 DSM MUX':0:CIC_OUT
+		'RX6 DSM MUX':0:CIC_OUT
+		'RX3 Digital Volume':1:68
+		'RX5 Digital Volume':1:68
+		'LINEOUT1 Volume':1:0
+		'LINEOUT2 Volume':1:0
+		'LINEOUT3 Volume':1:0
+		'LINEOUT4 Volume':1:0
+		'SLIM TX3 MUX':0:ZERO
+		'SLIM TX5 MUX':0:ZERO
         EndSequence
 
         ACDBID  14:1
