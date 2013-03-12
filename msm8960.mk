@@ -12,6 +12,21 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
     system/bluetooth/data/main.le.conf:system/etc/bluetooth/main.conf \
 
+# Audio configuration file
+PRODUCT_COPY_FILES += \
+    device/qcom/msm8960/audio_policy.conf:system/etc/audio_policy.conf \
+
+# audio UCM files
+PRODUCT_COPY_FILES += device/qcom/msm8960/snd_soc_msm/snd_soc_msm_2x:system/etc/snd_soc_msm/snd_soc_msm_2x \
+                      device/qcom/msm8960/snd_soc_msm/snd_soc_msm_2x_Fusion3:system/etc/snd_soc_msm/snd_soc_msm_2x_Fusion3 \
+                      device/qcom/msm8960/snd_soc_msm/snd_soc_msm_2x_Fusion3_auxpcm:system/etc/snd_soc_msm/snd_soc_msm_2x_Fusion3_auxpcm \
+                      device/qcom/msm8960/snd_soc_msm/snd_soc_msm_2x_auxpcm:system/etc/snd_soc_msm/snd_soc_msm_2x_auxpcm \
+                      device/qcom/msm8960/snd_soc_msm/snd_soc_msm_I2S:system/etc/snd_soc_msm/snd_soc_msm_I2S \
+                      device/qcom/msm8960/snd_soc_msm/snd_soc_msm_I2SFusion:system/etc/snd_soc_msm/snd_soc_msm_I2SFusion \
+                      device/qcom/msm8960/snd_soc_msm/snd_soc_msm_Sitar:system/etc/snd_soc_msm/snd_soc_msm_Sitar \
+                      device/qcom/msm8960/snd_soc_msm/snd_soc_msm_Sitar_auxpcm:system/etc/snd_soc_msm/snd_soc_msm_Sitar_auxpcm \
+                      device/qcom/msm8960/snd_soc_msm/snd_soc_msm_auxpcm:system/etc/snd_soc_msm/snd_soc_msm_auxpcm \
+
 PRODUCT_PACKAGES += \
     battery_monitor \
     battery_shutdown
