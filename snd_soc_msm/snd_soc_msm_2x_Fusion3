@@ -1975,6 +1975,211 @@ SectionVerb
 
 EndSection
 }
+SectionUseCase."VoLTE" {
+Comment "VoLTE use case"
+SectionVerb
+	Name "VoLTE"
+
+	EnableSequence
+		'STUB_RX Mixer VoLTE Stub':1:1
+		'VoLTE Stub Tx Mixer STUB_TX_HL':1:1
+		'VoLTE Stub Tx Mixer STUB_1_TX_HL':1:1
+	EndSequence
+
+	DisableSequence
+		'STUB_RX Mixer VoLTE Stub':1:0
+		'VoLTE Stub Tx Mixer STUB_TX_HL':1:0
+		'VoLTE Stub Tx Mixer STUB_1_TX_HL':1:0
+	EndSequence
+
+	# ALSA PCMs
+	PlaybackPCM 13
+	CapturePCM 13
+
+EndSection
+
+SectionVerb
+	Name "VoLTEHDMI"
+
+	EnableSequence
+	EndSequence
+
+	DisableSequence
+		'VoLTE Stub Tx Mixer SLIM_3_TX':1:0
+		'HDMI_RX_Voice Mixer VoLTE Stub':1:0
+		'HDMI_RX Port Mixer SLIM_3_TX':1:0
+		'VoLTE Stub Tx Mixer STUB_TX_HL':1:0
+	EndSequence
+
+	# ALSA PCMs
+	PlaybackPCM 13
+	CapturePCM 13
+
+EndSection
+
+SectionVerb
+	Name "VoLTEHDMI Tx"
+
+	EnableSequence
+		'VoLTE Stub Tx Mixer SLIM_3_TX':1:1
+		'HDMI_RX_Voice Mixer VoLTE Stub':1:1
+		'HDMI_RX Port Mixer SLIM_3_TX':1:1
+		'VoLTE Stub Tx Mixer STUB_TX_HL':1:1
+	EndSequence
+
+	DisableSequence
+	EndSequence
+
+	# ALSA PCMs
+	PlaybackPCM 13
+	CapturePCM 13
+
+EndSection
+
+SectionVerb
+	Name "VoLTEBT SCO Rx"
+
+	EnableSequence
+	EndSequence
+
+	DisableSequence
+		'Internal BTSCO SampleRate':1:8000
+		'VoLTE Stub Tx Mixer INTERNAL_BT_SCO_TX':1:0
+		'SLIMBUS_1_RX Mixer VoLTE Stub':1:0
+		'VoLTE Stub Tx Mixer SLIM_1_TX':1:0
+		'INTERNAL_BT_SCO_RX_Voice Mixer VoLTE Stub':1:0
+		'SLIMBUS_1_RX Port Mixer INTERNAL_BT_SCO_TX':1:0
+		'INTERNAL_BT_SCO_RX Port Mixer SLIM_1_TX':1:0
+		'SLIMBUS_3_RX_Voice Mixer VoLTE Stub':1:0
+		'SLIMBUS_3_RX Port Mixer INTERNAL_BT_SCO_RX':1:0
+	EndSequence
+
+	# ALSA PCMs
+	PlaybackPCM 13
+	CapturePCM 13
+
+EndSection
+
+SectionVerb
+	Name "VoLTEBT SCO Tx"
+
+	EnableSequence
+		'Internal BTSCO SampleRate':1:8000
+		'VoLTE Stub Tx Mixer INTERNAL_BT_SCO_TX':1:1
+		'SLIMBUS_1_RX Mixer VoLTE Stub':1:1
+		'VoLTE Stub Tx Mixer SLIM_1_TX':1:1
+		'INTERNAL_BT_SCO_RX_Voice Mixer VoLTE Stub':1:1
+		'SLIMBUS_1_RX Port Mixer INTERNAL_BT_SCO_TX':1:1
+		'INTERNAL_BT_SCO_RX Port Mixer SLIM_1_TX':1:1
+		'SLIM_3_RX Channels':0:One
+		'SLIMBUS_3_RX_Voice Mixer VoLTE Stub':1:1
+		'SLIMBUS_3_RX Port Mixer INTERNAL_BT_SCO_RX':1:1
+	EndSequence
+
+	DisableSequence
+	EndSequence
+
+	# ALSA PCMs
+	PlaybackPCM 13
+	CapturePCM 13
+
+EndSection
+
+SectionVerb
+	Name "VoLTEBT SCO WB Rx"
+
+	EnableSequence
+	EndSequence
+
+	DisableSequence
+		'Internal BTSCO SampleRate':1:8000
+		'VoLTE Stub Tx Mixer INTERNAL_BT_SCO_TX':1:0
+		'SLIMBUS_1_RX Mixer VoLTE Stub':1:0
+		'VoLTE Stub Tx Mixer SLIM_1_TX':1:0
+		'INTERNAL_BT_SCO_RX_Voice Mixer VoLTE Stub':1:0
+		'SLIMBUS_1_RX Port Mixer INTERNAL_BT_SCO_TX':1:0
+		'INTERNAL_BT_SCO_RX Port Mixer SLIM_1_TX':1:0
+		'SLIMBUS_3_RX_Voice Mixer VoLTE Stub':1:0
+		'SLIMBUS_3_RX Port Mixer INTERNAL_BT_SCO_RX':1:0
+	EndSequence
+
+	# ALSA PCMs
+	PlaybackPCM 13
+	CapturePCM 13
+
+EndSection
+
+SectionVerb
+	Name "VoLTEBT SCO WB Tx"
+
+	EnableSequence
+		'Internal BTSCO SampleRate':1:16000
+		'VoLTE Stub Tx Mixer INTERNAL_BT_SCO_TX':1:1
+		'SLIMBUS_1_RX Mixer VoLTE Stub':1:1
+		'VoLTE Stub Tx Mixer SLIM_1_TX':1:1
+		'INTERNAL_BT_SCO_RX_Voice Mixer VoLTE Stub':1:1
+		'SLIMBUS_1_RX Port Mixer INTERNAL_BT_SCO_TX':1:1
+		'INTERNAL_BT_SCO_RX Port Mixer SLIM_1_TX':1:1
+		'SLIM_3_RX Channels':0:One
+		'SLIMBUS_3_RX_Voice Mixer VoLTE Stub':1:1
+		'SLIMBUS_3_RX Port Mixer INTERNAL_BT_SCO_RX':1:1
+	EndSequence
+
+	DisableSequence
+	EndSequence
+
+	# ALSA PCMs
+	PlaybackPCM 13
+	CapturePCM 13
+
+EndSection
+
+SectionVerb
+	Name "VoLTEUSB PROXY Rx"
+
+	EnableSequence
+	EndSequence
+
+	DisableSequence
+		'VoLTE Stub Tx Mixer AFE_PCM_TX':1:0
+		'SLIMBUS_1_RX Mixer VoLTE Stub':1:0
+		'VoLTE Stub Tx Mixer SLIM_1_TX':1:0
+		'AFE_PCM_RX_Voice Mixer VoLTE Stub':1:0
+		'SLIMBUS_1_RX Port Mixer AFE_PCM_TX':1:0
+		'AFE_PCM_RX Port Mixer SLIM_1_TX':1:0
+		'SLIMBUS_3_RX_Voice Mixer VoLTE Stub':1:0
+		'SLIMBUS_3_RX Port Mixer AFE_PCM_RX':1:0
+	EndSequence
+
+	# ALSA PCMs
+	PlaybackPCM 13
+	CapturePCM 13
+
+EndSection
+
+SectionVerb
+	Name "VoLTEUSB PROXY Tx"
+
+	EnableSequence
+		'VoLTE Stub Tx Mixer AFE_PCM_TX':1:1
+		'SLIMBUS_1_RX Mixer VoLTE Stub':1:1
+		'VoLTE Stub Tx Mixer SLIM_1_TX':1:1
+		'AFE_PCM_RX_Voice Mixer VoLTE Stub':1:1
+		'SLIMBUS_1_RX Port Mixer AFE_PCM_TX':1:1
+		'AFE_PCM_RX Port Mixer SLIM_1_TX':1:1
+		'SLIMBUS_3_RX_Voice Mixer VoLTE Stub':1:1
+		'SLIMBUS_3_RX Port Mixer AFE_PCM_RX':1:1
+	EndSequence
+
+	DisableSequence
+	EndSequence
+
+	# ALSA PCMs
+	PlaybackPCM 13
+	CapturePCM 13
+
+EndSection
+}
 SectionUseCase."FM Digital Radio" {
 Comment "FM Radio use case"
 SectionVerb
@@ -7311,4 +7516,246 @@ SectionModifier
         PlaybackPCM 9
 
 EndSection
+
+SectionModifier
+	Name "Play VoLTE"
+
+	EnableSequence
+		'STUB_RX Mixer VoLTE Stub':1:1
+		'VoLTE Stub Tx Mixer STUB_TX_HL':1:1
+		'VoLTE Stub Tx Mixer STUB_1_TX_HL':1:1
+	EndSequence
+
+	DisableSequence
+		'STUB_RX Mixer VoLTE Stub':1:0
+		'VoLTE Stub Tx Mixer STUB_TX_HL':1:0
+		'VoLTE Stub Tx Mixer STUB_1_TX_HL':1:0
+	EndSequence
+
+	# ALSA PCMs
+	PlaybackPCM 13
+	CapturePCM 13
+
+EndSection
+
+SectionModifier
+	Name "Play VoLTEHDMI"
+
+	EnableSequence
+	EndSequence
+
+	DisableSequence
+		'VoLTE Stub Tx Mixer SLIM_3_TX':1:0
+		'HDMI_RX_Voice Mixer VoLTE Stub':1:0
+		'HDMI_RX Port Mixer SLIM_3_TX':1:0
+		'VoLTE Stub Tx Mixer STUB_TX_HL':1:0
+	EndSequence
+
+	# ALSA PCMs
+	PlaybackPCM 13
+	CapturePCM 13
+
+EndSection
+
+SectionModifier
+	Name "Play VoLTEHDMI Tx"
+
+	EnableSequence
+		'VoLTE Stub Tx Mixer SLIM_3_TX':1:1
+		'HDMI_RX_Voice Mixer VoLTE Stub':1:1
+		'HDMI_RX Port Mixer SLIM_3_TX':1:1
+		'VoLTE Stub Tx Mixer STUB_TX_HL':1:1
+	EndSequence
+
+	DisableSequence
+	EndSequence
+
+	# ALSA PCMs
+	PlaybackPCM 13
+	CapturePCM 13
+
+EndSection
+
+SectionModifier
+	Name "Play VoLTEHDMI"
+
+	EnableSequence
+	EndSequence
+
+	DisableSequence
+		'VoLTE Stub Tx Mixer SLIM_3_TX':1:0
+		'HDMI_RX_Voice Mixer VoLTE Stub':1:0
+		'HDMI_RX Port Mixer SLIM_3_TX':1:0
+		'VoLTE Stub Tx Mixer STUB_TX_HL':1:0
+	EndSequence
+
+	# ALSA PCMs
+	PlaybackPCM 13
+	CapturePCM 13
+
+EndSection
+
+SectionModifier
+	Name "Play VoLTEHDMI Tx"
+
+	EnableSequence
+		'VoLTE Stub Tx Mixer SLIM_3_TX':1:1
+		'HDMI_RX_Voice Mixer VoLTE Stub':1:1
+		'HDMI_RX Port Mixer SLIM_3_TX':1:1
+		'VoLTE Stub Tx Mixer STUB_TX_HL':1:1
+	EndSequence
+
+	DisableSequence
+	EndSequence
+
+	# ALSA PCMs
+	PlaybackPCM 13
+	CapturePCM 13
+
+EndSection
+
+SectionModifier
+	Name "Play VoLTEBT SCO Rx"
+
+	EnableSequence
+	EndSequence
+
+	DisableSequence
+		'Internal BTSCO SampleRate':1:8000
+		'VoLTE Stub Tx Mixer INTERNAL_BT_SCO_TX':1:0
+		'SLIMBUS_1_RX Mixer VoLTE Stub':1:0
+		'VoLTE Stub Tx Mixer SLIM_1_TX':1:0
+		'INTERNAL_BT_SCO_RX_Voice Mixer VoLTE Stub':1:0
+		'SLIMBUS_1_RX Port Mixer INTERNAL_BT_SCO_TX':1:0
+		'INTERNAL_BT_SCO_RX Port Mixer SLIM_1_TX':1:0
+		'SLIMBUS_3_RX_Voice Mixer VoLTE Stub':1:0
+		'SLIMBUS_3_RX Port Mixer INTERNAL_BT_SCO_RX':1:0
+	EndSequence
+
+	# ALSA PCMs
+	PlaybackPCM 13
+	CapturePCM 13
+
+EndSection
+
+SectionModifier
+	Name "Play VoLTEBT SCO Tx"
+
+	EnableSequence
+		'Internal BTSCO SampleRate':1:8000
+		'VoLTE Stub Tx Mixer INTERNAL_BT_SCO_TX':1:1
+		'SLIMBUS_1_RX Mixer VoLTE Stub':1:1
+		'VoLTE Stub Tx Mixer SLIM_1_TX':1:1
+		'INTERNAL_BT_SCO_RX_Voice Mixer VoLTE Stub':1:1
+		'SLIMBUS_1_RX Port Mixer INTERNAL_BT_SCO_TX':1:1
+		'INTERNAL_BT_SCO_RX Port Mixer SLIM_1_TX':1:1
+		'SLIM_3_RX Channels':0:One
+		'SLIMBUS_3_RX_Voice Mixer VoLTE Stub':1:1
+		'SLIMBUS_3_RX Port Mixer INTERNAL_BT_SCO_RX':1:1
+	EndSequence
+
+	DisableSequence
+	EndSequence
+
+	# ALSA PCMs
+	PlaybackPCM 13
+	CapturePCM 13
+
+EndSection
+
+SectionModifier
+	Name "Play VoLTEBT SCO WB Rx"
+
+	EnableSequence
+	EndSequence
+
+	DisableSequence
+		'Internal BTSCO SampleRate':1:8000
+		'VoLTE Stub Tx Mixer INTERNAL_BT_SCO_TX':1:0
+		'SLIMBUS_1_RX Mixer VoLTE Stub':1:0
+		'VoLTE Stub Tx Mixer SLIM_1_TX':1:0
+		'INTERNAL_BT_SCO_RX_Voice Mixer VoLTE Stub':1:0
+		'SLIMBUS_1_RX Port Mixer INTERNAL_BT_SCO_TX':1:0
+		'INTERNAL_BT_SCO_RX Port Mixer SLIM_1_TX':1:0
+		'SLIMBUS_3_RX_Voice Mixer VoLTE Stub':1:0
+		'SLIMBUS_3_RX Port Mixer INTERNAL_BT_SCO_RX':1:0
+	EndSequence
+
+	# ALSA PCMs
+	PlaybackPCM 13
+	CapturePCM 13
+
+EndSection
+
+SectionModifier
+	Name "Play VoLTEBT SCO WB Tx"
+
+	EnableSequence
+		'Internal BTSCO SampleRate':1:16000
+		'VoLTE Stub Tx Mixer INTERNAL_BT_SCO_TX':1:1
+		'SLIMBUS_1_RX Mixer VoLTE Stub':1:1
+		'VoLTE Stub Tx Mixer SLIM_1_TX':1:1
+		'INTERNAL_BT_SCO_RX_Voice Mixer VoLTE Stub':1:1
+		'SLIMBUS_1_RX Port Mixer INTERNAL_BT_SCO_TX':1:1
+		'INTERNAL_BT_SCO_RX Port Mixer SLIM_1_TX':1:1
+		'SLIM_3_RX Channels':0:One
+		'SLIMBUS_3_RX_Voice Mixer VoLTE Stub':1:1
+		'SLIMBUS_3_RX Port Mixer INTERNAL_BT_SCO_RX':1:1
+	EndSequence
+
+	DisableSequence
+	EndSequence
+
+	# ALSA PCMs
+	PlaybackPCM 13
+	CapturePCM 13
+
+EndSection
+
+SectionModifier
+	Name "Play VoLTEUSB PROXY Rx"
+
+	EnableSequence
+	EndSequence
+
+	DisableSequence
+		'VoLTE Stub Tx Mixer AFE_PCM_TX':1:0
+		'SLIMBUS_1_RX Mixer VoLTE Stub':1:0
+		'VoLTE Stub Tx Mixer SLIM_1_TX':1:0
+		'AFE_PCM_RX_Voice Mixer VoLTE Stub':1:0
+		'SLIMBUS_1_RX Port Mixer AFE_PCM_TX':1:0
+		'AFE_PCM_RX Port Mixer SLIM_1_TX':1:0
+		'SLIMBUS_3_RX_Voice Mixer VoLTE Stub':1:0
+		'SLIMBUS_3_RX Port Mixer AFE_PCM_RX':1:0
+	EndSequence
+
+	# ALSA PCMs
+	PlaybackPCM 13
+	CapturePCM 13
+
+EndSection
+
+SectionModifier
+	Name "Play VoLTEUSB PROXY Tx"
+
+	EnableSequence
+		'VoLTE Stub Tx Mixer AFE_PCM_TX':1:1
+		'SLIMBUS_1_RX Mixer VoLTE Stub':1:1
+		'VoLTE Stub Tx Mixer SLIM_1_TX':1:1
+		'AFE_PCM_RX_Voice Mixer VoLTE Stub':1:1
+		'SLIMBUS_1_RX Port Mixer AFE_PCM_TX':1:1
+		'AFE_PCM_RX Port Mixer SLIM_1_TX':1:1
+		'SLIMBUS_3_RX_Voice Mixer VoLTE Stub':1:1
+		'SLIMBUS_3_RX Port Mixer AFE_PCM_RX':1:1
+	EndSequence
+
+	DisableSequence
+	EndSequence
+
+	# ALSA PCMs
+	PlaybackPCM 13
+	CapturePCM 13
+
+EndSection
+
 # End of master file
