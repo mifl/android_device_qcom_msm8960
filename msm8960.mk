@@ -16,6 +16,9 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
     device/qcom/msm8960/audio_policy.conf:system/etc/audio_policy.conf \
 
+PRODUCT_COPY_FILES += \
+    device/qcom/msm8960/audio_policy_8064.conf:system/etc/audio_policy_8064.conf \
+
 # audio UCM files
 PRODUCT_COPY_FILES += device/qcom/msm8960/snd_soc_msm/snd_soc_msm_2x:system/etc/snd_soc_msm/snd_soc_msm_2x \
                       device/qcom/msm8960/snd_soc_msm/snd_soc_msm_2x_Fusion3:system/etc/snd_soc_msm/snd_soc_msm_2x_Fusion3 \
@@ -26,6 +29,8 @@ PRODUCT_COPY_FILES += device/qcom/msm8960/snd_soc_msm/snd_soc_msm_2x:system/etc/
                       device/qcom/msm8960/snd_soc_msm/snd_soc_msm_Sitar:system/etc/snd_soc_msm/snd_soc_msm_Sitar \
                       device/qcom/msm8960/snd_soc_msm/snd_soc_msm_Sitar_auxpcm:system/etc/snd_soc_msm/snd_soc_msm_Sitar_auxpcm \
                       device/qcom/msm8960/snd_soc_msm/snd_soc_msm_auxpcm:system/etc/snd_soc_msm/snd_soc_msm_auxpcm \
+                      device/qcom/msm8960/snd_soc_msm/snd_soc_msm_2x_mpq:system/etc/snd_soc_msm/snd_soc_msm_2x_mpq \
+                      device/qcom/msm8960/snd_soc_msm/snd_soc_msm_2x_mpq_auxpcm:system/etc/snd_soc_msm/snd_soc_msm_2x_mpq_auxpcm \
 
 PRODUCT_PACKAGES += \
     battery_monitor \
