@@ -56,6 +56,7 @@ on boot
    write /sys/devices/i2c-3/3-0024/cyttsp_update_fw 1
    write /sys/devices/i2c-3/3-005b/update_fw 1
    start qcamerasvr
+   insmod /system/lib/modules/alx/alx.ko
 
 on post-fs-data
    mkdir /data/tombstones 0771 system system
@@ -83,6 +84,10 @@ service thermald /system/bin/thermald
    user root
    group root
    disabled
+
+service dhcpcd_eth0 /system/bin/dhcpcd -ABKL
+    disabled
+    oneshot
 
 service thermal-engine /system/bin/thermal-engine
    class main
