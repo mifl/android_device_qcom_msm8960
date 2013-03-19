@@ -70,7 +70,7 @@ on post-fs-data
 service qcamerasvr /system/bin/mm-qcamera-daemon
         class late_start
         user camera
-        group camera system inet input graphics
+        group camera system inet input graphics net_bt_stack
 
 #start GNSS/Sensor interface daemon
 service gsiff_daemon /system/bin/gsiff_daemon
@@ -131,7 +131,6 @@ service qseecomd /system/bin/qseecomd
 
 # Start kickstart if mdm is detected
 on property:ro.baseband=mdm
-    write /sys/module/rmnet_usb/parameters/rmnet_data_init 1
     mkdir /data/qcks 0770 system system
     start kickstart
 
@@ -140,14 +139,12 @@ on property:ro.baseband=sglte
     mkdir /data/misc/mdmhelperdata 0700
     start mdm_helper
 
-on property:ro.baseband=dsda
-    write /sys/module/rmnet_usb/parameters/rmnet_data_init 1
-
 # Start up mdm_helper if dsda2 detected
 on property:ro.baseband=dsda2
-    write /sys/module/rmnet_usb/parameters/no_rmnet_devs 2
-    write /sys/module/rmnet_usb/parameters/rmnet_dev_names hsicctl,hsusbctl
-    write /sys/module/rmnet_usb/parameters/rmnet_data_init 1
+    mkdir /data/misc/mdmhelperdata 0700
+    start mdm_helper
+
+on property:ro.baseband=sglte2
     mkdir /data/misc/mdmhelperdata 0700
     start mdm_helper
 

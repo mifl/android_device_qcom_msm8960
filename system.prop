@@ -132,3 +132,6 @@ ro.streaming.video.drs=true
 persist.debug.wfd.enable=1
 #property to choose between virtual/external wfd display
 persist.sys.wfd.virtual=0
+
+#system prop for setting rmnet mux mode
+persist.rmnet.mux=disabled
