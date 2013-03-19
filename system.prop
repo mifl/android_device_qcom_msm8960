@@ -90,6 +90,8 @@ ro.bluetooth.remote.autoconnect=true
 # 0: Always discoverable
 #debug.bt.discoverable_time=0
 
+qcom.bluetooth.soc=ath3k
+
 #system prop for switching gps driver to qmi
 persist.gps.qmienabled=true
 
