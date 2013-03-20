@@ -42,6 +42,11 @@ PRODUCT_PACKAGES += \
         VisualizationWallpapers \
         librs_jni
 
+PRODUCT_PACKAGES += \
+        hostapd_default.conf \
+        hostapd.accept \
+        hostapd.deny
+
 PRODUCT_COPY_FILES += \
 	device/qcom/msm8960/WCNSS_cfg.dat:system/vendor/firmware/wlan/prima/WCNSS_cfg.dat \
 	device/qcom/msm8960/WCNSS_qcom_cfg.ini:system/etc/wifi/WCNSS_qcom_cfg.ini \
