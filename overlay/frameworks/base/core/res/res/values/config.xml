@@ -110,7 +110,7 @@
 
     <!-- Minimum screen brightness setting allowed by the power manager.
          The user is forbidden from setting the brightness below this level. -->
-    <integer name="config_screenBrightnessSettingMinimum">1</integer>
+    <integer name="config_screenBrightnessSettingMinimum">10</integer>
 
     <!-- The duration (in milliseconds) that the radio will scan for a signal
          when there's no network connection. If the scan doesn't timeout, use zero -->
@@ -237,7 +237,7 @@
          If the span is equal to or greater than this size, a scaling gesture
          will begin, where supported. (See android.view.ScaleGestureDetector)
 
-         This value has been tuned for the "msm8960" device. -->
+         This value has been tuned for the "mako" device. -->
     <dimen name="config_minScalingSpan">35mm</dimen>
 
     <!-- Setting this true forces the headset jack switches to use the/dev/input/event subsystem
