@@ -48,4 +48,53 @@
     <!-- If this is true, the screen will come on when you plug/unplug usb/power/whatever. -->
     <bool name="config_unplugTurnsOnScreen">true</bool>
 
+     <string-array name="config_statusBarIcons">
+       <item><xliff:g id="id">ime</xliff:g></item>
+       <item><xliff:g id="id">sync_failing</xliff:g></item>
+       <item><xliff:g id="id">sync_active</xliff:g></item>
+       <item><xliff:g id="id">gps</xliff:g></item>
+       <item><xliff:g id="id">bluetooth</xliff:g></item>
+       <item><xliff:g id="id">nfc</xliff:g></item>
+       <item><xliff:g id="id">tty</xliff:g></item>
+       <item><xliff:g id="id">speakerphone</xliff:g></item>
+       <item><xliff:g id="id">mute</xliff:g></item>
+       <item><xliff:g id="id">volume</xliff:g></item>
+       <item><xliff:g id="id">wifi</xliff:g></item>
+       <item><xliff:g id="id">ethernet</xliff:g></item>
+       <item><xliff:g id="id">cdma_eri</xliff:g></item>
+       <item><xliff:g id="id">phone_signal_second_sub</xliff:g></item>
+       <item><xliff:g id="id">data_connection</xliff:g></item>
+       <item><xliff:g id="id">phone_evdo_signal</xliff:g></item>
+       <item><xliff:g id="id">phone_signal</xliff:g></item>
+       <item><xliff:g id="id">battery</xliff:g></item>
+       <item><xliff:g id="id">alarm_clock</xliff:g></item>
+       <item><xliff:g id="id">secure</xliff:g></item>
+       <item><xliff:g id="id">clock</xliff:g></item>
+    </string-array>
+
+    <string-array translatable="false" name="networkAttributes">
+        <item>"WIFI,1,1,1,-1,true"</item>
+        <item>"mobile,0,0,0,-1,true"</item>
+        <item>"mobile_mms,2,0,2,60000,true"</item>
+        <item>"mobile_supl,3,0,2,60000,true"</item>
+        <item>"mobile_hipri,5,0,3,60000,true"</item>
+        <item>"ethernet,9,9,1,-1,true"</item>
+        <item>"mobile_fota,10,0,2,60000,true"</item>
+        <item>"mobile_ims,11,0,2,60000,true"</item>
+        <item>"mobile_cbs,12,0,2,60000,true"</item>
+        <item>"wifi_p2p,13,1,0,-1,true"</item>
+        <item>"bluetooth,7,7,2,-1,true"</item>
+    </string-array>
+
+     <!-- This string array should be overridden by the device to present a list of radio
+         attributes.  This is used by the connectivity manager to decide which networks can coexist
+         based on the hardware -->
+    <!-- An Array of "[ConnectivityManager connectionType],
+                      [# simultaneous connection types]"  -->
+    <string-array translatable="false" name="radioAttributes">
+        <item>"1,1"</item>
+        <item>"0,1"</item>
+        <item>"7,1"</item>
+        <item>"9,1"</item>
+    </string-array>
 </resources>
