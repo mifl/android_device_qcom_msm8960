@@ -25,7 +25,7 @@ ARCH_ARM_HAVE_TLS_REGISTER := true
 
 BOARD_KERNEL_BASE := 0x80200000
 BOARD_KERNEL_PAGESIZE := 2048
-BOARD_KERNEL_CMDLINE := console=ttyHSL0,115200,n8 androidboot.hardware=msm8960 maxcpus=2
+BOARD_KERNEL_CMDLINE := console=ttyHSL0,115200,n8 androidboot.hardware=msm8960 maxcpus=2 no_console_suspend=1
 BOARD_MKBOOTIMG_ARGS := --ramdisk_offset 0x02000000
 
 BOARD_USES_ALSA_AUDIO:= true
