@@ -2284,19 +2284,19 @@ SectionVerb
 
 EndSection
 }
-SectionUseCase."SGLTE" {
-Comment "SGLTE use case"
+SectionUseCase."Voice2" {
+Comment "Voice2 use case"
 SectionVerb
-        Name "SGLTE"
+        Name "Voice2"
 
         EnableSequence
-                'SLIM_0_RX_Voice Mixer SGLTE':1:1
-                'SGLTE_Tx Mixer SLIM_0_TX_SGLTE':1:1
+                'SLIM_0_RX_Voice Mixer Voice2':1:1
+                'Voice2_Tx Mixer SLIM_0_TX_Voice2':1:1
         EndSequence
 
         DisableSequence
-                'SLIM_0_RX_Voice Mixer SGLTE':1:0
-                'SGLTE_Tx Mixer SLIM_0_TX_SGLTE':1:0
+                'SLIM_0_RX_Voice Mixer Voice2':1:0
+                'Voice2_Tx Mixer SLIM_0_TX_Voice2':1:0
         EndSequence
 
         # ALSA PCMs
@@ -2306,14 +2306,14 @@ SectionVerb
 EndSection
 
 SectionVerb
-        Name "SGLTEHDMI"
+        Name "Voice2HDMI"
 
         EnableSequence
         EndSequence
 
         DisableSequence
-                'HDMI_RX_Voice Mixer SGLTE':1:0
-                'SGLTE_Tx Mixer SLIM_0_TX_SGLTE':1:0
+                'HDMI_RX_Voice Mixer Voice2':1:0
+                'Voice2_Tx Mixer SLIM_0_TX_Voice2':1:0
         EndSequence
 
         # ALSA PCMs
@@ -2323,47 +2323,11 @@ SectionVerb
 EndSection
 
 SectionVerb
-        Name "SGLTEHDMI Tx"
+        Name "Voice2HDMI Tx"
 
         EnableSequence
-                'HDMI_RX_Voice Mixer SGLTE':1:1
-                'SGLTE_Tx Mixer SLIM_0_TX_SGLTE':1:1
-        EndSequence
-
-        DisableSequence
-        EndSequence
-
-        # ALSA PCMs
-        PlaybackPCM 13
-        CapturePCM 13
-
-EndSection
-
-SectionVerb
-        Name "SGLTEBT SCO Rx"
-
-        EnableSequence
-        EndSequence
-
-        DisableSequence
-                'Internal BTSCO SampleRate':0:8000
-                'INTERNAL_BT_SCO_RX_Voice Mixer SGLTE':1:0
-                'SGLTE_Tx Mixer INTERNAL_BT_SCO_TX_SGLTE':1:0
-        EndSequence
-
-        # ALSA PCMs
-        PlaybackPCM 13
-        CapturePCM 13
-
-EndSection
-
-SectionVerb
-        Name "SGLTEBT SCO Tx"
-
-        EnableSequence
-                'Internal BTSCO SampleRate':0:8000
-                'INTERNAL_BT_SCO_RX_Voice Mixer SGLTE':1:1
-                'SGLTE_Tx Mixer INTERNAL_BT_SCO_TX_SGLTE':1:1
+                'HDMI_RX_Voice Mixer Voice2':1:1
+                'Voice2_Tx Mixer SLIM_0_TX_Voice2':1:1
         EndSequence
 
         DisableSequence
@@ -2376,15 +2340,15 @@ SectionVerb
 EndSection
 
 SectionVerb
-        Name "SGLTEBT SCO WB Rx"
+        Name "Voice2BT SCO Rx"
 
         EnableSequence
         EndSequence
 
         DisableSequence
                 'Internal BTSCO SampleRate':0:8000
-                'INTERNAL_BT_SCO_RX_Voice Mixer SGLTE':1:0
-                'SGLTE_Tx Mixer INTERNAL_BT_SCO_TX_SGLTE':1:0
+                'INTERNAL_BT_SCO_RX_Voice Mixer Voice2':1:0
+                'Voice2_Tx Mixer INTERNAL_BT_SCO_TX_Voice2':1:0
         EndSequence
 
         # ALSA PCMs
@@ -2394,12 +2358,48 @@ SectionVerb
 EndSection
 
 SectionVerb
-        Name "SGLTEBT SCO WB Tx"
+        Name "Voice2BT SCO Tx"
+
+        EnableSequence
+                'Internal BTSCO SampleRate':0:8000
+                'INTERNAL_BT_SCO_RX_Voice Mixer Voice2':1:1
+                'Voice2_Tx Mixer INTERNAL_BT_SCO_TX_Voice2':1:1
+        EndSequence
+
+        DisableSequence
+        EndSequence
+
+        # ALSA PCMs
+        PlaybackPCM 13
+        CapturePCM 13
+
+EndSection
+
+SectionVerb
+        Name "Voice2BT SCO WB Rx"
+
+        EnableSequence
+        EndSequence
+
+        DisableSequence
+                'Internal BTSCO SampleRate':0:8000
+                'INTERNAL_BT_SCO_RX_Voice Mixer Voice2':1:0
+                'Voice2_Tx Mixer INTERNAL_BT_SCO_TX_Voice2':1:0
+        EndSequence
+
+        # ALSA PCMs
+        PlaybackPCM 13
+        CapturePCM 13
+
+EndSection
+
+SectionVerb
+        Name "Voice2BT SCO WB Tx"
 
         EnableSequence
                 'Internal BTSCO SampleRate':0:16000
-                'INTERNAL_BT_SCO_RX_Voice Mixer SGLTE':1:1
-                'SGLTE_Tx Mixer INTERNAL_BT_SCO_TX_SGLTE':1:1
+                'INTERNAL_BT_SCO_RX_Voice Mixer Voice2':1:1
+                'Voice2_Tx Mixer INTERNAL_BT_SCO_TX_Voice2':1:1
         EndSequence
 
         DisableSequence
@@ -2412,14 +2412,14 @@ SectionVerb
 EndSection
 
 SectionVerb
-        Name "SGLTEPROXY Rx"
+        Name "Voice2PROXY Rx"
 
         EnableSequence
         EndSequence
 
         DisableSequence
-                'AFE_PCM_RX_Voice Mixer SGLTE':1:0
-                'SGLTE_Tx Mixer AFE_PCM_TX_SGLTE':1:0
+                'AFE_PCM_RX_Voice Mixer Voice2':1:0
+                'Voice2_Tx Mixer AFE_PCM_TX_Voice2':1:0
         EndSequence
 
         # ALSA PCMs
@@ -2429,11 +2429,11 @@ SectionVerb
 EndSection
 
 SectionVerb
-        Name "SGLTEPROXY Tx"
+        Name "Voice2PROXY Tx"
 
         EnableSequence
-                'AFE_PCM_RX_Voice Mixer SGLTE':1:1
-                'SGLTE_Tx Mixer AFE_PCM_TX_SGLTE':1:1
+                'AFE_PCM_RX_Voice Mixer Voice2':1:1
+                'Voice2_Tx Mixer AFE_PCM_TX_Voice2':1:1
         EndSequence
 
         DisableSequence
@@ -2446,14 +2446,14 @@ SectionVerb
 EndSection
 
 SectionVerb
-        Name "SGLTEUSB PROXY Rx"
+        Name "Voice2USB PROXY Rx"
 
         EnableSequence
         EndSequence
 
         DisableSequence
-                'AFE_PCM_RX_Voice Mixer SGLTE':1:0
-                'SGLTE_Tx Mixer AFE_PCM_TX_SGLTE':1:0
+                'AFE_PCM_RX_Voice Mixer Voice2':1:0
+                'Voice2_Tx Mixer AFE_PCM_TX_Voice2':1:0
         EndSequence
 
         # ALSA PCMs
@@ -2463,11 +2463,11 @@ SectionVerb
 EndSection
 
 SectionVerb
-        Name "SGLTEUSB PROXY Tx"
+        Name "Voice2USB PROXY Tx"
 
         EnableSequence
-                'AFE_PCM_RX_Voice Mixer SGLTE':1:1
-                'SGLTE_Tx Mixer AFE_PCM_TX_SGLTE':1:1
+                'AFE_PCM_RX_Voice Mixer Voice2':1:1
+                'Voice2_Tx Mixer AFE_PCM_TX_Voice2':1:1
         EndSequence
 
         DisableSequence
@@ -5649,7 +5649,7 @@ SectionDevice
 EndSection
 
 SectionDevice
-	Name "DMIC Endfire SGLTE"
+	Name "DMIC Endfire Voice2"
 	Comment "Dual MIC Endfire Tx device sglte"
 
 	EnableSequence
@@ -5743,7 +5743,7 @@ SectionDevice
 EndSection
 
 SectionDevice
-	Name "Speaker DMIC Endfire SGLTE"
+	Name "Speaker DMIC Endfire Voice2"
 	Comment "Dual MIC Endfire Tx device Sglte"
 
 	EnableSequence
@@ -5807,7 +5807,7 @@ SectionDevice
 EndSection
 
 SectionDevice
-	Name "Handset DMIC Stereo SGLTE"
+	Name "Handset DMIC Stereo Voice2"
 	Comment "Handset Dual MIC Stereo Tx device Sglte"
 
 	EnableSequence
@@ -5871,7 +5871,7 @@ SectionDevice
 EndSection
 
 SectionDevice
-	Name "Speaker DMIC Stereo SGLTE"
+	Name "Speaker DMIC Stereo Voice2"
 	Comment "Speaker Dual MIC Stereo Tx device Sglte"
 
 	EnableSequence
@@ -8603,16 +8603,16 @@ SectionModifier
 EndSection
 
 SectionModifier
-        Name "Play SGLTE"
+        Name "Play Voice2"
 
         EnableSequence
-                'SLIM_0_RX_Voice Mixer SGLTE':1:1
-                'SGLTE_Tx Mixer SLIM_0_TX_SGLTE':1:1
+                'SLIM_0_RX_Voice Mixer Voice2':1:1
+                'Voice2_Tx Mixer SLIM_0_TX_Voice2':1:1
         EndSequence
 
         DisableSequence
-                'SLIM_0_RX_Voice Mixer SGLTE':1:0
-                'SGLTE_Tx Mixer SLIM_0_TX_SGLTE':1:0
+                'SLIM_0_RX_Voice Mixer Voice2':1:0
+                'Voice2_Tx Mixer SLIM_0_TX_Voice2':1:0
         EndSequence
 
         # ALSA PCMs
@@ -8622,14 +8622,14 @@ SectionModifier
 EndSection
 
 SectionModifier
-        Name "Play SGLTEHDMI"
+        Name "Play Voice2HDMI"
 
         EnableSequence
         EndSequence
 
         DisableSequence
-                'HDMI_RX_Voice Mixer SGLTE':1:0
-                'SGLTE_Tx Mixer SLIM_0_TX_SGLTE':1:0
+                'HDMI_RX_Voice Mixer Voice2':1:0
+                'Voice2_Tx Mixer SLIM_0_TX_Voice2':1:0
         EndSequence
 
         # ALSA PCMs
@@ -8639,11 +8639,11 @@ SectionModifier
 EndSection
 
 SectionModifier
-        Name "Play SGLTEHDMI Tx"
+        Name "Play Voice2HDMI Tx"
 
         EnableSequence
-                'HDMI_RX_Voice Mixer SGLTE':1:1
-                'SGLTE_Tx Mixer SLIM_0_TX_SGLTE':1:1
+                'HDMI_RX_Voice Mixer Voice2':1:1
+                'Voice2_Tx Mixer SLIM_0_TX_Voice2':1:1
         EndSequence
 
         DisableSequence
@@ -8656,15 +8656,15 @@ SectionModifier
 EndSection
 
 SectionModifier
-        Name "Play SGLTEBT SCO Rx"
+        Name "Play Voice2BT SCO Rx"
 
         EnableSequence
         EndSequence
 
         DisableSequence
                 'Internal BTSCO SampleRate':0:8000
-                'INTERNAL_BT_SCO_RX_Voice Mixer SGLTE':1:0
-                'SGLTE_Tx Mixer INTERNAL_BT_SCO_TX_SGLTE':1:0
+                'INTERNAL_BT_SCO_RX_Voice Mixer Voice2':1:0
+                'Voice2_Tx Mixer INTERNAL_BT_SCO_TX_Voice2':1:0
         EndSequence
 
         # ALSA PCMs
@@ -8674,12 +8674,12 @@ SectionModifier
 EndSection
 
 SectionModifier
-        Name "Play SGLTEBT SCO Tx"
+        Name "Play Voice2BT SCO Tx"
 
         EnableSequence
                 'Internal BTSCO SampleRate':0:8000
-                'INTERNAL_BT_SCO_RX_Voice Mixer SGLTE':1:1
-                'SGLTE_Tx Mixer INTERNAL_BT_SCO_TX_SGLTE':1:1
+                'INTERNAL_BT_SCO_RX_Voice Mixer Voice2':1:1
+                'Voice2_Tx Mixer INTERNAL_BT_SCO_TX_Voice2':1:1
         EndSequence
 
         DisableSequence
@@ -8692,15 +8692,15 @@ SectionModifier
 EndSection
 
 SectionModifier
-        Name "Play SGLTEBT SCO WB Rx"
+        Name "Play Voice2BT SCO WB Rx"
 
         EnableSequence
         EndSequence
 
         DisableSequence
                 'Internal BTSCO SampleRate':0:16000
-                'INTERNAL_BT_SCO_RX_Voice Mixer SGLTE':1:0
-                'SGLTE_Tx Mixer INTERNAL_BT_SCO_TX_SGLTE':1:0
+                'INTERNAL_BT_SCO_RX_Voice Mixer Voice2':1:0
+                'Voice2_Tx Mixer INTERNAL_BT_SCO_TX_Voice2':1:0
         EndSequence
 
         # ALSA PCMs
@@ -8710,12 +8710,12 @@ SectionModifier
 EndSection
 
 SectionModifier
-        Name "Play SGLTEBT SCO WB Tx"
+        Name "Play Voice2BT SCO WB Tx"
 
         EnableSequence
                 'Internal BTSCO SampleRate':0:16000
-                'INTERNAL_BT_SCO_RX_Voice Mixer SGLTE':1:1
-                'SGLTE_Tx Mixer INTERNAL_BT_SCO_TX_SGLTE':1:1
+                'INTERNAL_BT_SCO_RX_Voice Mixer Voice2':1:1
+                'Voice2_Tx Mixer INTERNAL_BT_SCO_TX_Voice2':1:1
         EndSequence
 
         DisableSequence
@@ -8728,14 +8728,14 @@ SectionModifier
 EndSection
 
 SectionModifier
-        Name "Play SGLTEPROXY Rx"
+        Name "Play Voice2PROXY Rx"
 
         EnableSequence
         EndSequence
 
         DisableSequence
-                'AFE_PCM_RX_Voice Mixer SGLTE':1:0
-                'SGLTE_Tx Mixer AFE_PCM_TX_SGLTE':1:0
+                'AFE_PCM_RX_Voice Mixer Voice2':1:0
+                'Voice2_Tx Mixer AFE_PCM_TX_Voice2':1:0
         EndSequence
 
         # ALSA PCMs
@@ -8745,11 +8745,11 @@ SectionModifier
 EndSection
 
 SectionModifier
-        Name "Play SGLTEPROXY Tx"
+        Name "Play Voice2PROXY Tx"
 
         EnableSequence
-                'AFE_PCM_RX_Voice Mixer SGLTE':1:1
-                'SGLTE_Tx Mixer AFE_PCM_TX_SGLTE':1:1
+                'AFE_PCM_RX_Voice Mixer Voice2':1:1
+                'Voice2_Tx Mixer AFE_PCM_TX_Voice2':1:1
         EndSequence
 
         DisableSequence
@@ -8762,14 +8762,14 @@ SectionModifier
 EndSection
 
 SectionModifier
-        Name "Play SGLTEUSB PROXY Rx"
+        Name "Play Voice2USB PROXY Rx"
 
         EnableSequence
         EndSequence
 
         DisableSequence
-                'AFE_PCM_RX_Voice Mixer SGLTE':1:0
-                'SGLTE_Tx Mixer AFE_PCM_TX_SGLTE':1:0
+                'AFE_PCM_RX_Voice Mixer Voice2':1:0
+                'Voice2_Tx Mixer AFE_PCM_TX_Voice2':1:0
         EndSequence
 
         # ALSA PCMs
@@ -8779,11 +8779,11 @@ SectionModifier
 EndSection
 
 SectionModifier
-        Name "Play SGLTEUSB PROXY Tx"
+        Name "Play Voice2USB PROXY Tx"
 
         EnableSequence
-                'AFE_PCM_RX_Voice Mixer SGLTE':1:1
-                'SGLTE_Tx Mixer AFE_PCM_TX_SGLTE':1:1
+                'AFE_PCM_RX_Voice Mixer Voice2':1:1
+                'Voice2_Tx Mixer AFE_PCM_TX_Voice2':1:1
         EndSequence
 
         DisableSequence
