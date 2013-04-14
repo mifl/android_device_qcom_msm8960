@@ -22,12 +22,13 @@ endif # TARGET_USE_HDMI_AS_PRIMARY
 #TODO: Fix-me: Setting TARGET_HAVE_HDMI_OUT to false
 # to get rid of compilation error.
 TARGET_HAVE_HDMI_OUT := false
+BOARD_USES_LEGACY_ALSA_AUDIO := true
 TARGET_USES_OVERLAY := true
 TARGET_NO_BOOTLOADER := false
 TARGET_NO_KERNEL := false
 TARGET_NO_RADIOIMAGE := true
 TARGET_NO_RPC := true
-
+TARGET_CPU_VARIANT=krait
 TARGET_GLOBAL_CFLAGS += -mfpu=neon -mfloat-abi=softfp
 TARGET_GLOBAL_CPPFLAGS += -mfpu=neon -mfloat-abi=softfp
 TARGET_CPU_ABI  := armeabi-v7a
