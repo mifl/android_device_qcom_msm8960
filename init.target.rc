@@ -36,7 +36,8 @@ service ril-qmi /system/bin/sh /init.qcom.ril.sh
     class main
     user root
     oneshot
-
+on init
+    export BOOTCLASSPATH ${BOOTCLASSPATH}:/system/framework/security-bridge.jar:/system/framework/oem-services.jar
 on fs
     mount_all fstab.qcom
 
@@ -118,6 +119,7 @@ service kickstart /system/bin/qcks -i /firmware/image/
 service mdm_helper /system/bin/mdm_helper
     class main
     onrestart setprop ro.service.mdm_helper_restarted "true"
+    group system
     disabled
 
 service qrngd /system/bin/qrngd -f
