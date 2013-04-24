@@ -3688,6 +3688,39 @@ SectionDevice
 
 EndSection
 
+
+SectionDevice
+        Name "DMIC Endfire Voice2"
+        Comment "Dual MIC Endfire Tx device"
+
+	EnableSequence
+                'AIF1_CAP Mixer SLIM TX1':1:1
+                'AIF1_CAP Mixer SLIM TX5':1:1
+                'SLIM TX1 MUX':0:DEC1
+                'DEC1 MUX':0:ADC1
+                'ADC1 Volume':1:100
+                'SLIM TX5 MUX':0:DEC2
+                'DEC2 MUX':0:ADC3
+                'ADC3 Volume':1:100
+                'SLIM_0_TX Channels':0:Two
+        EndSequence
+
+        DisableSequence
+                'AIF1_CAP Mixer SLIM TX1':1:0
+                'AIF1_CAP Mixer SLIM TX5':1:0
+                'SLIM TX1 MUX':0:ZERO
+                'DEC2 MUX':0:ZERO
+                'ADC1 Volume':1:0
+                'SLIM TX5 MUX':0:ZERO
+                'DEC2 MUX':0:ZERO
+                'ADC3 Volume':1:0
+        EndSequence
+
+        ACDBID  6:2
+        EffectsMixerCTL "SRS TruMedia"
+
+EndSection
+
 SectionDevice
 	Name "Speaker DMIC Endfire"
 	Comment "Dual MIC Endfire Tx device"
@@ -3717,6 +3750,38 @@ SectionDevice
 
 	ACDBID	13:2
 	EffectsMixerCTL "SRS TruMedia"
+
+EndSection
+
+SectionDevice
+        Name "Speaker DMIC Endfire Voice2"
+        Comment "Dual MIC Endfire Tx device"
+
+        EnableSequence
+                'AIF1_CAP Mixer SLIM TX1':1:1
+                'AIF1_CAP Mixer SLIM TX5':1:1
+                'SLIM TX1 MUX':0:DEC1
+                'DEC1 MUX':0:ADC1
+                'ADC1 Volume':1:100
+                'SLIM TX5 MUX':0:DEC2
+                'DEC2 MUX':0:ADC3
+                'ADC3 Volume':1:100
+                'SLIM_0_TX Channels':0:Two
+        EndSequence
+
+        DisableSequence
+                'AIF1_CAP Mixer SLIM TX1':1:0
+                'AIF1_CAP Mixer SLIM TX5':1:0
+                'SLIM TX1 MUX':0:ZERO
+                'DEC1 MUX':0:ZERO
+                'ADC1 Volume':1:0
+                'SLIM TX5 MUX':0:ZERO
+                'DEC2 MUX':0:ZERO
+                'ADC3 Volume':1:0
+        EndSequence
+
+        ACDBID  13:2
+        EffectsMixerCTL "SRS TruMedia"
 
 EndSection
 
