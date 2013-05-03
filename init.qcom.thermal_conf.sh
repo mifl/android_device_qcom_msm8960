@@ -49,7 +49,7 @@ esac
 if [ ! -h $THERMALD_CONF_SYMLINK ]; then
  # create symlink to target-specific config file
  case "$platformid" in
-     "109" | "130") #APQ/MPQ8064
+     "109" | "130" | "172") #APQ/MPQ8064 & APQ/MPQ8064aa
      ln -s /etc/thermald-8064.conf $THERMALD_CONF_SYMLINK 2>/dev/null
      ;;
 
@@ -57,11 +57,11 @@ if [ ! -h $THERMALD_CONF_SYMLINK ]; then
      ln -s /etc/thermald-8064ab.conf $THERMALD_CONF_SYMLINK 2>/dev/null
      ;;
 
-     "116" | "117" | "118" | "119" | "120" | "121" | "142" | "143" | "144" | "160" | "179" | "180" | "181") #MSM8x30&MSM8x27
+     "116" | "117" | "118" | "119" | "120" | "121" | "142" | "143" | "144" | "160" | "179" | "180") #MSM8x30&MSM8x27
      ln -s /etc/thermald-8930.conf $THERMALD_CONF_SYMLINK 2>/dev/null
      ;;
 
-     "154" | "155" | "156" | "157") #MSM8930ab
+     "154" | "155" | "156" | "157" | "181") #MSM8930ab
      ln -s /etc/thermald-8930ab.conf $THERMALD_CONF_SYMLINK 2>/dev/null
      ;;
 
@@ -80,7 +80,7 @@ THERMAL_ENGINE_CONF_SYMLINK=/etc/thermal-engine.conf
 if [ ! -h $THERMAL_ENGINE_CONF_SYMLINK ]; then
  # create symlink to target-specific config file
  case "$platformid" in
-     "109" | "130") #APQ/MPQ8064
+     "109" | "130" | "172") #APQ/MPQ8064 & APQ/MPQ8064aa
      ln -s /etc/thermal-engine-8064.conf $THERMAL_ENGINE_CONF_SYMLINK 2>/dev/null
      ;;
 

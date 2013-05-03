@@ -79,6 +79,7 @@ HAVE_MXT_CFG := true
 
 # Add NON-HLOS files for ota upgrade
 ADD_RADIO_FILES ?= false
+TARGET_USES_QCOM_BSP := true
 
 # Added to indicate that protobuf-c is supported in this build
 PROTOBUF_SUPPORTED := true
