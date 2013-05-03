@@ -4539,6 +4539,7 @@ SectionModifier
 	# ALSA PCMs
 	PlaybackPCM 5
 	CapturePCM 6
+	PlaybackVolume "Internal FM RX Volume"
 
 EndSection
 
