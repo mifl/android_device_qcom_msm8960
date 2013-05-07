@@ -7,7 +7,7 @@ ifeq ($(TARGET_ARCH),)
 TARGET_ARCH := arm
 endif
 
--include vendor/qcom/proprietary/common/msm8960/BoardConfigVendor.mk
+-include $(QCPATH)/common/msm8960/BoardConfigVendor.mk
 
 TARGET_USE_HDMI_AS_PRIMARY := false
 
