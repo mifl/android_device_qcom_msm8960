@@ -5320,6 +5320,21 @@ SectionModifier
 EndSection
 
 SectionModifier
+        Name "Play VOIPSPDIF"
+
+        EnableSequence
+        EndSequence
+
+        DisableSequence
+        EndSequence
+
+        # ALSA PCMs
+        PlaybackPCM 3
+        CapturePCM 3
+
+EndSection
+
+SectionModifier
 	Name "Play VOIPBT SCO Rx"
 
 	EnableSequence
