@@ -46,7 +46,7 @@ case "$platformid" in
     ln -s /etc/thermald-8064.conf $THERMALD_CONF_SYMLINK 2>/dev/null
     ;;
 
-    "116" | "117" | "118" | "119") #MSM8930
+    "116" | "117" | "118" | "119" | "120" | "121" | "142" | "143" | "144" | "160" | "179" | "180") #MSM8930,MSM8x27&MSM8930aa
     ln -s /etc/thermald-8930.conf $THERMALD_CONF_SYMLINK 2>/dev/null
     ;;
 
