@@ -39,6 +39,7 @@ setprop qcom.thermal thermald
 
 # Figure out if thermal-engine should start
 platformid=`cat /sys/devices/system/soc/soc0/id`
+hw_platform=`cat /sys/devices/system/soc/soc0/hw_platform`
 case "$platformid" in
     "153") #APQ/MPQ8064ab
     setprop qcom.thermal thermal-engine
@@ -58,7 +59,15 @@ if [ ! -h $THERMALD_CONF_SYMLINK ]; then
      ;;
 
      "116" | "117" | "118" | "119" | "120" | "121" | "142" | "143" | "144" | "160" | "179" | "180") #MSM8x30&MSM8x27
-     ln -s /etc/thermald-8930.conf $THERMALD_CONF_SYMLINK 2>/dev/null
+     case "$hw_platform" in
+          "QRD") #8x30 QRD
+          ln -s /etc/thermald-8930-qrd.conf $THERMALD_CONF_SYMLINK 2>/dev/null
+          ;;
+
+          *)
+          ln -s /etc/thermald-8930.conf $THERMALD_CONF_SYMLINK 2>/dev/null
+	  ;;
+     esac
      ;;
 
      "154" | "155" | "156" | "157" | "181") #MSM8930ab
