@@ -4294,7 +4294,7 @@ SectionDevice
 	DisableSequence
 	EndSequence
 
-	ACDBID	18:1
+	ACDBID	53:1
 	EffectsMixerCTL "SRS SS3D HDMI"
 
 EndSection
@@ -4433,7 +4433,7 @@ SectionDevice
 	DisableSequence
 	EndSequence
 
-	ACDBID	0:1
+	ACDBID	53:1
 	EffectsMixerCTL "SRS SS3D"
 
 EndSection
