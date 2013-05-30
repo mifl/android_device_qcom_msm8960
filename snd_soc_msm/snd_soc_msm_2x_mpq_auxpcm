@@ -2622,136 +2622,6 @@ SectionVerb
 
 EndSection
 }
-SectionUseCase."HiFi Tunnel2" {
-Comment "Tunnel mode playback use case"
-SectionVerb
-	Name "HiFi Tunnel2"
-
-	EnableSequence
-		'SLIMBUS_0_RX Audio Mixer MultiMedia7':1:1
-	EndSequence
-
-	DisableSequence
-		'SLIMBUS_0_RX Audio Mixer MultiMedia7':1:0
-	EndSequence
-
-	# ALSA PCMs
-	PlaybackPCM 16
-
-EndSection
-
-SectionVerb
-	Name "HiFi Tunnel2FM Tx"
-
-	EnableSequence
-		'INTERNAL_FM_RX Audio Mixer MultiMedia7':1:1
-	EndSequence
-
-	DisableSequence
-		'INTERNAL_FM_RX Audio Mixer MultiMedia7':1:0
-	EndSequence
-
-	# ALSA PCMs
-	PlaybackPCM 16
-
-EndSection
-
-SectionVerb
-	Name "HiFi Tunnel2HDMI"
-
-	EnableSequence
-		'HDMI Mixer MultiMedia7':1:1
-	EndSequence
-
-	DisableSequence
-		'HDMI Mixer MultiMedia7':1:0
-	EndSequence
-
-	# ALSA PCMs
-	PlaybackPCM 16
-
-EndSection
-
-SectionVerb
-	Name "HiFi Tunnel2BT SCO Rx"
-
-	EnableSequence
-		'AUX_PCM_RX Audio Mixer MultiMedia7':1:1
-	EndSequence
-
-	DisableSequence
-		'AUX_PCM_RX Audio Mixer MultiMedia7':1:0
-	EndSequence
-
-	# ALSA PCMs
-	PlaybackPCM 16
-
-EndSection
-
-SectionVerb
-	Name "HiFi Tunnel2BT SCO WB Rx"
-
-	EnableSequence
-		'AUX_PCM_RX Audio Mixer MultiMedia7':1:1
-	EndSequence
-
-	DisableSequence
-		'AUX_PCM_RX Audio Mixer MultiMedia7':1:0
-	EndSequence
-
-	# ALSA PCMs
-	PlaybackPCM 16
-
-EndSection
-
-SectionVerb
-        Name "HiFi Tunnel2PROXY Rx"
-
-        EnableSequence
-                'AFE_PCM_RX Audio Mixer MultiMedia7':1:1
-        EndSequence
-
-        DisableSequence
-                'AFE_PCM_RX Audio Mixer MultiMedia7':1:0
-        EndSequence
-
-        # ALSA PCMs
-        PlaybackPCM 16
-
-EndSection
-
-SectionVerb
-        Name "HiFi Tunnel2PROXY Tx"
-
-        EnableSequence
-        EndSequence
-
-        DisableSequence
-        EndSequence
-
-        # ALSA PCMs
-        PlaybackPCM 16
-
-EndSection
-
-SectionVerb
-	Name "HiFi Tunnel2SPDIF"
-
-	EnableSequence
-		'SEC_RX Audio Mixer MultiMedia7':1:1
-	EndSequence
-
-	DisableSequence
-		'SEC_RX Audio Mixer MultiMedia7':1:0
-	EndSequence
-
-	# ALSA PCMs
-	PlaybackPCM 16
-
-EndSection
-
-EndSection
-}
 SectionUseCase."HiFi Tunnel1Pseudo" {
 Comment "HIFI transcode use case"
 SectionModifier
@@ -2808,7 +2678,926 @@ SectionModifier
 
 EndSection
 }
+SectionUseCase."HiFi Tunnel2" {
+Comment "Tunnel2 mode playback use case"
+SectionVerb
+	Name "HiFi Tunnel2"
 
+	EnableSequence
+		'SLIMBUS_0_RX Audio Mixer MultiMedia7':1:1
+	EndSequence
+
+	DisableSequence
+		'SLIMBUS_0_RX Audio Mixer MultiMedia7':1:0
+	EndSequence
+
+	# ALSA PCMs
+	PlaybackPCM 16
+
+EndSection
+
+SectionVerb
+	Name "HiFi Tunnel2FM Tx"
+
+	EnableSequence
+		'INTERNAL_FM_RX Audio Mixer MultiMedia7':1:1
+	EndSequence
+
+	DisableSequence
+		'INTERNAL_FM_RX Audio Mixer MultiMedia7':1:0
+	EndSequence
+
+	# ALSA PCMs
+	PlaybackPCM 16
+
+EndSection
+
+SectionVerb
+	Name "HiFi Tunnel2HDMI"
+
+	EnableSequence
+		'HDMI Mixer MultiMedia7':1:1
+	EndSequence
+
+	DisableSequence
+		'HDMI Mixer MultiMedia7':1:0
+	EndSequence
+
+	# ALSA PCMs
+	PlaybackPCM 16
+
+EndSection
+
+SectionVerb
+	Name "HiFi Tunnel2BT SCO Rx"
+
+	EnableSequence
+		'INTERNAL_BT_SCO_RX Audio Mixer MultiMedia7':1:1
+	EndSequence
+
+	DisableSequence
+		'INTERNAL_BT_SCO_RX Audio Mixer MultiMedia7':1:0
+	EndSequence
+
+	# ALSA PCMs
+	PlaybackPCM 16
+
+EndSection
+
+SectionVerb
+	Name "HiFi Tunnel2BT SCO WB Rx"
+
+	EnableSequence
+		'INTERNAL_BT_SCO_RX Audio Mixer MultiMedia7':1:1
+	EndSequence
+
+	DisableSequence
+		'INTERNAL_BT_SCO_RX Audio Mixer MultiMedia7':1:0
+	EndSequence
+
+	# ALSA PCMs
+	PlaybackPCM 16
+
+EndSection
+
+SectionVerb
+        Name "HiFi Tunnel2PROXY Rx"
+
+        EnableSequence
+                'AFE_PCM_RX Audio Mixer MultiMedia7':1:1
+        EndSequence
+
+        DisableSequence
+                'AFE_PCM_RX Audio Mixer MultiMedia7':1:0
+        EndSequence
+
+        # ALSA PCMs
+        PlaybackPCM 16
+
+EndSection
+
+SectionVerb
+        Name "HiFi Tunnel2PROXY Tx"
+
+        EnableSequence
+        EndSequence
+
+        DisableSequence
+        EndSequence
+
+        # ALSA PCMs
+        PlaybackPCM 16
+
+EndSection
+
+SectionVerb
+	Name "HiFi Tunnel2SPDIF"
+
+	EnableSequence
+		'SEC_RX Audio Mixer MultiMedia7':1:1
+	EndSequence
+
+	DisableSequence
+		'SEC_RX Audio Mixer MultiMedia7':1:0
+	EndSequence
+
+	# ALSA PCMs
+	PlaybackPCM 16
+
+EndSection
+}
+SectionUseCase."HiFi Tunnel2Pseudo" {
+Comment "HIFI transcode use case"
+SectionModifier
+        Name "HiFi Tunnel2Pseudo"
+
+        EnableSequence
+                'PSEUDO Mixer MultiMedia7':1:1
+                'SEC_RX Audio Mixer Pseudo':1:1
+        EndSequence
+
+        DisableSequence
+                'PSEUDO Mixer MultiMedia7':1:0
+                'SEC_RX Audio Mixer Pseudo':1:1
+        EndSequence
+
+        # ALSA PCMs
+        PlaybackPCM 19
+
+EndSection
+
+SectionModifier
+        Name "HiFi Tunnel2PseudoSPDIF"
+
+        EnableSequence
+                'PSEUDO Mixer MultiMedia7':1:1
+                'SEC_RX Audio Mixer Pseudo':1:1
+        EndSequence
+
+        DisableSequence
+                'PSEUDO Mixer MultiMedia7':1:0
+                'SEC_RX Audio Mixer Pseudo':1:0
+        EndSequence
+
+        # ALSA PCMs
+        PlaybackPCM 19
+
+EndSection
+
+SectionModifier
+        Name "HiFi Tunnel2PseudoHDMI"
+
+        EnableSequence
+                'PSEUDO Mixer MultiMedia7':1:1
+                'HDMI Mixer Pseudo':1:1
+        EndSequence
+
+        DisableSequence
+                'PSEUDO Mixer MultiMedia7':1:0
+                'HDMI Mixer Pseudo':1:0
+        EndSequence
+
+        # ALSA PCMs
+        PlaybackPCM 19
+
+EndSection
+}
+SectionUseCase."HiFi Tunnel3" {
+Comment "Tunnel3 mode playback use case"
+SectionVerb
+	Name "HiFi Tunnel3"
+
+	EnableSequence
+		'SLIMBUS_0_RX Audio Mixer MultiMedia8':1:1
+	EndSequence
+
+	DisableSequence
+		'SLIMBUS_0_RX Audio Mixer MultiMedia8':1:0
+	EndSequence
+
+	# ALSA PCMs
+	PlaybackPCM 17
+
+EndSection
+
+SectionVerb
+	Name "HiFi Tunnel3FM Tx"
+
+	EnableSequence
+		'INTERNAL_FM_RX Audio Mixer MultiMedia8':1:1
+	EndSequence
+
+	DisableSequence
+		'INTERNAL_FM_RX Audio Mixer MultiMedia8':1:0
+	EndSequence
+
+	# ALSA PCMs
+	PlaybackPCM 17
+
+EndSection
+
+SectionVerb
+	Name "HiFi Tunnel3HDMI"
+
+	EnableSequence
+		'HDMI Mixer MultiMedia8':1:1
+	EndSequence
+
+	DisableSequence
+		'HDMI Mixer MultiMedia8':1:0
+	EndSequence
+
+	# ALSA PCMs
+	PlaybackPCM 17
+
+EndSection
+
+SectionVerb
+	Name "HiFi Tunnel3BT SCO Rx"
+
+	EnableSequence
+		'INTERNAL_BT_SCO_RX Audio Mixer MultiMedia8':1:1
+	EndSequence
+
+	DisableSequence
+		'INTERNAL_BT_SCO_RX Audio Mixer MultiMedia8':1:0
+	EndSequence
+
+	# ALSA PCMs
+	PlaybackPCM 17
+
+EndSection
+
+SectionVerb
+	Name "HiFi Tunnel3BT SCO WB Rx"
+
+	EnableSequence
+		'INTERNAL_BT_SCO_RX Audio Mixer MultiMedia8':1:1
+	EndSequence
+
+	DisableSequence
+		'INTERNAL_BT_SCO_RX Audio Mixer MultiMedia8':1:0
+	EndSequence
+
+	# ALSA PCMs
+	PlaybackPCM 17
+
+EndSection
+
+SectionVerb
+        Name "HiFi Tunnel3PROXY Rx"
+
+        EnableSequence
+                'AFE_PCM_RX Audio Mixer MultiMedia8':1:1
+        EndSequence
+
+        DisableSequence
+                'AFE_PCM_RX Audio Mixer MultiMedia8':1:0
+        EndSequence
+
+        # ALSA PCMs
+        PlaybackPCM 17
+
+EndSection
+
+SectionVerb
+        Name "HiFi Tunnel3PROXY Tx"
+
+        EnableSequence
+        EndSequence
+
+        DisableSequence
+        EndSequence
+
+        # ALSA PCMs
+        PlaybackPCM 17
+
+EndSection
+
+SectionVerb
+	Name "HiFi Tunnel3SPDIF"
+
+	EnableSequence
+		'SEC_RX Audio Mixer MultiMedia8':1:1
+	EndSequence
+
+	DisableSequence
+		'SEC_RX Audio Mixer MultiMedia8':1:0
+	EndSequence
+
+	# ALSA PCMs
+	PlaybackPCM 17
+
+EndSection
+}
+SectionUseCase."HiFi Tunnel3Pseudo" {
+Comment "HIFI transcode use case"
+SectionModifier
+        Name "HiFi Tunnel3Pseudo"
+
+        EnableSequence
+                'PSEUDO Mixer MultiMedia8':1:1
+                'SEC_RX Audio Mixer Pseudo':1:1
+        EndSequence
+
+        DisableSequence
+                'PSEUDO Mixer MultiMedia8':1:0
+                'SEC_RX Audio Mixer Pseudo':1:1
+        EndSequence
+
+        # ALSA PCMs
+        PlaybackPCM 19
+
+EndSection
+
+SectionModifier
+        Name "HiFi Tunnel3PseudoSPDIF"
+
+        EnableSequence
+                'PSEUDO Mixer MultiMedia8':1:1
+                'SEC_RX Audio Mixer Pseudo':1:1
+        EndSequence
+
+        DisableSequence
+                'PSEUDO Mixer MultiMedia8':1:0
+                'SEC_RX Audio Mixer Pseudo':1:0
+        EndSequence
+
+        # ALSA PCMs
+        PlaybackPCM 19
+
+EndSection
+
+SectionModifier
+        Name "HiFi Tunnel3PseudoHDMI"
+
+        EnableSequence
+                'PSEUDO Mixer MultiMedia8':1:1
+                'HDMI Mixer Pseudo':1:1
+        EndSequence
+
+        DisableSequence
+                'PSEUDO Mixer MultiMedia8':1:0
+                'HDMI Mixer Pseudo':1:0
+        EndSequence
+
+        # ALSA PCMs
+        PlaybackPCM 19
+
+EndSection
+}
+SectionUseCase."HiFi Tunnel4" {
+Comment "Tunnel4 mode playback use case"
+SectionVerb
+	Name "HiFi Tunnel4"
+
+	EnableSequence
+		'SLIMBUS_0_RX Audio Mixer MultiMedia9':1:1
+	EndSequence
+
+	DisableSequence
+		'SLIMBUS_0_RX Audio Mixer MultiMedia9':1:0
+	EndSequence
+
+	# ALSA PCMs
+	PlaybackPCM 20
+
+EndSection
+
+SectionVerb
+	Name "HiFi Tunnel4FM Tx"
+
+	EnableSequence
+		'INTERNAL_FM_RX Audio Mixer MultiMedia9':1:1
+	EndSequence
+
+	DisableSequence
+		'INTERNAL_FM_RX Audio Mixer MultiMedia9':1:0
+	EndSequence
+
+	# ALSA PCMs
+	PlaybackPCM 20
+
+EndSection
+
+SectionVerb
+	Name "HiFi Tunnel4HDMI"
+
+	EnableSequence
+		'HDMI Mixer MultiMedia9':1:1
+	EndSequence
+
+	DisableSequence
+		'HDMI Mixer MultiMedia9':1:0
+	EndSequence
+
+	# ALSA PCMs
+	PlaybackPCM 20
+
+EndSection
+
+SectionVerb
+	Name "HiFi Tunnel4BT SCO Rx"
+
+	EnableSequence
+		'INTERNAL_BT_SCO_RX Audio Mixer MultiMedia9':1:1
+	EndSequence
+
+	DisableSequence
+		'INTERNAL_BT_SCO_RX Audio Mixer MultiMedia9':1:0
+	EndSequence
+
+	# ALSA PCMs
+	PlaybackPCM 20
+
+EndSection
+
+SectionVerb
+	Name "HiFi Tunnel4BT SCO WB Rx"
+
+	EnableSequence
+		'INTERNAL_BT_SCO_RX Audio Mixer MultiMedia9':1:1
+	EndSequence
+
+	DisableSequence
+		'INTERNAL_BT_SCO_RX Audio Mixer MultiMedia9':1:0
+	EndSequence
+
+	# ALSA PCMs
+	PlaybackPCM 20
+
+EndSection
+
+SectionVerb
+        Name "HiFi Tunnel4PROXY Rx"
+
+        EnableSequence
+                'AFE_PCM_RX Audio Mixer MultiMedia9':1:1
+        EndSequence
+
+        DisableSequence
+                'AFE_PCM_RX Audio Mixer MultiMedia9':1:0
+        EndSequence
+
+        # ALSA PCMs
+        PlaybackPCM 20
+
+EndSection
+
+SectionVerb
+        Name "HiFi Tunnel4PROXY Tx"
+
+        EnableSequence
+        EndSequence
+
+        DisableSequence
+        EndSequence
+
+        # ALSA PCMs
+        PlaybackPCM 20
+
+EndSection
+
+SectionVerb
+	Name "HiFi Tunnel4SPDIF"
+
+	EnableSequence
+		'SEC_RX Audio Mixer MultiMedia9':1:1
+	EndSequence
+
+	DisableSequence
+		'SEC_RX Audio Mixer MultiMedia9':1:0
+	EndSequence
+
+	# ALSA PCMs
+	PlaybackPCM 20
+
+EndSection
+}
+SectionUseCase."HiFi Tunnel4Pseudo" {
+Comment "HIFI transcode use case"
+SectionModifier
+        Name "HiFi Tunnel4Pseudo"
+
+        EnableSequence
+                'PSEUDO Mixer MultiMedia20':1:1
+                'SEC_RX Audio Mixer Pseudo':1:1
+        EndSequence
+
+        DisableSequence
+                'PSEUDO Mixer MultiMedia20':1:0
+                'SEC_RX Audio Mixer Pseudo':1:1
+        EndSequence
+
+        # ALSA PCMs
+        PlaybackPCM 19
+
+EndSection
+
+SectionModifier
+        Name "HiFi Tunnel4PseudoSPDIF"
+
+        EnableSequence
+                'PSEUDO Mixer MultiMedia20':1:1
+                'SEC_RX Audio Mixer Pseudo':1:1
+        EndSequence
+
+        DisableSequence
+                'PSEUDO Mixer MultiMedia20':1:0
+                'SEC_RX Audio Mixer Pseudo':1:0
+        EndSequence
+
+        # ALSA PCMs
+        PlaybackPCM 19
+
+EndSection
+
+SectionModifier
+        Name "HiFi Tunnel4PseudoHDMI"
+
+        EnableSequence
+                'PSEUDO Mixer MultiMedia20':1:1
+                'HDMI Mixer Pseudo':1:1
+        EndSequence
+
+        DisableSequence
+                'PSEUDO Mixer MultiMedia20':1:0
+                'HDMI Mixer Pseudo':1:0
+        EndSequence
+
+        # ALSA PCMs
+        PlaybackPCM 19
+
+EndSection
+}
+SectionUseCase."HiFi Tunnel5" {
+Comment "Tunnel5 mode playback use case"
+SectionVerb
+	Name "HiFi Tunnel5"
+
+	EnableSequence
+		'SLIMBUS_0_RX Audio Mixer MultiMedia10':1:1
+	EndSequence
+
+	DisableSequence
+		'SLIMBUS_0_RX Audio Mixer MultiMedia10':1:0
+	EndSequence
+
+	# ALSA PCMs
+	PlaybackPCM 21
+
+EndSection
+
+SectionVerb
+	Name "HiFi Tunnel5FM Tx"
+
+	EnableSequence
+		'INTERNAL_FM_RX Audio Mixer MultiMedia10':1:1
+	EndSequence
+
+	DisableSequence
+		'INTERNAL_FM_RX Audio Mixer MultiMedia10':1:0
+	EndSequence
+
+	# ALSA PCMs
+	PlaybackPCM 21
+
+EndSection
+
+SectionVerb
+	Name "HiFi Tunnel5HDMI"
+
+	EnableSequence
+		'HDMI Mixer MultiMedia10':1:1
+	EndSequence
+
+	DisableSequence
+		'HDMI Mixer MultiMedia10':1:0
+	EndSequence
+
+	# ALSA PCMs
+	PlaybackPCM 21
+
+EndSection
+
+SectionVerb
+	Name "HiFi Tunnel5BT SCO Rx"
+
+	EnableSequence
+		'INTERNAL_BT_SCO_RX Audio Mixer MultiMedia10':1:1
+	EndSequence
+
+	DisableSequence
+		'INTERNAL_BT_SCO_RX Audio Mixer MultiMedia10':1:0
+	EndSequence
+
+	# ALSA PCMs
+	PlaybackPCM 21
+
+EndSection
+
+SectionVerb
+	Name "HiFi Tunnel5BT SCO WB Rx"
+
+	EnableSequence
+		'INTERNAL_BT_SCO_RX Audio Mixer MultiMedia10':1:1
+	EndSequence
+
+	DisableSequence
+		'INTERNAL_BT_SCO_RX Audio Mixer MultiMedia10':1:0
+	EndSequence
+
+	# ALSA PCMs
+	PlaybackPCM 21
+
+EndSection
+
+SectionVerb
+        Name "HiFi Tunnel5PROXY Rx"
+
+        EnableSequence
+                'AFE_PCM_RX Audio Mixer MultiMedia10':1:1
+        EndSequence
+
+        DisableSequence
+                'AFE_PCM_RX Audio Mixer MultiMedia10':1:0
+        EndSequence
+
+        # ALSA PCMs
+        PlaybackPCM 21
+
+EndSection
+
+SectionVerb
+        Name "HiFi Tunnel5PROXY Tx"
+
+        EnableSequence
+        EndSequence
+
+        DisableSequence
+        EndSequence
+
+        # ALSA PCMs
+        PlaybackPCM 21
+
+EndSection
+
+SectionVerb
+	Name "HiFi Tunnel5SPDIF"
+
+	EnableSequence
+		'SEC_RX Audio Mixer MultiMedia10':1:1
+	EndSequence
+
+	DisableSequence
+		'SEC_RX Audio Mixer MultiMedia10':1:0
+	EndSequence
+
+	# ALSA PCMs
+	PlaybackPCM 21
+
+EndSection
+}
+SectionUseCase."HiFi Tunnel5Pseudo" {
+Comment "HIFI transcode use case"
+SectionModifier
+        Name "HiFi Tunnel5Pseudo"
+
+        EnableSequence
+                'PSEUDO Mixer MultiMedia21':1:1
+                'SEC_RX Audio Mixer Pseudo':1:1
+        EndSequence
+
+        DisableSequence
+                'PSEUDO Mixer MultiMedia21':1:0
+                'SEC_RX Audio Mixer Pseudo':1:1
+        EndSequence
+
+        # ALSA PCMs
+        PlaybackPCM 19
+
+EndSection
+
+SectionModifier
+        Name "HiFi Tunnel5PseudoSPDIF"
+
+        EnableSequence
+                'PSEUDO Mixer MultiMedia21':1:1
+                'SEC_RX Audio Mixer Pseudo':1:1
+        EndSequence
+
+        DisableSequence
+                'PSEUDO Mixer MultiMedia21':1:0
+                'SEC_RX Audio Mixer Pseudo':1:0
+        EndSequence
+
+        # ALSA PCMs
+        PlaybackPCM 19
+
+EndSection
+
+SectionModifier
+        Name "HiFi Tunnel5PseudoHDMI"
+
+        EnableSequence
+                'PSEUDO Mixer MultiMedia21':1:1
+                'HDMI Mixer Pseudo':1:1
+        EndSequence
+
+        DisableSequence
+                'PSEUDO Mixer MultiMedia21':1:0
+                'HDMI Mixer Pseudo':1:0
+        EndSequence
+
+        # ALSA PCMs
+        PlaybackPCM 19
+
+EndSection
+}
+SectionUseCase."HiFi Tunnel6" {
+Comment "Tunnel6 mode playback use case"
+SectionVerb
+	Name "HiFi Tunnel6"
+
+	EnableSequence
+		'SLIMBUS_0_RX Audio Mixer MultiMedia11':1:1
+	EndSequence
+
+	DisableSequence
+		'SLIMBUS_0_RX Audio Mixer MultiMedia11':1:0
+	EndSequence
+
+	# ALSA PCMs
+	PlaybackPCM 22
+
+EndSection
+
+SectionVerb
+	Name "HiFi Tunnel6FM Tx"
+
+	EnableSequence
+		'INTERNAL_FM_RX Audio Mixer MultiMedia11':1:1
+	EndSequence
+
+	DisableSequence
+		'INTERNAL_FM_RX Audio Mixer MultiMedia11':1:0
+	EndSequence
+
+	# ALSA PCMs
+	PlaybackPCM 22
+
+EndSection
+
+SectionVerb
+	Name "HiFi Tunnel6HDMI"
+
+	EnableSequence
+		'HDMI Mixer MultiMedia11':1:1
+	EndSequence
+
+	DisableSequence
+		'HDMI Mixer MultiMedia11':1:0
+	EndSequence
+
+	# ALSA PCMs
+	PlaybackPCM 22
+
+EndSection
+
+SectionVerb
+	Name "HiFi Tunnel6BT SCO Rx"
+
+	EnableSequence
+		'INTERNAL_BT_SCO_RX Audio Mixer MultiMedia11':1:1
+	EndSequence
+
+	DisableSequence
+		'INTERNAL_BT_SCO_RX Audio Mixer MultiMedia11':1:0
+	EndSequence
+
+	# ALSA PCMs
+	PlaybackPCM 22
+
+EndSection
+
+SectionVerb
+	Name "HiFi Tunnel6BT SCO WB Rx"
+
+	EnableSequence
+		'INTERNAL_BT_SCO_RX Audio Mixer MultiMedia11':1:1
+	EndSequence
+
+	DisableSequence
+		'INTERNAL_BT_SCO_RX Audio Mixer MultiMedia11':1:0
+	EndSequence
+
+	# ALSA PCMs
+	PlaybackPCM 22
+
+EndSection
+
+SectionVerb
+        Name "HiFi Tunnel6PROXY Rx"
+
+        EnableSequence
+                'AFE_PCM_RX Audio Mixer MultiMedia11':1:1
+        EndSequence
+
+        DisableSequence
+                'AFE_PCM_RX Audio Mixer MultiMedia11':1:0
+        EndSequence
+
+        # ALSA PCMs
+        PlaybackPCM 22
+
+EndSection
+
+SectionVerb
+        Name "HiFi Tunnel6PROXY Tx"
+
+        EnableSequence
+        EndSequence
+
+        DisableSequence
+        EndSequence
+
+        # ALSA PCMs
+        PlaybackPCM 22
+
+EndSection
+
+SectionVerb
+	Name "HiFi Tunnel6SPDIF"
+
+	EnableSequence
+		'SEC_RX Audio Mixer MultiMedia11':1:1
+	EndSequence
+
+	DisableSequence
+		'SEC_RX Audio Mixer MultiMedia11':1:0
+	EndSequence
+
+	# ALSA PCMs
+	PlaybackPCM 22
+
+EndSection
+}
+SectionUseCase."HiFi Tunnel6Pseudo" {
+Comment "HIFI transcode use case"
+SectionModifier
+        Name "HiFi Tunnel6Pseudo"
+
+        EnableSequence
+                'PSEUDO Mixer MultiMedia22':1:1
+                'SEC_RX Audio Mixer Pseudo':1:1
+        EndSequence
+
+        DisableSequence
+                'PSEUDO Mixer MultiMedia22':1:0
+                'SEC_RX Audio Mixer Pseudo':1:1
+        EndSequence
+
+        # ALSA PCMs
+        PlaybackPCM 19
+
+EndSection
+
+SectionModifier
+        Name "HiFi Tunnel6PseudoSPDIF"
+
+        EnableSequence
+                'PSEUDO Mixer MultiMedia22':1:1
+                'SEC_RX Audio Mixer Pseudo':1:1
+        EndSequence
+
+        DisableSequence
+                'PSEUDO Mixer MultiMedia22':1:0
+                'SEC_RX Audio Mixer Pseudo':1:0
+        EndSequence
+
+        # ALSA PCMs
+        PlaybackPCM 19
+
+EndSection
+
+SectionModifier
+        Name "HiFi Tunnel6PseudoHDMI"
+
+        EnableSequence
+                'PSEUDO Mixer MultiMedia22':1:1
+                'HDMI Mixer Pseudo':1:1
+        EndSequence
+
+        DisableSequence
+                'PSEUDO Mixer MultiMedia22':1:0
+                'HDMI Mixer Pseudo':1:0
+        EndSequence
+
+        # ALSA PCMs
+        PlaybackPCM 19
+
+EndSection
+}
 SectionUseCase."VoLTE" {
 Comment "VoLTE use case"
 SectionVerb
@@ -5477,120 +6266,6 @@ SectionModifier
 EndSection
 
 SectionModifier
-	Name "Play Tunnel1"
-
-	EnableSequence
-		'SLIMBUS_0_RX Audio Mixer MultiMedia4':1:1
-	EndSequence
-
-	DisableSequence
-		'SLIMBUS_0_RX Audio Mixer MultiMedia4':1:0
-	EndSequence
-
-	# ALSA PCMs
-	PlaybackPCM 9
-
-EndSection
-
-SectionModifier
-	Name "Play Tunnel1Speaker FM Tx"
-
-	EnableSequence
-		'SLIMBUS_0_RX Audio Mixer MultiMedia4':1:1
-		'INTERNAL_FM_RX Audio Mixer MultiMedia4':1:1
-	EndSequence
-
-	DisableSequence
-		'SLIMBUS_0_RX Audio Mixer MultiMedia4':1:0
-		'INTERNAL_FM_RX Audio Mixer MultiMedia4':1:0
-	EndSequence
-
-	# ALSA PCMs
-	PlaybackPCM 9
-
-EndSection
-
-SectionModifier
-	Name "Play Tunnel1FM Tx"
-
-	EnableSequence
-		'INTERNAL_FM_RX Audio Mixer MultiMedia4':1:1
-	EndSequence
-
-	DisableSequence
-		'INTERNAL_FM_RX Audio Mixer MultiMedia4':1:0
-	EndSequence
-
-	# ALSA PCMs
-	PlaybackPCM 9
-
-EndSection
-
-SectionModifier
-	Name "Play Tunnel1HDMI"
-
-	EnableSequence
-		'HDMI Mixer MultiMedia4':1:1
-	EndSequence
-
-	DisableSequence
-		'HDMI Mixer MultiMedia4':1:0
-	EndSequence
-
-	# ALSA PCMs
-	PlaybackPCM 9
-
-EndSection
-
-SectionModifier
-	Name "Play Tunnel1BT SCO Rx"
-
-	EnableSequence
-		'AUX_PCM_RX Audio Mixer MultiMedia4':1:1
-	EndSequence
-
-	DisableSequence
-		'AUX_PCM_RX Audio Mixer MultiMedia4':1:0
-	EndSequence
-
-	# ALSA PCMs
-	PlaybackPCM 9
-
-EndSection
-
-SectionModifier
-	Name "Play Tunnel1BT SCO WB Rx"
-
-	EnableSequence
-		'AUX_PCM_RX Audio Mixer MultiMedia4':1:1
-	EndSequence
-
-	DisableSequence
-		'AUX_PCM_RX Audio Mixer MultiMedia4':1:0
-	EndSequence
-
-	# ALSA PCMs
-	PlaybackPCM 9
-
-EndSection
-
-SectionModifier
-        Name "Play Tunnel1PROXY Rx"
-
-        EnableSequence
-		'AFE_PCM_RX Audio Mixer MultiMedia4':1:1
-        EndSequence
-
-        DisableSequence
-		'AFE_PCM_RX Audio Mixer MultiMedia4':1:0
-        EndSequence
-
-        # ALSA PCMs
-        PlaybackPCM 9
-
-EndSection
-
-SectionModifier
 	Name "Play MusicSPDIF"
 
 	EnableSequence
@@ -5775,22 +6450,6 @@ SectionModifier
 	# ALSA PCMs
 	CapturePCM 1
 	PlaybackPCM 1
-
-EndSection
-
-SectionModifier
-	Name "Play Tunnel1SPDIF"
-
-	EnableSequence
-		'SEC_RX Audio Mixer MultiMedia4':1:1
-	EndSequence
-
-	DisableSequence
-		'SEC_RX Audio Mixer MultiMedia4':1:0
-	EndSequence
-
-	# ALSA PCMs
-	PlaybackPCM 9
 
 EndSection
 
@@ -6729,258 +7388,6 @@ SectionModifier
 EndSection
 
 SectionModifier
-	Name "Play Tunnel2"
-
-	EnableSequence
-		'SLIMBUS_0_RX Audio Mixer MultiMedia7':1:1
-	EndSequence
-
-	DisableSequence
-		'SLIMBUS_0_RX Audio Mixer MultiMedia7':1:0
-	EndSequence
-
-	# ALSA PCMs
-	PlaybackPCM 16
-
-EndSection
-
-SectionModifier
-	Name "Play Tunnel2FM Tx"
-
-	EnableSequence
-		'INTERNAL_FM_RX Audio Mixer MultiMedia7':1:1
-	EndSequence
-
-	DisableSequence
-		'INTERNAL_FM_RX Audio Mixer MultiMedia7':1:0
-	EndSequence
-
-	# ALSA PCMs
-	PlaybackPCM 16
-
-EndSection
-
-SectionModifier
-	Name "Play Tunnel2HDMI"
-
-	EnableSequence
-		'HDMI Mixer MultiMedia7':1:1
-	EndSequence
-
-	DisableSequence
-		'HDMI Mixer MultiMedia7':1:0
-	EndSequence
-
-	# ALSA PCMs
-	PlaybackPCM 16
-
-EndSection
-
-SectionModifier
-	Name "Play Tunnel2BT SCO Rx"
-
-	EnableSequence
-		'AUX_PCM_RX Audio Mixer MultiMedia7':1:1
-	EndSequence
-
-	DisableSequence
-		'AUX_PCM_RX Audio Mixer MultiMedia7':1:0
-	EndSequence
-
-	# ALSA PCMs
-	PlaybackPCM 16
-
-EndSection
-
-SectionModifier
-	Name "Play Tunnel2BT SCO WB Rx"
-
-	EnableSequence
-		'AUX_PCM_RX Audio Mixer MultiMedia7':1:1
-	EndSequence
-
-	DisableSequence
-		'AUX_PCM_RX Audio Mixer MultiMedia7':1:0
-	EndSequence
-
-	# ALSA PCMs
-	PlaybackPCM 16
-
-EndSection
-
-SectionModifier
-	Name "Play Tunnel2PROXY Rx"
-
-	EnableSequence
-		'AFE_PCM_RX Audio Mixer MultiMedia7':1:1
-	EndSequence
-
-	DisableSequence
-		'AFE_PCM_RX Audio Mixer MultiMedia7':1:0
-	EndSequence
-
-	# ALSA PCMs
-	PlaybackPCM 16
-
-EndSection
-
-SectionModifier
-        Name "Play Tunnel2PROXY Tx"
-
-        EnableSequence
-        EndSequence
-
-        DisableSequence
-        EndSequence
-
-        # ALSA PCMs
-        PlaybackPCM 16
-
-EndSection
-
-SectionModifier
-	Name "Play Tunnel2SPDIF"
-
-	EnableSequence
-		'SEC_RX Audio Mixer MultiMedia7':1:1
-	EndSequence
-
-	DisableSequence
-		'SEC_RX Audio Mixer MultiMedia7':1:0
-	EndSequence
-
-	# ALSA PCMs
-	PlaybackPCM 16
-
-EndSection
-
-SectionModifier
-	Name "Play Tunnel3"
-
-	EnableSequence
-		'SLIMBUS_0_RX Audio Mixer MultiMedia8':1:1
-	EndSequence
-
-	DisableSequence
-		'SLIMBUS_0_RX Audio Mixer MultiMedia8':1:0
-	EndSequence
-
-	# ALSA PCMs
-	PlaybackPCM 17
-
-EndSection
-
-SectionModifier
-	Name "Play Tunnel3FM Tx"
-
-	EnableSequence
-		'INTERNAL_FM_RX Audio Mixer MultiMedia8':1:1
-	EndSequence
-
-	DisableSequence
-		'INTERNAL_FM_RX Audio Mixer MultiMedia8':1:0
-	EndSequence
-
-	# ALSA PCMs
-	PlaybackPCM 17
-
-EndSection
-
-SectionModifier
-	Name "Play Tunnel3HDMI"
-
-	EnableSequence
-		'HDMI Mixer MultiMedia8':1:1
-	EndSequence
-
-	DisableSequence
-		'HDMI Mixer MultiMedia8':1:0
-	EndSequence
-
-	# ALSA PCMs
-	PlaybackPCM 17
-
-EndSection
-
-SectionModifier
-	Name "Play Tunnel3BT SCO Rx"
-
-	EnableSequence
-		'AUX_PCM_RX Audio Mixer MultiMedia8':1:1
-	EndSequence
-
-	DisableSequence
-		'AUX_PCM_RX Audio Mixer MultiMedia8':1:0
-	EndSequence
-
-	# ALSA PCMs
-	PlaybackPCM 17
-
-EndSection
-
-SectionModifier
-	Name "Play Tunnel3BT SCO WB Rx"
-
-	EnableSequence
-		'AUX_PCM_RX Audio Mixer MultiMedia8':1:1
-	EndSequence
-
-	DisableSequence
-		'AUX_PCM_RX Audio Mixer MultiMedia8':1:0
-	EndSequence
-
-	# ALSA PCMs
-	PlaybackPCM 17
-
-EndSection
-
-SectionModifier
-        Name "Play Tunnel3PROXY Rx"
-
-        EnableSequence
-                'AFE_PCM_RX Audio Mixer MultiMedia8':1:1
-        EndSequence
-
-        DisableSequence
-                'AFE_PCM_RX Audio Mixer MultiMedia8':1:0
-        EndSequence
-
-        # ALSA PCMs
-        PlaybackPCM 17
-
-EndSection
-
-SectionModifier
-        Name "Play Tunnel3PROXY Tx"
-
-        EnableSequence
-        EndSequence
-
-        DisableSequence
-        EndSequence
-
-        # ALSA PCMs
-        PlaybackPCM 17
-
-EndSection
-
-SectionModifier
-	Name "Play Tunnel3SPDIF"
-
-	EnableSequence
-		'SEC_RX Audio Mixer MultiMedia8':1:1
-	EndSequence
-
-	DisableSequence
-		'SEC_RX Audio Mixer MultiMedia8':1:0
-	EndSequence
-
-	# ALSA PCMs
-	PlaybackPCM 17
-
-EndSection
-
-SectionModifier
     Name "Play Tunnel1Pseudo"
 
     EnableSequence
@@ -7015,7 +7422,6 @@ SectionModifier
     PlaybackPCM 19
 
 EndSection
-
 
 SectionModifier
     Name "Play Tunnel1PseudoHDMI"
@@ -7126,7 +7532,6 @@ SectionModifier
 
 EndSection
 
-
 SectionModifier
     Name "Play Tunnel3PseudoHDMI"
 
@@ -7144,6 +7549,169 @@ SectionModifier
     PlaybackPCM 19
 
 EndSection
+
+SectionModifier
+        Name "Play Tunnel4Pseudo"
+
+        EnableSequence
+            'PSEUDO Mixer MultiMedia9':1:1
+            'SEC_RX Audio Mixer Pseudo':1:1
+        EndSequence
+
+        DisableSequence
+            'PSEUDO Mixer MultiMedia9':1:0
+            'SEC_RX Audio Mixer Pseudo':1:0
+        EndSequence
+
+        # ALSA PCMs
+        PlaybackPCM 19
+
+EndSection
+
+SectionModifier
+        Name "Play Tunnel4PseudoSPDIF"
+
+        EnableSequence
+                'PSEUDO Mixer MultiMedia9':1:1
+                'SEC_RX Audio Mixer Pseudo':1:1
+        EndSequence
+
+        DisableSequence
+                'PSEUDO Mixer MultiMedia9':1:0
+                'SEC_RX Audio Mixer Pseudo':1:0
+        EndSequence
+
+        # ALSA PCMs
+        PlaybackPCM 19
+
+EndSection
+
+SectionModifier
+        Name "Play Tunnel4PseudoHDMI"
+
+        EnableSequence
+                'PSEUDO Mixer MultiMedia9':1:1
+                'HDMI Mixer Pseudo':1:1
+        EndSequence
+
+        DisableSequence
+                'PSEUDO Mixer MultiMedia9':1:0
+                'HDMI Mixer Pseudo':1:0
+        EndSequence
+
+        # ALSA PCMs
+        PlaybackPCM 19
+
+EndSection
+
+SectionModifier
+        Name "Play Tunnel5Pseudo"
+
+        EnableSequence
+            'PSEUDO Mixer MultiMedia10':1:1
+            'SEC_RX Audio Mixer Pseudo':1:1
+        EndSequence
+
+        DisableSequence
+            'PSEUDO Mixer MultiMedia10':1:0
+            'SEC_RX Audio Mixer Pseudo':1:0
+        EndSequence
+
+        # ALSA PCMs
+        PlaybackPCM 19
+
+EndSection
+
+SectionModifier
+        Name "Play Tunnel5PseudoSPDIF"
+
+        EnableSequence
+                'PSEUDO Mixer MultiMedia10':1:1
+                'SEC_RX Audio Mixer Pseudo':1:1
+        EndSequence
+
+        DisableSequence
+                'PSEUDO Mixer MultiMedia10':1:0
+                'SEC_RX Audio Mixer Pseudo':1:0
+        EndSequence
+
+        # ALSA PCMs
+        PlaybackPCM 19
+
+EndSection
+
+SectionModifier
+        Name "Play Tunnel5PseudoHDMI"
+
+        EnableSequence
+                'PSEUDO Mixer MultiMedia10':1:1
+                'HDMI Mixer Pseudo':1:1
+        EndSequence
+
+        DisableSequence
+                'PSEUDO Mixer MultiMedia10':1:0
+                'HDMI Mixer Pseudo':1:0
+        EndSequence
+
+        # ALSA PCMs
+        PlaybackPCM 19
+
+EndSection
+
+SectionModifier
+        Name "Play Tunnel6Pseudo"
+
+        EnableSequence
+            'PSEUDO Mixer MultiMedia11':1:1
+            'SEC_RX Audio Mixer Pseudo':1:1
+        EndSequence
+
+        DisableSequence
+            'PSEUDO Mixer MultiMedia11':1:0
+            'SEC_RX Audio Mixer Pseudo':1:0
+        EndSequence
+
+        # ALSA PCMs
+        PlaybackPCM 19
+
+EndSection
+
+SectionModifier
+        Name "Play Tunnel6PseudoSPDIF"
+
+        EnableSequence
+                'PSEUDO Mixer MultiMedia11':1:1
+                'SEC_RX Audio Mixer Pseudo':1:1
+        EndSequence
+
+        DisableSequence
+                'PSEUDO Mixer MultiMedia11':1:0
+                'SEC_RX Audio Mixer Pseudo':1:0
+        EndSequence
+
+        # ALSA PCMs
+        PlaybackPCM 19
+
+EndSection
+
+SectionModifier
+        Name "Play Tunnel6PseudoHDMI"
+
+        EnableSequence
+                'PSEUDO Mixer MultiMedia11':1:1
+                'HDMI Mixer Pseudo':1:1
+        EndSequence
+
+        DisableSequence
+                'PSEUDO Mixer MultiMedia11':1:0
+                'HDMI Mixer Pseudo':1:0
+        EndSequence
+
+        # ALSA PCMs
+        PlaybackPCM 19
+
+EndSection
+
 SectionModifier
         Name "Play LPAPROXY Rx Speaker"
 
@@ -7255,6 +7823,762 @@ SectionModifier
         # ALSA PCMs
         CapturePCM 0
         PlaybackPCM 4
+
+EndSection
+
+SectionModifier
+	Name "Play Tunnel1"
+
+	EnableSequence
+		'SLIMBUS_0_RX Audio Mixer MultiMedia4':1:1
+	EndSequence
+
+	DisableSequence
+		'SLIMBUS_0_RX Audio Mixer MultiMedia4':1:0
+	EndSequence
+
+	# ALSA PCMs
+	PlaybackPCM 9
+
+EndSection
+
+SectionModifier
+	Name "Play Tunnel1FM Tx"
+
+	EnableSequence
+		'INTERNAL_FM_RX Audio Mixer MultiMedia4':1:1
+	EndSequence
+
+	DisableSequence
+		'INTERNAL_FM_RX Audio Mixer MultiMedia4':1:0
+	EndSequence
+
+	# ALSA PCMs
+	PlaybackPCM 9
+
+EndSection
+
+SectionModifier
+	Name "Play Tunnel1HDMI"
+
+	EnableSequence
+		'HDMI Mixer MultiMedia4':1:1
+	EndSequence
+
+	DisableSequence
+		'HDMI Mixer MultiMedia4':1:0
+	EndSequence
+
+	# ALSA PCMs
+	PlaybackPCM 9
+
+EndSection
+
+SectionModifier
+	Name "Play Tunnel1BT SCO Rx"
+
+	EnableSequence
+		'AUX_PCM_RX Audio Mixer MultiMedia4':1:1
+	EndSequence
+
+	DisableSequence
+		'AUX_PCM_RX Audio Mixer MultiMedia4':1:0
+	EndSequence
+
+	# ALSA PCMs
+	PlaybackPCM 9
+
+EndSection
+
+SectionModifier
+	Name "Play Tunnel1BT SCO WB Rx"
+
+	EnableSequence
+		'AUX_PCM_RX Audio Mixer MultiMedia4':1:1
+	EndSequence
+
+	DisableSequence
+		'AUX_PCM_RX Audio Mixer MultiMedia4':1:0
+	EndSequence
+
+	# ALSA PCMs
+	PlaybackPCM 9
+
+EndSection
+
+SectionModifier
+        Name "Play Tunnel1PROXY Rx"
+
+        EnableSequence
+                'AFE_PCM_RX Audio Mixer MultiMedia4':1:1
+        EndSequence
+
+        DisableSequence
+                'AFE_PCM_RX Audio Mixer MultiMedia4':1:0
+        EndSequence
+
+        # ALSA PCMs
+        PlaybackPCM 9
+
+EndSection
+
+SectionModifier
+        Name "Play Tunnel1PROXY Tx"
+
+        EnableSequence
+        EndSequence
+
+        DisableSequence
+        EndSequence
+
+        # ALSA PCMs
+        PlaybackPCM 9
+
+EndSection
+
+SectionModifier
+	Name "Play Tunnel1SPDIF"
+
+	EnableSequence
+		'SEC_RX Audio Mixer MultiMedia4':1:1
+	EndSequence
+
+	DisableSequence
+		'SEC_RX Audio Mixer MultiMedia4':1:0
+	EndSequence
+
+	# ALSA PCMs
+	PlaybackPCM 9
+
+EndSection
+
+SectionModifier
+	Name "Play Tunnel2"
+
+	EnableSequence
+		'SLIMBUS_0_RX Audio Mixer MultiMedia7':1:1
+	EndSequence
+
+	DisableSequence
+		'SLIMBUS_0_RX Audio Mixer MultiMedia7':1:0
+	EndSequence
+
+	# ALSA PCMs
+	PlaybackPCM 16
+
+EndSection
+
+SectionModifier
+	Name "Play Tunnel2FM Tx"
+
+	EnableSequence
+		'INTERNAL_FM_RX Audio Mixer MultiMedia7':1:1
+	EndSequence
+
+	DisableSequence
+		'INTERNAL_FM_RX Audio Mixer MultiMedia7':1:0
+	EndSequence
+
+	# ALSA PCMs
+	PlaybackPCM 16
+
+EndSection
+
+SectionModifier
+	Name "Play Tunnel2HDMI"
+
+	EnableSequence
+		'HDMI Mixer MultiMedia7':1:1
+	EndSequence
+
+	DisableSequence
+		'HDMI Mixer MultiMedia7':1:0
+	EndSequence
+
+	# ALSA PCMs
+	PlaybackPCM 16
+
+EndSection
+
+SectionModifier
+	Name "Play Tunnel2BT SCO Rx"
+
+	EnableSequence
+		'INTERNAL_BT_SCO_RX Audio Mixer MultiMedia7':1:1
+	EndSequence
+
+	DisableSequence
+		'INTERNAL_BT_SCO_RX Audio Mixer MultiMedia7':1:0
+	EndSequence
+
+	# ALSA PCMs
+	PlaybackPCM 16
+
+EndSection
+
+SectionModifier
+	Name "Play Tunnel2BT SCO WB Rx"
+
+	EnableSequence
+		'INTERNAL_BT_SCO_RX Audio Mixer MultiMedia7':1:1
+	EndSequence
+
+	DisableSequence
+		'INTERNAL_BT_SCO_RX Audio Mixer MultiMedia7':1:0
+	EndSequence
+
+	# ALSA PCMs
+	PlaybackPCM 16
+
+EndSection
+
+SectionModifier
+        Name "Play Tunnel2PROXY Rx"
+
+        EnableSequence
+                'AFE_PCM_RX Audio Mixer MultiMedia7':1:1
+        EndSequence
+
+        DisableSequence
+                'AFE_PCM_RX Audio Mixer MultiMedia7':1:0
+        EndSequence
+
+        # ALSA PCMs
+        PlaybackPCM 16
+
+EndSection
+
+SectionModifier
+        Name "Play Tunnel2PROXY Tx"
+
+        EnableSequence
+        EndSequence
+
+        DisableSequence
+        EndSequence
+
+        # ALSA PCMs
+        PlaybackPCM 16
+
+EndSection
+
+SectionModifier
+	Name "Play Tunnel2SPDIF"
+
+	EnableSequence
+		'SEC_RX Audio Mixer MultiMedia7':1:1
+	EndSequence
+
+	DisableSequence
+		'SEC_RX Audio Mixer MultiMedia7':1:0
+	EndSequence
+
+	# ALSA PCMs
+	PlaybackPCM 16
+
+EndSection
+
+SectionModifier
+	Name "Play Tunnel3"
+
+	EnableSequence
+		'SLIMBUS_0_RX Audio Mixer MultiMedia8':1:1
+	EndSequence
+
+	DisableSequence
+		'SLIMBUS_0_RX Audio Mixer MultiMedia8':1:0
+	EndSequence
+
+	# ALSA PCMs
+	PlaybackPCM 17
+
+EndSection
+
+SectionModifier
+	Name "Play Tunnel3FM Tx"
+
+	EnableSequence
+		'INTERNAL_FM_RX Audio Mixer MultiMedia8':1:1
+	EndSequence
+
+	DisableSequence
+		'INTERNAL_FM_RX Audio Mixer MultiMedia8':1:0
+	EndSequence
+
+	# ALSA PCMs
+	PlaybackPCM 17
+
+EndSection
+
+SectionModifier
+	Name "Play Tunnel3HDMI"
+
+	EnableSequence
+		'HDMI Mixer MultiMedia8':1:1
+	EndSequence
+
+	DisableSequence
+		'HDMI Mixer MultiMedia8':1:0
+	EndSequence
+
+	# ALSA PCMs
+	PlaybackPCM 17
+
+EndSection
+
+SectionModifier
+	Name "Play Tunnel3BT SCO Rx"
+
+	EnableSequence
+		'INTERNAL_BT_SCO_RX Audio Mixer MultiMedia8':1:1
+	EndSequence
+
+	DisableSequence
+		'INTERNAL_BT_SCO_RX Audio Mixer MultiMedia8':1:0
+	EndSequence
+
+	# ALSA PCMs
+	PlaybackPCM 17
+
+EndSection
+
+SectionModifier
+	Name "Play Tunnel3BT SCO WB Rx"
+
+	EnableSequence
+		'INTERNAL_BT_SCO_RX Audio Mixer MultiMedia8':1:1
+	EndSequence
+
+	DisableSequence
+		'INTERNAL_BT_SCO_RX Audio Mixer MultiMedia8':1:0
+	EndSequence
+
+	# ALSA PCMs
+	PlaybackPCM 17
+
+EndSection
+
+SectionModifier
+        Name "Play Tunnel3PROXY Rx"
+
+        EnableSequence
+                'AFE_PCM_RX Audio Mixer MultiMedia8':1:1
+        EndSequence
+
+        DisableSequence
+                'AFE_PCM_RX Audio Mixer MultiMedia8':1:0
+        EndSequence
+
+        # ALSA PCMs
+        PlaybackPCM 17
+
+EndSection
+
+SectionModifier
+        Name "Play Tunnel3PROXY Tx"
+
+        EnableSequence
+        EndSequence
+
+        DisableSequence
+        EndSequence
+
+        # ALSA PCMs
+        PlaybackPCM 17
+
+EndSection
+
+SectionModifier
+	Name "Play Tunnel3SPDIF"
+
+	EnableSequence
+		'SEC_RX Audio Mixer MultiMedia8':1:1
+	EndSequence
+
+	DisableSequence
+		'SEC_RX Audio Mixer MultiMedia8':1:0
+	EndSequence
+
+	# ALSA PCMs
+	PlaybackPCM 17
+
+EndSection
+
+SectionModifier
+	Name "Play Tunnel4"
+
+	EnableSequence
+		'SLIMBUS_0_RX Audio Mixer MultiMedia9':1:1
+	EndSequence
+
+	DisableSequence
+		'SLIMBUS_0_RX Audio Mixer MultiMedia9':1:0
+	EndSequence
+
+	# ALSA PCMs
+	PlaybackPCM 20
+
+EndSection
+
+SectionModifier
+	Name "Play Tunnel4FM Tx"
+
+	EnableSequence
+		'INTERNAL_FM_RX Audio Mixer MultiMedia9':1:1
+	EndSequence
+
+	DisableSequence
+		'INTERNAL_FM_RX Audio Mixer MultiMedia9':1:0
+	EndSequence
+
+	# ALSA PCMs
+	PlaybackPCM 20
+
+EndSection
+
+SectionModifier
+	Name "Play Tunnel4HDMI"
+
+	EnableSequence
+		'HDMI Mixer MultiMedia9':1:1
+	EndSequence
+
+	DisableSequence
+		'HDMI Mixer MultiMedia9':1:0
+	EndSequence
+
+	# ALSA PCMs
+	PlaybackPCM 20
+
+EndSection
+
+SectionModifier
+	Name "Play Tunnel4BT SCO Rx"
+
+	EnableSequence
+		'INTERNAL_BT_SCO_RX Audio Mixer MultiMedia9':1:1
+	EndSequence
+
+	DisableSequence
+		'INTERNAL_BT_SCO_RX Audio Mixer MultiMedia9':1:0
+	EndSequence
+
+	# ALSA PCMs
+	PlaybackPCM 20
+
+EndSection
+
+SectionModifier
+	Name "Play Tunnel4BT SCO WB Rx"
+
+	EnableSequence
+		'INTERNAL_BT_SCO_RX Audio Mixer MultiMedia9':1:1
+	EndSequence
+
+	DisableSequence
+		'INTERNAL_BT_SCO_RX Audio Mixer MultiMedia9':1:0
+	EndSequence
+
+	# ALSA PCMs
+	PlaybackPCM 20
+
+EndSection
+
+SectionModifier
+        Name "Play Tunnel4PROXY Rx"
+
+        EnableSequence
+                'AFE_PCM_RX Audio Mixer MultiMedia9':1:1
+        EndSequence
+
+        DisableSequence
+                'AFE_PCM_RX Audio Mixer MultiMedia9':1:0
+        EndSequence
+
+        # ALSA PCMs
+        PlaybackPCM 20
+
+EndSection
+
+SectionModifier
+        Name "Play Tunnel4PROXY Tx"
+
+        EnableSequence
+        EndSequence
+
+        DisableSequence
+        EndSequence
+
+        # ALSA PCMs
+        PlaybackPCM 20
+
+EndSection
+
+SectionModifier
+	Name "Play Tunnel4SPDIF"
+
+	EnableSequence
+		'SEC_RX Audio Mixer MultiMedia9':1:1
+	EndSequence
+
+	DisableSequence
+		'SEC_RX Audio Mixer MultiMedia9':1:0
+	EndSequence
+
+	# ALSA PCMs
+	PlaybackPCM 20
+
+EndSection
+
+SectionModifier
+	Name "Play Tunnel5"
+
+	EnableSequence
+		'SLIMBUS_0_RX Audio Mixer MultiMedia10':1:1
+	EndSequence
+
+	DisableSequence
+		'SLIMBUS_0_RX Audio Mixer MultiMedia10':1:0
+	EndSequence
+
+	# ALSA PCMs
+	PlaybackPCM 21
+
+EndSection
+
+SectionModifier
+	Name "Play Tunnel5FM Tx"
+
+	EnableSequence
+		'INTERNAL_FM_RX Audio Mixer MultiMedia10':1:1
+	EndSequence
+
+	DisableSequence
+		'INTERNAL_FM_RX Audio Mixer MultiMedia10':1:0
+	EndSequence
+
+	# ALSA PCMs
+	PlaybackPCM 21
+
+EndSection
+
+SectionModifier
+	Name "Play Tunnel5HDMI"
+
+	EnableSequence
+		'HDMI Mixer MultiMedia10':1:1
+	EndSequence
+
+	DisableSequence
+		'HDMI Mixer MultiMedia10':1:0
+	EndSequence
+
+	# ALSA PCMs
+	PlaybackPCM 21
+
+EndSection
+
+SectionModifier
+	Name "Play Tunnel5BT SCO Rx"
+
+	EnableSequence
+		'INTERNAL_BT_SCO_RX Audio Mixer MultiMedia10':1:1
+	EndSequence
+
+	DisableSequence
+		'INTERNAL_BT_SCO_RX Audio Mixer MultiMedia10':1:0
+	EndSequence
+
+	# ALSA PCMs
+	PlaybackPCM 21
+
+EndSection
+
+SectionModifier
+	Name "Play Tunnel5BT SCO WB Rx"
+
+	EnableSequence
+		'INTERNAL_BT_SCO_RX Audio Mixer MultiMedia10':1:1
+	EndSequence
+
+	DisableSequence
+		'INTERNAL_BT_SCO_RX Audio Mixer MultiMedia10':1:0
+	EndSequence
+
+	# ALSA PCMs
+	PlaybackPCM 21
+
+EndSection
+
+SectionModifier
+        Name "Play Tunnel5PROXY Rx"
+
+        EnableSequence
+                'AFE_PCM_RX Audio Mixer MultiMedia10':1:1
+        EndSequence
+
+        DisableSequence
+                'AFE_PCM_RX Audio Mixer MultiMedia10':1:0
+        EndSequence
+
+        # ALSA PCMs
+        PlaybackPCM 21
+
+EndSection
+
+SectionModifier
+        Name "Play Tunnel5PROXY Tx"
+
+        EnableSequence
+        EndSequence
+
+        DisableSequence
+        EndSequence
+
+        # ALSA PCMs
+        PlaybackPCM 21
+
+EndSection
+
+SectionModifier
+	Name "Play Tunnel5SPDIF"
+
+	EnableSequence
+		'SEC_RX Audio Mixer MultiMedia10':1:1
+	EndSequence
+
+	DisableSequence
+		'SEC_RX Audio Mixer MultiMedia10':1:0
+	EndSequence
+
+	# ALSA PCMs
+	PlaybackPCM 21
+
+EndSection
+
+SectionModifier
+	Name "Play Tunnel6"
+
+	EnableSequence
+		'SLIMBUS_0_RX Audio Mixer MultiMedia11':1:1
+	EndSequence
+
+	DisableSequence
+		'SLIMBUS_0_RX Audio Mixer MultiMedia11':1:0
+	EndSequence
+
+	# ALSA PCMs
+	PlaybackPCM 22
+
+EndSection
+
+SectionModifier
+	Name "Play Tunnel6FM Tx"
+
+	EnableSequence
+		'INTERNAL_FM_RX Audio Mixer MultiMedia11':1:1
+	EndSequence
+
+	DisableSequence
+		'INTERNAL_FM_RX Audio Mixer MultiMedia11':1:0
+	EndSequence
+
+	# ALSA PCMs
+	PlaybackPCM 22
+
+EndSection
+
+SectionModifier
+	Name "Play Tunnel6HDMI"
+
+	EnableSequence
+		'HDMI Mixer MultiMedia11':1:1
+	EndSequence
+
+	DisableSequence
+		'HDMI Mixer MultiMedia11':1:0
+	EndSequence
+
+	# ALSA PCMs
+	PlaybackPCM 22
+
+EndSection
+
+SectionModifier
+	Name "Play Tunnel6BT SCO Rx"
+
+	EnableSequence
+		'INTERNAL_BT_SCO_RX Audio Mixer MultiMedia11':1:1
+	EndSequence
+
+	DisableSequence
+		'INTERNAL_BT_SCO_RX Audio Mixer MultiMedia11':1:0
+	EndSequence
+
+	# ALSA PCMs
+	PlaybackPCM 22
+
+EndSection
+
+SectionModifier
+	Name "Play Tunnel6BT SCO WB Rx"
+
+	EnableSequence
+		'INTERNAL_BT_SCO_RX Audio Mixer MultiMedia11':1:1
+	EndSequence
+
+	DisableSequence
+		'INTERNAL_BT_SCO_RX Audio Mixer MultiMedia11':1:0
+	EndSequence
+
+	# ALSA PCMs
+	PlaybackPCM 22
+
+EndSection
+
+SectionModifier
+        Name "Play Tunnel6PROXY Rx"
+
+        EnableSequence
+                'AFE_PCM_RX Audio Mixer MultiMedia11':1:1
+        EndSequence
+
+        DisableSequence
+                'AFE_PCM_RX Audio Mixer MultiMedia11':1:0
+        EndSequence
+
+        # ALSA PCMs
+        PlaybackPCM 22
+
+EndSection
+
+SectionModifier
+        Name "Play Tunnel6PROXY Tx"
+
+        EnableSequence
+        EndSequence
+
+        DisableSequence
+        EndSequence
+
+        # ALSA PCMs
+        PlaybackPCM 22
+
+EndSection
+
+SectionModifier
+	Name "Play Tunnel6SPDIF"
+
+	EnableSequence
+		'SEC_RX Audio Mixer MultiMedia11':1:1
+	EndSequence
+
+	DisableSequence
+		'SEC_RX Audio Mixer MultiMedia11':1:0
+	EndSequence
+
+	# ALSA PCMs
+	PlaybackPCM 22
 
 EndSection
 # End of master file
