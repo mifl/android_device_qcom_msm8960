@@ -92,3 +92,27 @@ BOARD_HAS_ATH_ETH_ALX := true
 TARGET_USES_ION := true
 TARGET_ADDITIONAL_BOOTCLASSPATH := qcmediaplayer:WfdCommon:qcom.fmradio
 
+# Board specific SELinux policy variable definitions
+BOARD_SEPOLICY_DIRS := \
+       device/qcom/common/sepolicy
+
+BOARD_SEPOLICY_UNION := \
+       app.te \
+       bluetooth.te \
+       compatibility.te \
+       device.te \
+       domain.te \
+       drmserver.te \
+       file.te \
+       file_contexts \
+       hci_init.te \
+       init_shell.te \
+       keystore.te \
+       mediaserver.te \
+       kickstart.te \
+       nfc.te \
+       rild.te \
+       surfaceflinger.te \
+       system.te \
+       ueventd.te \
+       wpa.te
