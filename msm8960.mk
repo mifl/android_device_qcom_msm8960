@@ -1,5 +1,12 @@
 DEVICE_PACKAGE_OVERLAYS := device/qcom/msm8960/overlay
 
+ifeq ($(TARGET_ENABLE_QC_AV_ENHANCEMENTS),true)
+#media
+PRODUCT_COPY_FILES += \
+                      device/qcom/msm8960/media/media_profiles_8960.xml:system/etc/media_profiles.xml \
+                      device/qcom/msm8960/media/media_codecs_8960.xml:system/etc/media_codecs.xml
+endif #TARGET_ENABLE_QC_AV_ENHANCEMENTS
+
 $(call inherit-product, device/qcom/common/common.mk)
 
 PRODUCT_NAME := msm8960
