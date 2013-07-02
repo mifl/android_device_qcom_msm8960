@@ -208,25 +208,6 @@ SectionVerb
 EndSection
 
 SectionVerb
-        Name "HiFiUSB PROXY Rx Speaker"
-
-        EnableSequence
-                'AFE_PCM_RX Audio Mixer MultiMedia1':1:1
-                'SLIMBUS_0_RX Audio Mixer MultiMedia1':1:1
-        EndSequence
-
-        DisableSequence
-                'AFE_PCM_RX Audio Mixer MultiMedia1':1:0
-                'SLIMBUS_0_RX Audio Mixer MultiMedia1':1:0
-        EndSequence
-
-        # ALSA PCMs
-        CapturePCM 0
-        PlaybackPCM 0
-
-EndSection
-
-SectionVerb
         Name "HiFiPROXY Rx Earpiece"
 
         EnableSequence
@@ -505,25 +486,6 @@ EndSection
 
 SectionVerb
         Name "HiFi Low PowerPROXY Rx Speaker"
-
-        EnableSequence
-                'AFE_PCM_RX Audio Mixer MultiMedia3':1:1
-                'SLIMBUS_0_RX Audio Mixer MultiMedia3':1:1
-        EndSequence
-
-        DisableSequence
-                'AFE_PCM_RX Audio Mixer MultiMedia3':1:0
-                'SLIMBUS_0_RX Audio Mixer MultiMedia3':1:0
-        EndSequence
-
-        # ALSA PCMs
-        CapturePCM 0
-        PlaybackPCM 4
-
-EndSection
-
-SectionVerb
-        Name "HiFi Low PowerUSB PROXY Rx Speaker"
 
         EnableSequence
                 'AFE_PCM_RX Audio Mixer MultiMedia3':1:1
@@ -1162,201 +1124,6 @@ SectionVerb
 
 EndSection
 }
-SectionUseCase."Voice2" {
-Comment "Voice2 use case"
-SectionVerb
-        Name "Voice2"
-
-        EnableSequence
-                'SLIM_0_RX_Voice Mixer Voice2':1:1
-                'Voice2_Tx Mixer SLIM_0_TX_Voice2':1:1
-        EndSequence
-
-        DisableSequence
-                'SLIM_0_RX_Voice Mixer Voice2':1:0
-                'Voice2_Tx Mixer SLIM_0_TX_Voice2':1:0
-        EndSequence
-
-        # ALSA PCMs
-        PlaybackPCM 13
-        CapturePCM 13
-
-EndSection
-
-SectionVerb
-        Name "Voice2HDMI"
-
-        EnableSequence
-        EndSequence
-
-        DisableSequence
-                'HDMI_RX_Voice Mixer Voice2':1:0
-                'Voice2_Tx Mixer SLIM_0_TX_Voice2':1:0
-        EndSequence
-
-        # ALSA PCMs
-        PlaybackPCM 13
-        CapturePCM 13
-
-EndSection
-
-SectionVerb
-        Name "Voice2HDMI Tx"
-
-        EnableSequence
-                'HDMI_RX_Voice Mixer Voice2':1:1
-                'Voice2_Tx Mixer SLIM_0_TX_Voice2':1:1
-        EndSequence
-
-        DisableSequence
-        EndSequence
-
-        # ALSA PCMs
-        PlaybackPCM 13
-        CapturePCM 13
-
-EndSection
-
-SectionVerb
-        Name "Voice2BT SCO Rx"
-
-        EnableSequence
-        EndSequence
-
-        DisableSequence
-                'Internal BTSCO SampleRate':1:8000
-                'INTERNAL_BT_SCO_RX_Voice Mixer Voice2':1:0
-                'Voice2_Tx Mixer INTERNAL_BT_SCO_TX_Voice2':1:0
-        EndSequence
-
-        # ALSA PCMs
-        PlaybackPCM 13
-        CapturePCM 13
-
-EndSection
-
-SectionVerb
-        Name "Voice2BT SCO Tx"
-
-        EnableSequence
-                'Internal BTSCO SampleRate':1:8000
-                'INTERNAL_BT_SCO_RX_Voice Mixer Voice2':1:1
-                'Voice2_Tx Mixer INTERNAL_BT_SCO_TX_Voice2':1:1
-        EndSequence
-
-        DisableSequence
-        EndSequence
-
-        # ALSA PCMs
-        PlaybackPCM 13
-        CapturePCM 13
-
-EndSection
-
-SectionVerb
-        Name "Voice2BT SCO WB Rx"
-
-        EnableSequence
-        EndSequence
-
-        DisableSequence
-                'Internal BTSCO SampleRate':1:8000
-                'INTERNAL_BT_SCO_RX_Voice Mixer Voice2':1:0
-                'Voice2_Tx Mixer INTERNAL_BT_SCO_TX_Voice2':1:0
-        EndSequence
-
-        # ALSA PCMs
-        PlaybackPCM 13
-        CapturePCM 13
-
-EndSection
-
-SectionVerb
-        Name "Voice2BT SCO WB Tx"
-
-        EnableSequence
-                'Internal BTSCO SampleRate':1:16000
-                'INTERNAL_BT_SCO_RX_Voice Mixer Voice2':1:1
-                'Voice2_Tx Mixer INTERNAL_BT_SCO_TX_Voice2':1:1
-        EndSequence
-
-        DisableSequence
-        EndSequence
-
-        # ALSA PCMs
-        PlaybackPCM 13
-        CapturePCM 13
-
-EndSection
-
-SectionVerb
-        Name "Voice2PROXY Rx"
-
-        EnableSequence
-        EndSequence
-
-        DisableSequence
-                'AFE_PCM_RX_Voice Mixer Voice2':1:0
-                'Voice2_Tx Mixer AFE_PCM_TX_Voice2':1:0
-        EndSequence
-
-        # ALSA PCMs
-        PlaybackPCM 13
-        CapturePCM 13
-
-EndSection
-
-SectionVerb
-        Name "Voice2PROXY Tx"
-
-        EnableSequen1e
-                'AFE_PCM_RX_Voice Mixer Voice2':1:1
-                'Voice2_Tx Mixer AFE_PCM_TX_Voice2':1:1
-        EndSequence
-
-        DisableSequence
-        EndSequence
-
-        # ALSA PCMs
-        PlaybackPCM 13
-        CapturePCM 13
-
-EndSection
-
-SectionVerb
-        Name "Voice2USB PROXY Rx"
-
-        EnableSequence
-        EndSequence
-
-        DisableSequence
-                'AFE_PCM_RX_Voice Mixer Voice2':1:0
-                'Voice2_Tx Mixer AFE_PCM_TX_Voice2':1:0
-        EndSequence
-
-        # ALSA PCMs
-        PlaybackPCM 13
-        CapturePCM 13
-
-EndSection
-
-SectionVerb
-        Name "Voice2USB PROXY Tx"
-
-        EnableSequence
-                'AFE_PCM_RX_Voice Mixer Voice2':1:1
-                'Voice2_Tx Mixer AFE_PCM_TX_Voice2':1:1
-        EndSequence
-
-        DisableSequence
-        EndSequence
-
-        # ALSA PCMs
-        PlaybackPCM 13
-        CapturePCM 13
-
-EndSection
-}
 SectionUseCase."Voice Call" {
 Comment "Voice Call use case"
 SectionVerb
@@ -1419,7 +1186,7 @@ SectionVerb
 	EndSequence
 
 	DisableSequence
-		'Internal BTSCO SampleRate':1:8000
+		'Internal BTSCO SampleRate':0:8000
 		'INTERNAL_BT_SCO_RX_Voice Mixer CSVoice':1:0
 		'Voice_Tx Mixer INTERNAL_BT_SCO_TX_Voice':1:0
 	EndSequence
@@ -1434,7 +1201,7 @@ SectionVerb
 	Name "Voice CallBT SCO Tx"
 
 	EnableSequence
-		'Internal BTSCO SampleRate':1:8000
+		'Internal BTSCO SampleRate':0:8000
 		'INTERNAL_BT_SCO_RX_Voice Mixer CSVoice':1:1
 		'Voice_Tx Mixer INTERNAL_BT_SCO_TX_Voice':1:1
 	EndSequence
@@ -1455,7 +1222,7 @@ SectionVerb
 	EndSequence
 
 	DisableSequence
-		'Internal BTSCO SampleRate':1:8000
+		'Internal BTSCO SampleRate':0:8000
 		'INTERNAL_BT_SCO_RX_Voice Mixer CSVoice':1:0
 		'Voice_Tx Mixer INTERNAL_BT_SCO_TX_Voice':1:0
 	EndSequence
@@ -1470,43 +1237,9 @@ SectionVerb
 	Name "Voice CallBT SCO WB Tx"
 
 	EnableSequence
-		'Internal BTSCO SampleRate':1:16000
+		'Internal BTSCO SampleRate':0:16000
 		'INTERNAL_BT_SCO_RX_Voice Mixer CSVoice':1:1
 		'Voice_Tx Mixer INTERNAL_BT_SCO_TX_Voice':1:1
-	EndSequence
-
-	DisableSequence
-	EndSequence
-
-	# ALSA PCMs
-	PlaybackPCM 2
-	CapturePCM 2
-
-EndSection
-
-SectionVerb
-	Name "Voice CallUSB PROXY Rx"
-
-	EnableSequence
-	EndSequence
-
-	DisableSequence
-		'AFE_PCM_RX_Voice Mixer CSVoice':1:0
-		'Voice_Tx Mixer AFE_PCM_TX_Voice':1:0
-	EndSequence
-
-	# ALSA PCMs
-	PlaybackPCM 2
-	CapturePCM 2
-
-EndSection
-
-SectionVerb
-	Name "Voice CallUSB PROXY Tx"
-
-	EnableSequence
-		'AFE_PCM_RX_Voice Mixer CSVoice':1:1
-		'Voice_Tx Mixer AFE_PCM_TX_Voice':1:1
 	EndSequence
 
 	DisableSequence
@@ -1563,7 +1296,7 @@ SectionVerb
 	EndSequence
 
 	DisableSequence
-		'Internal BTSCO SampleRate':1:8000
+		'Internal BTSCO SampleRate':0:8000
 		'INTERNAL_BT_SCO_RX_Voice Mixer Voip':1:0
 		'Voip_Tx Mixer INTERNAL_BT_SCO_TX_Voip':1:0
 	EndSequence
@@ -1578,7 +1311,7 @@ SectionVerb
 	Name "Voice Call IPBT SCO Tx"
 
 	EnableSequence
-		'Internal BTSCO SampleRate':1:8000
+		'Internal BTSCO SampleRate':0:8000
 		'INTERNAL_BT_SCO_RX_Voice Mixer Voip':1:1
 		'Voip_Tx Mixer INTERNAL_BT_SCO_TX_Voip':1:1
 	EndSequence
@@ -1599,7 +1332,7 @@ SectionVerb
 	EndSequence
 
 	DisableSequence
-		'Internal BTSCO SampleRate':1:8000
+		'Internal BTSCO SampleRate':0:8000
 		'INTERNAL_BT_SCO_RX_Voice Mixer Voip':1:0
 		'Voip_Tx Mixer INTERNAL_BT_SCO_TX_Voip':1:0
 	EndSequence
@@ -1614,7 +1347,7 @@ SectionVerb
 	Name "Voice Call IPBT SCO WB Tx"
 
 	EnableSequence
-		'Internal BTSCO SampleRate':1:16000
+		'Internal BTSCO SampleRate':0:16000
 		'INTERNAL_BT_SCO_RX_Voice Mixer Voip':1:1
 		'Voip_Tx Mixer INTERNAL_BT_SCO_TX_Voip':1:1
 	EndSequence
@@ -2039,24 +1772,6 @@ EndSection
 
 SectionVerb
         Name "HiFi TunnelPROXY Rx Speaker"
-
-        EnableSequence
-                'AFE_PCM_RX Audio Mixer MultiMedia4':1:1
-                'SLIMBUS_0_RX Audio Mixer MultiMedia4':1:1
-        EndSequence
-
-        DisableSequence
-                'AFE_PCM_RX Audio Mixer MultiMedia4':1:0
-                'SLIMBUS_0_RX Audio Mixer MultiMedia4':1:0
-        EndSequence
-
-        # ALSA PCMs
-        PlaybackPCM 9
-
-EndSection
-
-SectionVerb
-        Name "HiFi TunnelUSB PROXY Rx Speaker"
 
         EnableSequence
                 'AFE_PCM_RX Audio Mixer MultiMedia4':1:1
@@ -2659,25 +2374,6 @@ SectionVerb
         PlaybackPCM 14
 
 EndSection
-
-SectionVerb
-        Name "HiFi LowlatencyUSB PROXY Rx Speaker"
-
-        EnableSequence
-                'AFE_PCM_RX Audio Mixer MultiMedia5':1:1
-                'SLIMBUS_0_RX Audio Mixer MultiMedia5':1:1
-        EndSequence
-
-        DisableSequence
-                'AFE_PCM_RX Audio Mixer MultiMedia5':1:0
-                'SLIMBUS_0_RX Audio Mixer MultiMedia5':1:0
-        EndSequence
-
-        # ALSA PCMs
-        PlaybackPCM 14
-
-EndSection
-
 SectionVerb
         Name "HiFi LowlatencyPROXY Rx Earpiece"
 
@@ -2787,7 +2483,7 @@ SectionVerb
 EndSection
 
 SectionVerb
-	Name "VoLTEHDMI"
+	Name "VoLTE CallHDMI"
 
 	EnableSequence
 	EndSequence
@@ -2804,7 +2500,7 @@ SectionVerb
 EndSection
 
 SectionVerb
-	Name "VoLTEHDMI Tx"
+	Name "VoLTE CallHDMI Tx"
 
 	EnableSequence
 		'HDMI_RX_Voice Mixer VoLTE':1:1
@@ -2821,13 +2517,13 @@ SectionVerb
 EndSection
 
 SectionVerb
-	Name "VoLTEBT SCO Rx"
+	Name "VoLTE CallBT SCO Rx"
 
 	EnableSequence
 	EndSequence
 
 	DisableSequence
-                'Internal BTSCO SampleRate':1:8000
+                'Internal BTSCO SampleRate':0:8000
 		'INTERNAL_BT_SCO_RX_Voice Mixer VoLTE':1:0
 		'VoLTE_Tx Mixer INTERNAL_BT_SCO_TX_VoLTE':1:0
 	EndSequence
@@ -2839,10 +2535,10 @@ SectionVerb
 EndSection
 
 SectionVerb
-	Name "VoLTEBT SCO Tx"
+	Name "VoLTE CallBT SCO Tx"
 
 	EnableSequence
-                'Internal BTSCO SampleRate':1:8000
+                'Internal BTSCO SampleRate':0:8000
 		'INTERNAL_BT_SCO_RX_Voice Mixer VoLTE':1:1
 		'VoLTE_Tx Mixer INTERNAL_BT_SCO_TX_VoLTE':1:1
 	EndSequence
@@ -2857,13 +2553,13 @@ SectionVerb
 EndSection
 
 SectionVerb
-	Name "VoLTEBT SCO WB Rx"
+	Name "VoLTE CallBT SCO WB Rx"
 
 	EnableSequence
 	EndSequence
 
 	DisableSequence
-                'Internal BTSCO SampleRate':1:8000
+                'Internal BTSCO SampleRate':0:8000
 		'INTERNAL_BT_SCO_RX_Voice Mixer VoLTE':1:0
 		'VoLTE_Tx Mixer INTERNAL_BT_SCO_TX_VoLTE':1:0
 	EndSequence
@@ -2875,10 +2571,10 @@ SectionVerb
 EndSection
 
 SectionVerb
-	Name "VoLTEBT SCO WB Tx"
+	Name "VoLTE CallBT SCO WB Tx"
 
 	EnableSequence
-                'Internal BTSCO SampleRate':1:16000
+                'Internal BTSCO SampleRate':0:16000
 		'INTERNAL_BT_SCO_RX_Voice Mixer VoLTE':1:1
 		'VoLTE_Tx Mixer INTERNAL_BT_SCO_TX_VoLTE':1:1
 	EndSequence
@@ -2889,40 +2585,6 @@ SectionVerb
 	# ALSA PCMs
 	PlaybackPCM 12
 	capturePCM 12
-
-EndSection
-
-SectionVerb
-        Name "VoLTEUSB PROXY Rx"
-
-        EnableSequence
-        EndSequence
-
-        DisableSequence
-                'AFE_PCM_RX_Voice Mixer VoLTE':1:0
-                'VoLTE_Tx Mixer AFE_PCM_TX_VoLTE':1:0
-        EndSequence
-
-        # ALSA PCMs
-        PlaybackPCM 12
-        CapturePCM 12
-
-EndSection
-
-SectionVerb
-        Name "VoLTEUSB PROXY Tx"
-
-        EnableSequence
-                'AFE_PCM_RX_Voice Mixer VoLTE':1:1
-                'VoLTE_Tx Mixer AFE_PCM_TX_VoLTE':1:1
-        EndSequence
-
-        DisableSequence
-        EndSequence
-
-        # ALSA PCMs
-        PlaybackPCM 12
-        CapturePCM 12
 
 EndSection
 }
@@ -3976,7 +3638,7 @@ SectionDevice
 	DisableSequence
 	EndSequence
 
-	ACDBID	20:1
+	ACDBID	0:1
 	EffectsMixerCTL "SRS TruMedia"
 
 EndSection
@@ -4112,35 +3774,6 @@ EndSection
 SectionDevice
 	Name "PROXY Rx Speaker"
 	Comment "PROXY Rx + Speaker Rx device combo device"
-
-	EnableSequence
-		'SLIM RX1 MUX':0:AIF1_PB
-		'DAC3 MUX':0:INV_RX1
-		'DAC2 MUX':0:RX1
-		'LINEOUT1 Volume':1:100
-		'LINEOUT2 Volume':1:100
-		'SLIM_0_RX Channels':0:One
-		'RX1 MIX1 INP1':0:RX1
-		'RX1 Digital Volume':1:68
-		'PMIC SPK Gain':0:POS_20_DB
-	EndSequence
-
-	DisableSequence
-		'SLIM RX1 MUX':0:ZERO
-		'RX1 MIX1 INP1':0:ZERO
-		'DAC3 MUX':0:ZERO
-		'DAC2 MUX':0:ZERO
-	EndSequence
-
-	ACDBID	14:1
-	EffectsMixerCTL "SRS TruMedia"
-	EC_REF_RXMixerCTL "SLIM_RX"
-
-EndSection
-
-SectionDevice
-	Name "USB PROXY Rx Speaker"
-	Comment "USB PROXY Rx + Speaker Rx device combo device"
 
 	EnableSequence
 		'SLIM RX1 MUX':0:AIF1_PB
@@ -4365,6 +3998,19 @@ SectionModifier
 
         EnableSequence
                 'SLIMBUS_0_RX Audio Mixer MultiMedia1':1:1
+                'SLIM_0_RX Channels':0:Two
+                'RX1 MIX1 INP1':0:RX1
+                'RX1 MIX1 INP2':0:RX6
+                'RX2 MIX1 INP1':0:RX2
+                'RX2 MIX1 INP2':0:RX7
+                'HPHL DAC Switch':1:1
+                'HPHR DAC Switch':1:1
+                'RX1 Digital Volume':1:68
+                'RX2 Digital Volume':1:68
+                'HPHL Volume':1:50
+                'HPHR Volume':1:50
+                'SLIM TX3 MUX':0:RMIX1
+                'SLIM TX5 MUX':0:RMIX2
         EndSequence
 
         DisableSequence
@@ -5018,165 +4664,6 @@ SectionModifier
 EndSection
 
 SectionModifier
-        Name "Play Voice2"
-
-        EnableSequence
-                'SLIM_0_RX_Voice Mixer Voice2':1:1
-                'Voice2_Tx Mixer SLIM_0_TX_Voice2':1:1
-        EndSequence
-
-        DisableSequence
-                'SLIM_0_RX_Voice Mixer Voice2':1:0
-                'Voice2_Tx Mixer SLIM_0_TX_Voice2':1:0
-        EndSequence
-
-        # ALSA PCMs
-        CapturePCM 13
-        PlaybackPCM 13
-
-EndSection
-
-SectionModifier
-        Name "Play Voice2HDMI"
-
-        EnableSequence
-        EndSequence
-
-        DisableSequence
-                'HDMI_RX_Voice Mixer Voice2':1:0
-                'Voice2_Tx Mixer SLIM_0_TX_Voice2':1:0
-        EndSequence
-
-        # ALSA PCMs
-        PlaybackPCM 13
-        capturePCM 13
-
-EndSection
-
-SectionModifier
-        Name "Play Voice2HDMI Tx"
-
-        EnableSequence
-                'HDMI_RX_Voice Mixer Voice2':1:1
-                'Voice2_Tx Mixer SLIM_0_TX_Voice2':1:1
-        EndSequence
-
-        DisableSequence
-        EndSequence
-
-        # ALSA PCMs
-        PlaybackPCM 13
-        capturePCM 13
-
-EndSection
-
-SectionModifier
-        Name "Play Voice2BT SCO Rx"
-
-        EnableSequence
-        EndSequence
-
-        DisableSequence
-                'Internal BTSCO SampleRate':1:8000
-                'INTERNAL_BT_SCO_RX_Voice Mixer Voice2':1:0
-                'Voice2_Tx Mixer INTERNAL_BT_SCO_TX_Voice2':1:0
-        EndSequence
-
-        # ALSA PCMs
-        PlaybackPCM 13
-        CapturePCM 13
-
-EndSection
-
-SectionModifier
-        Name "Play Voice2BT SCO Tx"
-
-        EnableSequence
-                'Internal BTSCO SampleRate':1:8000
-                'INTERNAL_BT_SCO_RX_Voice Mixer Voice2':1:1
-                'Voice2_Tx Mixer INTERNAL_BT_SCO_TX_Voice2':1:1
-        EndSequence
-
-        DisableSequence
-        EndSequence
-
-        # ALSA PCMs
-        PlaybackPCM 13
-        CapturePCM 13
-
-EndSection
-
-SectionModifier
-        Name "Play Voice2BT SCO WB Rx"
-
-        EnableSequence
-        EndSequence
-
-        DisableSequence
-                'Internal BTSCO SampleRate':1:8000
-                'INTERNAL_BT_SCO_RX_Voice Mixer Voice2':1:0
-                'Voice2_Tx Mixer INTERNAL_BT_SCO_TX_Voice2':1:0
-        EndSequence
-
-        # ALSA PCMs
-        PlaybackPCM 13
-        CapturePCM 13
-
-EndSection
-
-SectionModifier
-        Name "Play Voice2BT SCO WB Tx"
-
-        EnableSequence
-                'Internal BTSCO SampleRate':1:16000
-                'INTERNAL_BT_SCO_RX_Voice Mixer Voice2':1:1
-                'Voice2_Tx Mixer INTERNAL_BT_SCO_TX_Voice2':1:1
-        EndSequence
-
-        DisableSequence
-        EndSequence
-
-        # ALSA PCMs
-        PlaybackPCM 13
-        CapturePCM 13
-
-EndSection
-
-SectionModifier
-        Name "Play Voice2USB PROXY Rx"
-
-        EnableSequence
-        EndSequence
-
-        DisableSequence
-                'AFE_PCM_RX_Voice Mixer Voice2':1:0
-                'Voice2_Tx Mixer AFE_PCM_TX_Voice2':1:0
-        EndSequence
-
-        # ALSA PCMs
-        PlaybackPCM 13
-        CapturePCM 13
-
-EndSection
-
-SectionModifier
-        Name "Play Voice2USB PROXY Tx"
-
-        EnableSequence
-                'AFE_PCM_RX_Voice Mixer Voice2':1:1
-                'Voice2_Tx Mixer AFE_PCM_TX_Voice2':1:1
-        EndSequence
-
-        DisableSequence
-        EndSequence
-
-        # ALSA PCMs
-        PlaybackPCM 13
-        CapturePCM 13
-
-EndSection
-
-SectionModifier
 	Name "Play Voice"
 
 	EnableSequence
@@ -5236,7 +4723,7 @@ SectionModifier
 	EndSequence
 
 	DisableSequence
-		'Internal BTSCO SampleRate':1:8000
+		'Internal BTSCO SampleRate':0:8000
 		'INTERNAL_BT_SCO_RX_Voice Mixer CSVoice':1:0
 		'Voice_Tx Mixer INTERNAL_BT_SCO_TX_Voice':1:0
 	EndSequence
@@ -5251,7 +4738,7 @@ SectionModifier
 	Name "Play VoiceBT SCO Tx"
 
 	EnableSequence
-		'Internal BTSCO SampleRate':1:8000
+		'Internal BTSCO SampleRate':0:8000
 		'INTERNAL_BT_SCO_RX_Voice Mixer CSVoice':1:1
 		'Voice_Tx Mixer INTERNAL_BT_SCO_TX_Voice':1:1
 	EndSequence
@@ -5272,7 +4759,7 @@ SectionModifier
 	EndSequence
 
 	DisableSequence
-		'Internal BTSCO SampleRate':1:8000
+		'Internal BTSCO SampleRate':0:8000
 		'INTERNAL_BT_SCO_RX_Voice Mixer CSVoice':1:0
 		'Voice_Tx Mixer INTERNAL_BT_SCO_TX_Voice':1:0
 	EndSequence
@@ -5287,43 +4774,9 @@ SectionModifier
 	Name "Play VoiceBT SCO WB Tx"
 
 	EnableSequence
-		'Internal BTSCO SampleRate':1:16000
+		'Internal BTSCO SampleRate':0:16000
 		'INTERNAL_BT_SCO_RX_Voice Mixer CSVoice':1:1
 		'Voice_Tx Mixer INTERNAL_BT_SCO_TX_Voice':1:1
-	EndSequence
-
-	DisableSequence
-	EndSequence
-
-	# ALSA PCMs
-	PlaybackPCM 2
-	CapturePCM 2
-
-EndSection
-
-SectionModifier
-	Name "Play VoiceUSB PROXY Rx"
-
-	EnableSequence
-	EndSequence
-
-	DisableSequence
-		'AFE_PCM_RX_Voice Mixer CSVoice':1:0
-		'Voice_Tx Mixer AFE_PCM_TX_Voice':1:0
-	EndSequence
-
-	# ALSA PCMs
-	PlaybackPCM 2
-	CapturePCM 2
-
-EndSection
-
-SectionModifier
-	Name "Play VoiceUSB PROXY Tx"
-
-	EnableSequence
-		'AFE_PCM_RX_Voice Mixer CSVoice':1:1
-		'Voice_Tx Mixer AFE_PCM_TX_Voice':1:1
 	EndSequence
 
 	DisableSequence
@@ -5393,7 +4846,7 @@ SectionModifier
 	EndSequence
 
 	DisableSequence
-		'Internal BTSCO SampleRate':1:8000
+		'Internal BTSCO SampleRate':0:8000
 		'INTERNAL_BT_SCO_RX_Voice Mixer Voip':1:0
 		'Voip_Tx Mixer INTERNAL_BT_SCO_TX_Voip':1:0
 	EndSequence
@@ -5408,7 +4861,7 @@ SectionModifier
 	Name "Play VOIPBT SCO Tx"
 
 	EnableSequence
-		'Internal BTSCO SampleRate':1:8000
+		'Internal BTSCO SampleRate':0:8000
 		'INTERNAL_BT_SCO_RX_Voice Mixer Voip':1:1
 		'Voip_Tx Mixer INTERNAL_BT_SCO_TX_Voip':1:1
 	EndSequence
@@ -5429,7 +4882,7 @@ SectionModifier
 	EndSequence
 
 	DisableSequence
-		'Internal BTSCO SampleRate':1:8000
+		'Internal BTSCO SampleRate':0:8000
 		'INTERNAL_BT_SCO_RX_Voice Mixer Voip':1:0
 		'Voip_Tx Mixer INTERNAL_BT_SCO_TX_Voip':1:0
 	EndSequence
@@ -5444,7 +4897,7 @@ SectionModifier
 	Name "Play VOIPBT SCO WB Tx"
 
 	EnableSequence
-		'Internal BTSCO SampleRate':1:16000
+		'Internal BTSCO SampleRate':0:16000
 		'INTERNAL_BT_SCO_RX_Voice Mixer Voip':1:1
 		'Voip_Tx Mixer INTERNAL_BT_SCO_TX_Voip':1:1
 	EndSequence
@@ -6215,25 +5668,6 @@ SectionModifier
 EndSection
 
 SectionModifier
-        Name "Play MusicUSB PROXY Rx Speaker"
-
-        EnableSequence
-                'AFE_PCM_RX Audio Mixer MultiMedia1':1:1
-                'SLIMBUS_0_RX Audio Mixer MultiMedia1':1:1
-        EndSequence
-
-        DisableSequence
-                'AFE_PCM_RX Audio Mixer MultiMedia1':1:0
-                'SLIMBUS_0_RX Audio Mixer MultiMedia1':1:0
-        EndSequence
-
-        # ALSA PCMs
-        CapturePCM 0
-        PlaybackPCM 0
-
-EndSection
-
-SectionModifier
         Name "Play MusicPROXY Rx Earpiece"
 
         EnableSequence
@@ -6331,25 +5765,6 @@ EndSection
 SectionModifier
 
         Name "Play TunnelPROXY Rx Speaker"
-
-        EnableSequence
-                'AFE_PCM_RX Audio Mixer MultiMedia4':1:1
-                'SLIMBUS_0_RX Audio Mixer MultiMedia4':1:1
-        EndSequence
-
-        DisableSequence
-                'AFE_PCM_RX Audio Mixer MultiMedia4':1:0
-                'SLIMBUS_0_RX Audio Mixer MultiMedia4':1:0
-        EndSequence
-
-        # ALSA PCMs
-        PlaybackPCM 9
-
-EndSection
-
-SectionModifier
-
-        Name "Play TunnelUSB PROXY Rx Speaker"
 
         EnableSequence
                 'AFE_PCM_RX Audio Mixer MultiMedia4':1:1
@@ -6476,25 +5891,6 @@ SectionModifier
 EndSection
 
 SectionModifier
-        Name "Play LPAUSB PROXY Rx Speaker"
-
-        EnableSequence
-                'AFE_PCM_RX Audio Mixer MultiMedia3':1:1
-                'SLIMBUS_0_RX Audio Mixer MultiMedia3':1:1
-        EndSequence
-
-        DisableSequence
-                'AFE_PCM_RX Audio Mixer MultiMedia3':1:0
-                'SLIMBUS_0_RX Audio Mixer MultiMedia3':1:0
-        EndSequence
-
-        # ALSA PCMs
-        CapturePCM 0
-        PlaybackPCM 4
-
-EndSection
-
-SectionModifier
         Name "Play LPAPROXY Rx Earpiece"
 
         EnableSequence
@@ -6599,146 +5995,6 @@ SectionModifier
 	DisableSequence
 		'SLIM_0_RX_Voice Mixer VoLTE':1:0
 		'VoLTE_Tx Mixer SLIM_0_TX_VoLTE':1:0
-	EndSequence
-
-	# ALSA PCMs
-	PlaybackPCM 12
-	capturePCM 12
-
-EndSection
-
-SectionModifier
-	Name "Play VoLTEBT SCO Rx"
-
-	EnableSequence
-	EndSequence
-
-	DisableSequence
-                'Internal BTSCO SampleRate':1:8000
-		'INTERNAL_BT_SCO_RX_Voice Mixer VoLTE':1:0
-		'VoLTE_Tx Mixer INTERNAL_BT_SCO_TX_VoLTE':1:0
-	EndSequence
-
-	# ALSA PCMs
-	PlaybackPCM 12
-	capturePCM 12
-
-EndSection
-
-SectionModifier
-	Name "Play VoLTEBT SCO Tx"
-
-	EnableSequence
-                'Internal BTSCO SampleRate':1:8000
-		'INTERNAL_BT_SCO_RX_Voice Mixer VoLTE':1:1
-		'VoLTE_Tx Mixer INTERNAL_BT_SCO_TX_VoLTE':1:1
-	EndSequence
-
-	DisableSequence
-	EndSequence
-
-	# ALSA PCMs
-	PlaybackPCM 12
-	capturePCM 12
-
-EndSection
-
-SectionModifier
-	Name "Play VoLTEBT SCO WB Rx"
-
-	EnableSequence
-	EndSequence
-
-	DisableSequence
-                'Internal BTSCO SampleRate':1:8000
-		'INTERNAL_BT_SCO_RX_Voice Mixer VoLTE':1:0
-		'VoLTE_Tx Mixer INTERNAL_BT_SCO_TX_VoLTE':1:0
-	EndSequence
-
-	# ALSA PCMs
-	PlaybackPCM 12
-	capturePCM 12
-
-EndSection
-
-SectionModifier
-	Name "Play VoLTEBT SCO WB Tx"
-
-	EnableSequence
-                'Internal BTSCO SampleRate':1:16000
-		'INTERNAL_BT_SCO_RX_Voice Mixer VoLTE':1:1
-		'VoLTE_Tx Mixer INTERNAL_BT_SCO_TX_VoLTE':1:1
-	EndSequence
-
-	DisableSequence
-	EndSequence
-
-	# ALSA PCMs
-	PlaybackPCM 12
-	capturePCM 12
-
-EndSection
-
-SectionModifier
-        Name "Play VoLTEUSB PROXY Rx"
-
-        EnableSequence
-        EndSequence
-
-        DisableSequence
-                'AFE_PCM_RX_Voice Mixer VoLTE':1:0
-                'VoLTE_Tx Mixer AFE_PCM_TX_VoLTE':1:0
-        EndSequence
-
-        # ALSA PCMs
-        PlaybackPCM 12
-        CapturePCM 12
-
-EndSection
-
-SectionModifier
-        Name "Play VoLTEUSB PROXY Tx"
-
-        EnableSequence
-                'AFE_PCM_RX_Voice Mixer VoLTE':1:1
-                'VoLTE_Tx Mixer AFE_PCM_TX_VoLTE':1:1
-        EndSequence
-
-        DisableSequence
-        EndSequence
-
-        # ALSA PCMs
-        PlaybackPCM 12
-        CapturePCM 12
-
-EndSection
-
-SectionModifier
-	Name "Play VoLTEHDMI"
-
-	EnableSequence
-	EndSequence
-
-	DisableSequence
-		'HDMI_RX_Voice Mixer VoLTE':1:0
-		'VoLTE_Tx Mixer SLIM_0_TX_VoLTE':1:0
-	EndSequence
-
-	# ALSA PCMs
-	PlaybackPCM 12
-	capturePCM 12
-
-EndSection
-
-SectionModifier
-	Name "Play VoLTEHDMI Tx"
-
-	EnableSequence
-		'HDMI_RX_Voice Mixer VoLTE':1:1
-		'VoLTE_Tx Mixer SLIM_0_TX_VoLTE':1:1
-	EndSequence
-
-	DisableSequence
 	EndSequence
 
 	# ALSA PCMs

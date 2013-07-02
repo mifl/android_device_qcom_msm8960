@@ -408,7 +408,7 @@ SectionVerb
 	EndSequence
 
 	DisableSequence
-		'SLIM_1 SampleRate':1:8000
+		'Internal BTSCO SampleRate':0:8000
 		'Voice Stub Tx Mixer INTERNAL_BT_SCO_TX':1:0
 		'SLIMBUS_1_RX Mixer Voice Stub':1:0
 		'Voice Stub Tx Mixer SLIM_1_TX':1:0
@@ -429,8 +429,7 @@ SectionVerb
 	Name "Voice CallBT SCO Tx"
 
 	EnableSequence
-		'SLIM_1 SampleRate':1:8000
-		'SLIM_1_RX Channels':0:One
+		'Internal BTSCO SampleRate':0:8000
 		'Voice Stub Tx Mixer INTERNAL_BT_SCO_TX':1:1
 		'SLIMBUS_1_RX Mixer Voice Stub':1:1
 		'Voice Stub Tx Mixer SLIM_1_TX':1:1
@@ -458,7 +457,7 @@ SectionVerb
 	EndSequence
 
 	DisableSequence
-		'SLIM_1 SampleRate':1:8000
+		'Internal BTSCO SampleRate':0:8000
 		'Voice Stub Tx Mixer INTERNAL_BT_SCO_TX':1:0
 		'SLIMBUS_1_RX Mixer Voice Stub':1:0
 		'Voice Stub Tx Mixer SLIM_1_TX':1:0
@@ -479,8 +478,7 @@ SectionVerb
 	Name "Voice CallBT SCO WB Tx"
 
 	EnableSequence
-		'SLIM_1 SampleRate':1:16000
-		'SLIM_1_RX Channels':0:One
+		'Internal BTSCO SampleRate':0:16000
 		'Voice Stub Tx Mixer INTERNAL_BT_SCO_TX':1:1
 		'SLIMBUS_1_RX Mixer Voice Stub':1:1
 		'Voice Stub Tx Mixer SLIM_1_TX':1:1
@@ -546,7 +544,7 @@ SectionVerb
 	EndSequence
 
 	DisableSequence
-		'SLIM_1 SampleRate':1:8000
+		'Internal BTSCO SampleRate':0:8000
 		'AUX_PCM_RX_Voice Mixer Voip':1:0
 		'Voip_Tx Mixer AUX_PCM_TX_Voip':1:0
 	EndSequence
@@ -561,7 +559,7 @@ SectionVerb
 	Name "Voice Call IPBT SCO Tx"
 
 	EnableSequence
-		'SLIM_1 SampleRate':1:8000
+		'Internal BTSCO SampleRate':0:8000
 		'AUX_PCM_RX_Voice Mixer Voip':1:1
 		'Voip_Tx Mixer AUX_PCM_TX_Voip':1:1
 	EndSequence
@@ -582,7 +580,7 @@ SectionVerb
 	EndSequence
 
 	DisableSequence
-		'SLIM_1 SampleRate':1:8000
+		'Internal BTSCO SampleRate':0:8000
 		'AUX_PCM_RX_Voice Mixer Voip':1:0
 		'Voip_Tx Mixer AUX_PCM_TX_Voip':1:0
 	EndSequence
@@ -597,7 +595,7 @@ SectionVerb
 	Name "Voice Call IPBT SCO WB Tx"
 
 	EnableSequence
-		'SLIM_1 SampleRate':1:16000
+		'Internal BTSCO SampleRate':0:16000
 		'AUX_PCM_RX_Voice Mixer Voip':1:1
 		'Voip_Tx Mixer AUX_PCM_TX_Voip':1:1
 	EndSequence
@@ -1499,21 +1497,17 @@ SectionDevice
 	Comment "ANC Handset Rx device"
 
 	EnableSequence
-		'ANC Function':0:ON
 		'SLIM RX1 MUX':0:AIF1_PB
 		'SLIM RX6 MUX':0:AIF2_PB
 		'SLIM_0_RX Channels':0:One
-		'MICBIAS1 CAPLESS Switch':1:1
-		'MICBIAS3 CAPLESS Switch':1:1
 		'RX1 MIX1 INP1':0:RX1
 		'RX1 MIX1 INP2':0:RX6
-		'EAR PA Gain':0:POS_2_DB
 		'DAC1 Switch':1:1
+		'ANC Slot':1:1
+		'ANC1 MUX':0:DMIC1
+		'MICBIAS1 CAPLESS Switch':1:1
 		'AIF3_CAP Mixer SLIM TX3':1:1
 		'SLIM TX3 MUX':0:RMIX1
-		'ANC Slot':1:4
-		'ANC1 MUX':0:DMIC4
-		'ANC1 FB MUX':0:EAR_HPH_L
 	EndSequence
 
 	DisableSequence
@@ -1524,12 +1518,12 @@ SectionDevice
 		'DAC1 Switch':1:0
 		'ANC Slot':1:0
 		'ANC1 MUX':0:ZERO
+		'MICBIAS1 CAPLESS Switch':1:0
 		'AIF3_CAP Mixer SLIM TX3':1:0
 		'SLIM TX3 MUX':0:ZERO
-		'ANC Function':0:OFF
 	EndSequence
 
-	ACDBID	7:1
+	ACDBID	30:1
 	EffectsMixerCTL "SRS TruMedia"
 	EC_REF_RXMixerCTL "SLIM_RX"
 
@@ -1791,14 +1785,11 @@ SectionDevice
 	Comment "Speaker ANC Headset Rx combo device"
 
 	EnableSequence
-		'ANC Function':0:ON
 		'SLIM RX1 MUX':0:AIF1_PB
 		'SLIM RX6 MUX':0:AIF2_PB
 		'SLIM RX2 MUX':0:AIF1_PB
 		'SLIM RX7 MUX':0:AIF2_PB
 		'SLIM_0_RX Channels':0:Two
-		'MICBIAS3 CAPLESS Switch':1:1
-		'MICBIAS1 CAPLESS Switch':1:1
 		'RX3 MIX1 INP1':0:RX1
 		'RX3 MIX1 INP2':0:RX6
 		'RX5 MIX1 INP1':0:RX2
@@ -1820,11 +1811,13 @@ SectionDevice
 		'RX1 Digital Volume':1:65
 		'RX2 Digital Volume':1:65
 		'ANC Slot':1:0
-		'ANC1 FB MUX':0:EAR_HPH_L
 		'ANC1 MUX':0:ADC4
 		'ANC2 MUX':0:ADC3
+		'ANC1 FB MUX':0:EAR_HPH_L
 		'ADC3 Volume':1:85
 		'ADC4 Volume':1:85
+		'MICBIAS3 CAPLESS Switch':1:1
+		'MICBIAS1 CAPLESS Switch':1:1
 		'AIF3_CAP Mixer SLIM TX3':1:1
 		'AIF3_CAP Mixer SLIM TX5':1:1
 		'SLIM TX3 MUX':0:RMIX1
@@ -1866,7 +1859,6 @@ SectionDevice
 		'AIF3_CAP Mixer SLIM TX5':1:0
 		'SLIM TX3 MUX':0:ZERO
 		'SLIM TX5 MUX':0:ZERO
-		'ANC Function':0:OFF
 	EndSequence
 
 	ACDBID	26:1
@@ -1880,14 +1872,11 @@ SectionDevice
 	Comment "ANC Headset Rx device"
 
 	EnableSequence
-		'ANC Function':0:ON
 		'SLIM RX1 MUX':0:AIF1_PB
 		'SLIM RX6 MUX':0:AIF2_PB
 		'SLIM RX2 MUX':0:AIF1_PB
 		'SLIM RX7 MUX':0:AIF2_PB
 		'SLIM_0_RX Channels':0:Two
-		'MICBIAS3 CAPLESS Switch':1:1
-		'MICBIAS1 CAPLESS Switch':1:1
 		'RX1 MIX1 INP1':0:RX1
 		'RX1 MIX1 INP2':0:RX6
 		'RX2 MIX1 INP1':0:RX2
@@ -1899,11 +1888,13 @@ SectionDevice
 		'RX1 Digital Volume':1:65
 		'RX2 Digital Volume':1:65
 		'ANC Slot':1:0
-		'ANC1 FB MUX':0:EAR_HPH_L
 		'ANC1 MUX':0:ADC4
 		'ANC2 MUX':0:ADC3
+		'ANC1 FB MUX':0:EAR_HPH_L
 		'ADC3 Volume':1:85
 		'ADC4 Volume':1:85
+		'MICBIAS3 CAPLESS Switch':1:1
+		'MICBIAS1 CAPLESS Switch':1:1
 		'AIF3_CAP Mixer SLIM TX3':1:1
 		'AIF3_CAP Mixer SLIM TX5':1:1
 		'SLIM TX3 MUX':0:RMIX1
@@ -1933,7 +1924,6 @@ SectionDevice
 		'AIF3_CAP Mixer SLIM TX5':1:0
 		'SLIM TX3 MUX':0:ZERO
 		'SLIM TX5 MUX':0:ZERO
-		'ANC Function':0:OFF
 	EndSequence
 
 	ACDBID	26:1
@@ -1947,14 +1937,11 @@ SectionDevice
 	Comment "ANC Headset Rx device for voice call"
 
 	EnableSequence
-		'ANC Function':0:ON
 		'SLIM RX1 MUX':0:AIF1_PB
 		'SLIM RX6 MUX':0:AIF2_PB
 		'SLIM RX2 MUX':0:AIF1_PB
 		'SLIM RX7 MUX':0:AIF2_PB
 		'SLIM_0_RX Channels':0:Two
-		'MICBIAS3 CAPLESS Switch':1:1
-		'MICBIAS1 CAPLESS Switch':1:1
 		'RX1 MIX1 INP1':0:RX1
 		'RX1 MIX1 INP2':0:RX6
 		'RX2 MIX1 INP1':0:RX2
@@ -1966,11 +1953,13 @@ SectionDevice
 		'RX1 Digital Volume':1:65
 		'RX2 Digital Volume':1:65
 		'ANC Slot':1:0
-		'ANC1 FB MUX':0:EAR_HPH_L
 		'ANC1 MUX':0:ADC4
 		'ANC2 MUX':0:ADC3
+		'ANC1 FB MUX':0:EAR_HPH_L
 		'ADC3 Volume':1:85
 		'ADC4 Volume':1:85
+		'MICBIAS3 CAPLESS Switch':1:1
+		'MICBIAS1 CAPLESS Switch':1:1
 		'AIF3_CAP Mixer SLIM TX3':1:1
 		'AIF3_CAP Mixer SLIM TX5':1:1
 		'SLIM TX3 MUX':0:RMIX1
@@ -2024,7 +2013,6 @@ SectionDevice
 		'IIR1 Band5':2:0x0 0x0 0x0 0x0 0x0
 		'RX1 MIX2 INP1':0:ZERO
 		'RX2 MIX2 INP1':0:ZERO
-		'ANC Function':0:OFF
 	EndSequence
 
 	ACDBID	26:1
@@ -2197,47 +2185,6 @@ SectionDevice
 EndSection
 
 SectionDevice
-	Name "AANC Line"
-	Comment "Speaker Tx device for AANC"
-
-	EnableSequence
-		'AIF1_CAP Mixer SLIM TX7':1:1
-		'AIF1_CAP Mixer SLIM TX8':1:1
-		'AIF1_CAP Mixer SLIM TX9':1:1
-		'SLIM_0_TX Channels':0:Three
-		'SLIM TX7 MUX':0:DEC7
-		'DEC7 MUX':0:DMIC1
-		'SLIM TX8 MUX':0:DEC9
-		'DEC9 MUX':0:DMIC4
-		'SLIM TX9 MUX':0:DEC6
-		'DEC6 MUX':0:DMIC6
-		'MICBIAS1 CAPLESS Switch':1:1
-		'MICBIAS3 CAPLESS Switch':1:1
-		'MICBIAS4 CAPLESS Switch':1:1
-		'IIR1 INP1 Volume':1:50
-		'IIR1 INP1 MUX':0:DEC7
-	EndSequence
-
-	DisableSequence
-		'AIF1_CAP Mixer SLIM TX7':1:0
-		'AIF1_CAP Mixer SLIM TX8':1:0
-		'AIF1_CAP Mixer SLIM TX9':1:0
-		'SLIM TX7 MUX':0:ZERO
-		'DEC7 MUX':0:ZERO
-		'SLIM TX8 MUX':0:ZERO
-		'DEC9 MUX':0:ZERO
-		'SLIM TX9 MUX':0:ZERO
-		'DEC6 MUX':0:ZERO
-		'IIR1 INP1 Volume':1:0
-		'IIR1 INP1 MUX':0:ZERO
-	EndSequence
-
-	ACDBID	48:2
-	EffectsMixerCTL "SRS TruMedia"
-
-EndSection
-
-SectionDevice
 	Name "TTY Handset Tx"
 	Comment "TTY VCO Handset Tx device"
 
@@ -2396,47 +2343,6 @@ SectionDevice
 	EndSequence
 
 	ACDBID	6:2
-	EffectsMixerCTL "SRS TruMedia"
-
-EndSection
-
-SectionDevice
-	Name "AANC DMIC Endfire"
-	Comment "Dual MIC Endfire Tx device for AANC"
-
-	EnableSequence
-		'AIF1_CAP Mixer SLIM TX7':1:1
-		'AIF1_CAP Mixer SLIM TX8':1:1
-		'AIF1_CAP Mixer SLIM TX9':1:1
-		'SLIM TX7 MUX':0:DEC7
-		'DEC7 MUX':0:DMIC1
-		'SLIM TX8 MUX':0:DEC9
-		'DEC9 MUX':0:DMIC4
-		'SLIM TX9 MUX':0:DEC6
-		'DEC6 MUX':0:DMIC6
-		'MICBIAS1 CAPLESS Switch':1:1
-		'MICBIAS3 CAPLESS Switch':1:1
-		'MICBIAS4 CAPLESS Switch':1:1
-		'SLIM_0_TX Channels':0:Three
-		'IIR1 INP1 Volume':1:50
-		'IIR1 INP1 MUX':0:DEC7
-	EndSequence
-
-	DisableSequence
-		'AIF1_CAP Mixer SLIM TX7':1:0
-		'AIF1_CAP Mixer SLIM TX8':1:0
-		'AIF1_CAP Mixer SLIM TX9':1:0
-		'SLIM TX7 MUX':0:ZERO
-		'DEC7 MUX':0:ZERO
-		'SLIM TX8 MUX':0:ZERO
-		'DEC9 MUX':0:ZERO
-		'SLIM TX9 MUX':0:ZERO
-		'DEC6 MUX':0:ZERO
-		'IIR1 INP1 Volume':1:0
-		'IIR1 INP1 MUX':0:ZERO
-	EndSequence
-
-	ACDBID	49:2
 	EffectsMixerCTL "SRS TruMedia"
 
 EndSection
@@ -2778,7 +2684,7 @@ SectionDevice
 	DisableSequence
 	EndSequence
 
-	ACDBID	20:1
+	ACDBID	0:1
 	EffectsMixerCTL "SRS TruMedia"
 
 EndSection
@@ -3312,7 +3218,7 @@ SectionModifier
 	EndSequence
 
 	DisableSequence
-		'SLIM_1 SampleRate':1:8000
+		'Internal BTSCO SampleRate':0:8000
 		'Voice Stub Tx Mixer INTERNAL_BT_SCO_TX':1:0
 		'SLIMBUS_1_RX Mixer Voice Stub':1:0
 		'Voice Stub Tx Mixer SLIM_1_TX':1:0
@@ -3333,8 +3239,7 @@ SectionModifier
 	Name "Play VoiceBT SCO Tx"
 
 	EnableSequence
-		'SLIM_1 SampleRate':1:8000
-		'SLIM_1_RX Channels':0:One
+		'Internal BTSCO SampleRate':0:8000
 		'Voice Stub Tx Mixer INTERNAL_BT_SCO_TX':1:1
 		'SLIMBUS_1_RX Mixer Voice Stub':1:1
 		'Voice Stub Tx Mixer SLIM_1_TX':1:1
@@ -3362,7 +3267,7 @@ SectionModifier
 	EndSequence
 
 	DisableSequence
-		'SLIM_1 SampleRate':1:8000
+		'Internal BTSCO SampleRate':0:8000
 		'Voice Stub Tx Mixer INTERNAL_BT_SCO_TX':1:0
 		'SLIMBUS_1_RX Mixer Voice Stub':1:0
 		'Voice Stub Tx Mixer SLIM_1_TX':1:0
@@ -3383,8 +3288,7 @@ SectionModifier
 	Name "Play VoiceBT SCO WB Tx"
 
 	EnableSequence
-		'SLIM_1 SampleRate':1:16000
-		'SLIM_1_RX Channels':0:One
+		'Internal BTSCO SampleRate':0:16000
 		'Voice Stub Tx Mixer INTERNAL_BT_SCO_TX':1:1
 		'SLIMBUS_1_RX Mixer Voice Stub':1:1
 		'Voice Stub Tx Mixer SLIM_1_TX':1:1
@@ -3465,7 +3369,7 @@ SectionModifier
 	EndSequence
 
 	DisableSequence
-		'SLIM_1 SampleRate':1:8000
+		'Internal BTSCO SampleRate':0:8000
 		'AUX_PCM_RX_Voice Mixer Voip':1:0
 		'Voip_Tx Mixer AUX_PCM_TX_Voip':1:0
 	EndSequence
@@ -3480,7 +3384,7 @@ SectionModifier
 	Name "Play VOIPBT SCO Tx"
 
 	EnableSequence
-		'SLIM_1 SampleRate':1:8000
+		'Internal BTSCO SampleRate':0:8000
 		'AUX_PCM_RX_Voice Mixer Voip':1:1
 		'Voip_Tx Mixer AUX_PCM_TX_Voip':1:1
 	EndSequence
@@ -3501,7 +3405,7 @@ SectionModifier
 	EndSequence
 
 	DisableSequence
-		'SLIM_1 SampleRate':1:8000
+		'Internal BTSCO SampleRate':0:8000
 		'AUX_PCM_RX_Voice Mixer Voip':1:0
 		'Voip_Tx Mixer AUX_PCM_TX_Voip':1:0
 	EndSequence
@@ -3516,7 +3420,7 @@ SectionModifier
 	Name "Play VOIPBT SCO WB Tx"
 
 	EnableSequence
-		'SLIM_1 SampleRate':1:16000
+		'Internal BTSCO SampleRate':0:16000
 		'AUX_PCM_RX_Voice Mixer Voip':1:1
 		'Voip_Tx Mixer AUX_PCM_TX_Voip':1:1
 	EndSequence
