@@ -32,6 +32,7 @@ PRODUCT_COPY_FILES += device/qcom/msm8960/snd_soc_msm/snd_soc_msm_2x:system/etc/
                       device/qcom/msm8960/snd_soc_msm/snd_soc_msm_auxpcm:system/etc/snd_soc_msm/snd_soc_msm_auxpcm \
                       device/qcom/msm8960/snd_soc_msm/snd_soc_msm_2x_mpq:system/etc/snd_soc_msm/snd_soc_msm_2x_mpq \
                       device/qcom/msm8960/snd_soc_msm/snd_soc_msm_2x_mpq_auxpcm:system/etc/snd_soc_msm/snd_soc_msm_2x_mpq_auxpcm \
+                      device/qcom/msm8960/snd_soc_msm/snd_soc_msm_2x_mpq_auxpcm_dma:system/etc/snd_soc_msm/snd_soc_msm_2x_mpq_auxpcm_dma \
 
 PRODUCT_PACKAGES += \
     battery_monitor \

@@ -71,7 +71,9 @@ persist.audio.lowlatency.rec=false
 # System prop to select audio resampler quality
 af.resampler.quality=255
 # System prop to select MPQAudioPlayer by default on mpq8064
-mpq.audio.decode=true
+mpq.audio.decode=false
+# System prop to enable spdif over mi2s incase of dma board
+spdif.mi2s=false
 
 #
 # system prop for opengles version
