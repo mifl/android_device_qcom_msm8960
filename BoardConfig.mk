@@ -63,6 +63,7 @@ BOARD_PERSISTIMAGE_PARTITION_SIZE := 5242880
 BOARD_TOMBSTONESIMAGE_PARTITION_SIZE := 268435456
 BOARD_FLASH_BLOCK_SIZE := 131072 # (BOARD_KERNEL_PAGESIZE * 64)
 
+TARGET_ADDITIONAL_BOOTCLASSPATH := WfdCommon
 # Use signed boot and recovery image
 TARGET_BOOTIMG_SIGNED := true
 
@@ -93,3 +94,27 @@ TARGET_ENABLE_QC_AV_ENHANCEMENTS := true
 TARGET_USES_ION := true
 TARGET_ADDITIONAL_BOOTCLASSPATH := qcmediaplayer:WfdCommon:qcom.fmradio
 
+# Board specific SELinux policy variable definitions
+BOARD_SEPOLICY_DIRS := \
+       device/qcom/common/sepolicy
+
+BOARD_SEPOLICY_UNION := \
+       app.te \
+       bluetooth.te \
+       compatibility.te \
+       device.te \
+       domain.te \
+       drmserver.te \
+       file.te \
+       file_contexts \
+       hci_init.te \
+       init_shell.te \
+       keystore.te \
+       mediaserver.te \
+       kickstart.te \
+       nfc.te \
+       rild.te \
+       surfaceflinger.te \
+       system.te \
+       ueventd.te \
+       wpa.te
