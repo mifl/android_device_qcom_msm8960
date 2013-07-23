@@ -68,6 +68,17 @@ on post-fs-data
    mkdir /tombstones/mdm 0771 system system
    mkdir /tombstones/mdm2 0771 system system
 
+# bt_hsic_control
+service bt_hsic_control /system/bin/sh /system/etc/hsic.control.bt.sh
+    user root
+    disabled
+
+on property:bluetooth.hsic_ctrl=load_wlan
+    start bt_hsic_control
+
+on property:bluetooth.hsic_ctrl=unbind_hsic
+    start bt_hsic_control
+
 #start camera server as daemon
 service qcamerasvr /system/bin/mm-qcamera-daemon
         class late_start
