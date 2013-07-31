@@ -53,6 +53,9 @@ media.stagefright.enable-fma2dp=true
 media.stagefright.enable-scan=true
 mmp.enable.3g2=true
 media.aac_51_output_enabled=true
+#33395 is sum of supported format flags in AAL
+#Formats: AVI AC3 ASF AAC QCP DTS 3G2
+mm.enable.qcom_parser=33395
 
 #
 # system props for the data modules
@@ -76,8 +79,8 @@ mpq.audio.decode=true
 #
 # system prop for opengles version
 #
-# 131072 is decimal for 0x20000 to report version 2
-ro.opengles.version=131072
+# 196608 is decimal for 0x30000 to report version 3
+ro.opengles.version=196608
 
 # system prop for requesting Master role in incoming Bluetooth connection.
 #
