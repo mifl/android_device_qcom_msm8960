@@ -1072,6 +1072,40 @@ SectionVerb
 EndSection
 
 SectionVerb
+	Name "HiFi RecPROXY Tx"
+
+	EnableSequence
+		'MultiMedia1 Mixer AFE_PCM_TX':1:1
+	EndSequence
+
+	DisableSequence
+		'MultiMedia1 Mixer AFE_PCM_TX':1:0
+	EndSequence
+
+	# ALSA PCMs
+	CapturePCM 0
+	PlaybackPCM 0
+
+EndSection
+
+SectionVerb
+        Name "HiFi RecUSB PROXY Tx"
+
+        EnableSequence
+                'MultiMedia1 Mixer AFE_PCM_TX':1:1
+        EndSequence
+
+        DisableSequence
+                'MultiMedia1 Mixer AFE_PCM_TX':1:0
+        EndSequence
+
+        # ALSA PCMs
+        CapturePCM 0
+        PlaybackPCM 0
+
+EndSection
+
+SectionVerb
 	Name "HiFi RecSSR QMIC"
 
 	EnableSequence
@@ -5014,6 +5048,40 @@ SectionModifier
         # ALSA PCMs
         PlaybackPCM 9
         CapturePCM 9
+
+EndSection
+
+SectionModifier
+        Name "Capture MusicPROXY Tx"
+
+        EnableSequence
+                'MultiMedia1 Mixer AFE_PCM_TX':1:1
+        EndSequence
+
+        DisableSequence
+                'MultiMedia1 Mixer AFE_PCM_TX':1:0
+        EndSequence
+
+        # ALSA PCMs
+        CapturePCM 0
+        PlaybackPCM 0
+
+EndSection
+
+SectionModifier
+        Name "Capture MusicUSB PROXY Tx"
+
+        EnableSequence
+                'MultiMedia1 Mixer AFE_PCM_TX':1:1
+        EndSequence
+
+        DisableSequence
+                'MultiMedia1 Mixer AFE_PCM_TX':1:0
+        EndSequence
+
+        # ALSA PCMs
+        CapturePCM 0
+        PlaybackPCM 0
 
 EndSection
 
