@@ -42,6 +42,7 @@ lpa.decode=false
 tunnel.decode=true
 tunnel.audiovideo.decode=true
 lpa.use-stagefright=true
+qcom.hw.aac.encoder=true
 
 #system props for the MM modules
 
