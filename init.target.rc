@@ -69,7 +69,7 @@ on post-fs-data
 service qcamerasvr /system/bin/mm-qcamera-daemon
         class late_start
         user camera
-        group camera system inet input graphics bluetooth
+        group media system inet input graphics bluetooth
 
 #start GNSS/Sensor interface daemon
 service gsiff_daemon /system/bin/gsiff_daemon
