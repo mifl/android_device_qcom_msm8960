@@ -38,7 +38,11 @@ THERMALD_CONF_SYMLINK=/etc/thermald.conf
 setprop qcom.thermal thermald
 
 # Figure out if thermal-engine should start
-platformid=`cat /sys/devices/system/soc/soc0/id`
+if [ -f /sys/devices/soc0/soc_id ]; then
+    platformid=`cat /sys/devices/soc0/soc_id`
+else
+    platformid=`cat /sys/devices/system/soc/soc0/id`
+fi
 case "$platformid" in
     "153") #APQ/MPQ8064ab
     setprop qcom.thermal thermal-engine
