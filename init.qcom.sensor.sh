@@ -40,7 +40,11 @@ if [ -h $SENSOR_HAL_SYMLINK ]; then
 fi
 
 # create symlink to target-specific config file
-platformid=`cat /sys/devices/system/soc/soc0/id`
+if [ -f /sys/devices/soc0/soc_id ]; then
+    platformid=`cat /sys/devices/soc0/soc_id`
+else
+    platformid=`cat /sys/devices/system/soc/soc0/id`
+fi
 case "$platformid" in
     "116") #msm8930
     ln -s /system/lib/hw/sensors.msm8930.so $SENSOR_HAL_SYMLINK 2>/dev/null
