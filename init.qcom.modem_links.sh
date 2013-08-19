@@ -90,7 +90,12 @@ case $linksNeeded in
       case $fixModemFirmware in
       1)
         # Check chip version
-        case `cat /sys/devices/system/soc/soc0/version 2>/dev/null` in
+        if [ -f /sys/devices/soc0/revision ]; then
+            rev_id=`cat /sys/devices/soc0/revision`
+        else
+            rev_id=`cat /sys/devices/system/soc/soc0/version`
+        fi
+        case "$rev_id" in
           "1.0" | "1.1")
             for file in modem_f1.* ; do
               newname=modem_fw.${file##*.}
