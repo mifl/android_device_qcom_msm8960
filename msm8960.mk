@@ -16,9 +16,6 @@ $(call inherit-product, device/qcom/common/common.mk)
 PRODUCT_NAME := msm8960
 PRODUCT_DEVICE := msm8960
 
-PRODUCT_COPY_FILES += \
-    frameworks/native/data/etc/android.hardware.sensor.barometer.xml:system/etc/permissions/android.hardware.sensor.barometer.xml \
-
 # Bluetooth configuration files
 PRODUCT_COPY_FILES += \
     system/bluetooth/data/main.le.conf:system/etc/bluetooth/main.conf \
