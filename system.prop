@@ -57,7 +57,6 @@ vidc.debug.level=1
 # system props for the data modules
 #
 ro.use_data_netmgrd=true
-persist.data.netmgrd.qos.enable=true
 
 #system props for time-services
 persist.timed.enable=true
