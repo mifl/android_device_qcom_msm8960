@@ -34,9 +34,6 @@ export PATH
 
 THERMALD_CONF_SYMLINK=/etc/thermald.conf
 
-# Set a default value
-setprop qcom.thermal thermald
-
 # Figure out if thermal-engine should start
 platformid=`cat /sys/devices/system/soc/soc0/id`
 case "$platformid" in
