@@ -67,3 +67,15 @@ key 361   SETTINGS	WAKE
 key 366   DVR		WAKE
 key 217   SEARCH	WAKE
 key 154   WINDOW	WAKE
+
+# iWedia extensions
+key 59    F1            WAKE
+key 60    F2            WAKE
+key 61    F3            WAKE
+key 62    F4            WAKE
+key 63    F5            WAKE
+key 64    F6            WAKE
+key 65    F7            WAKE
+key 66    F8            WAKE
+key 365   GUIDE         WAKE
+key 370   CAPTIONS      WAKE
