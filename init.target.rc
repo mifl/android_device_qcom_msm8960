@@ -37,8 +37,9 @@ service ril-qmi /system/bin/sh /init.qcom.ril.sh
     user root
     oneshot
 
-on init
-       export BOOTCLASSPATH ${BOOTCLASSPATH}:/system/framework/WfdCommon.jar:/system/framework/qcmediaplayer.jar
+#on init
+       # This is no longer supported from KK release.
+       #export BOOTCLASSPATH ${BOOTCLASSPATH}:/system/framework/WfdCommon.jar:/system/framework/qcmediaplayer.jar
 on fs
     mount_all fstab.qcom
 
