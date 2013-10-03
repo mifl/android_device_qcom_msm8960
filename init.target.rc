@@ -93,12 +93,6 @@ service thermal-engine /system/bin/thermal-engine
    group root
    disabled
 
-on property:qcom.thermal=thermald
-    start thermald
-
-on property:qcom.thermal=thermal-engine
-    start thermal-engine
-
 service mpdecision /system/bin/mpdecision --no_sleep --avg_comp
    user root
    disabled
