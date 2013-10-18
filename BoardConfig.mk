@@ -111,6 +111,7 @@ BOARD_SEPOLICY_UNION := \
        keystore.te \
        mediaserver.te \
        kickstart.te \
+       netd.te \
        nfc.te \
        rild.te \
        surfaceflinger.te \
