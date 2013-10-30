@@ -32,11 +32,6 @@ on early-init
     symlink /data/tombstones /tombstones
     mount debugfs debugfs /sys/kernel/debug
 
-service ril-qmi /system/bin/sh /init.qcom.ril.sh
-    class main
-    user root
-    oneshot
-
 #on init
        # This is no longer supported from KK release.
        #export BOOTCLASSPATH ${BOOTCLASSPATH}:/system/framework/WfdCommon.jar:/system/framework/qcmediaplayer.jar
