@@ -47,3 +47,7 @@ PRODUCT_COPY_FILES += \
     device/qcom/msm8960/WCNSS_cfg.dat:system/etc/firmware/wlan/prima/WCNSS_cfg.dat \
     device/qcom/msm8960/WCNSS_qcom_cfg.ini:system/etc/wifi/WCNSS_qcom_cfg.ini \
     device/qcom/msm8960/WCNSS_qcom_wlan_nv.bin:persist/WCNSS_qcom_wlan_nv.bin
+
+# prescan package list
+PRODUCT_COPY_FILES += \
+    device/qcom/msm8960/package_scan_list.conf:system/etc/package_scan_list.conf
