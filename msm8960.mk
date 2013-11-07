@@ -33,11 +33,11 @@ PRODUCT_PACKAGES += \
     battery_shutdown
 
 # Wallpapers
-PRODUCT_PACKAGES += Galaxy4
-PRODUCT_PACKAGES += HoloSpiralWallpaper
-PRODUCT_PACKAGES += MagicSmokeWallpapers
-PRODUCT_PACKAGES += NoiseField
-PRODUCT_PACKAGES += PhaseBeam
+#PRODUCT_PACKAGES += Galaxy4
+#PRODUCT_PACKAGES += HoloSpiralWallpaper
+#PRODUCT_PACKAGES += MagicSmokeWallpapers
+#PRODUCT_PACKAGES += NoiseField
+#PRODUCT_PACKAGES += PhaseBeam
 
 #fstab.qcom
 PRODUCT_PACKAGES += fstab.qcom
