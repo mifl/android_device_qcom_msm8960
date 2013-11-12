@@ -48,4 +48,7 @@
     <!-- If this is true, the screen will come on when you plug/unplug usb/power/whatever. -->
     <bool name="config_unplugTurnsOnScreen">true</bool>
 
+    <!-- Max users supported in the device (for multi user support) -->
+    <integer name="config_multiuserMaximumUsers">5</integer>
+
 </resources>
