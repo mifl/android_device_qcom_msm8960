@@ -38,6 +38,8 @@ PRODUCT_COPY_FILES += device/qcom/msm8960/snd_soc_msm/snd_soc_msm_2x:system/etc/
                       device/qcom/msm8960/snd_soc_msm/snd_soc_msm_Sitar_Sglte:system/etc/snd_soc_msm/snd_soc_msm_Sitar_Sglte \
                       device/qcom/msm8960/snd_soc_msm/snd_soc_msm_Sitar_auxpcm:system/etc/snd_soc_msm/snd_soc_msm_Sitar_auxpcm \
                       device/qcom/msm8960/snd_soc_msm/snd_soc_msm_auxpcm:system/etc/snd_soc_msm/snd_soc_msm_auxpcm \
+                      device/qcom/msm8960/snd_soc_msm/snd_soc_msm_2x_mpq:system/etc/snd_soc_msm/snd_soc_msm_2x_mpq \
+                      device/qcom/msm8960/snd_soc_msm/snd_soc_msm_2x_mpq_auxpcm:system/etc/snd_soc_msm/snd_soc_msm_2x_mpq_auxpcm \
 
 # gps/location secuity configuration file
 PRODUCT_COPY_FILES += \
