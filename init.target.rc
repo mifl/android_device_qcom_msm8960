@@ -55,6 +55,9 @@ on fs
     wait /dev/block/platform/msm_sdcc.1/by-name/modem
     mount vfat /dev/block/platform/msm_sdcc.1/by-name/modem /firmware ro shortname=lower,uid=1000,gid=1000,dmask=227,fmask=337
 
+    symlink /system/usr/keylayout/samsung_remote_ir.kl /system/usr/keylayout/gpio_ir_recv.kl
+    symlink /system/usr/keylayout/ue_rf4ce_remote.kl /system/usr/keylayout/user-rc-input.kl
+
 on boot
    write /sys/devices/i2c-3/3-0024/cyttsp_update_fw 1
    write /sys/devices/i2c-3/3-005b/update_fw 1
@@ -68,6 +71,7 @@ on post-fs-data
    mkdir /tombstones/dsps 0771 system system
    mkdir /tombstones/mdm 0771 system system
    mkdir /tombstones/mdm2 0771 system system
+   mount ext4 /dev/block/platform/msm_sdcc.1/by-name/system /system ro remount barrier=1
 
 #start camera server as daemon
 service qcamerasvr /system/bin/mm-qcamera-daemon
