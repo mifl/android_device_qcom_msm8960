@@ -29,7 +29,7 @@
 #
 # start two rild when dsds property enabled
 #
-dsds=`getprop persist.multisim.config`
+dsds=`getprop persist.radio.multisim.config`
 if [ "$dsds" = "dsds" ]; then
     setprop ro.multi.rild true
     stop ril-daemon
