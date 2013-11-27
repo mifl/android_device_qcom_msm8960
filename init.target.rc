@@ -74,8 +74,8 @@ service qcamerasvr /system/bin/mm-qcamera-daemon
 #start GNSS/Sensor interface daemon
 service gsiff_daemon /system/bin/gsiff_daemon
     class late_start
-    user system
-    group gps qcom_oncrpc net_raw
+    user gps
+    group gps qcom_oncrpc net_raw misc
 
 service thermald /system/bin/thermald
    class main
