@@ -96,3 +96,7 @@ BOARD_HAS_ATH_ETH_ALX := true
 TARGET_USES_ION := true
 TARGET_ADDITIONAL_BOOTCLASSPATH := qcmediaplayer:WfdCommon
 REDUCED_APPS := true
+
+# Configuration for Automotive platform
+#AUTOPLAT_001 := true
+AUTOPLAT_001 := false
