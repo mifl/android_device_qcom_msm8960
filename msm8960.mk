@@ -17,7 +17,7 @@ $(call inherit-product, device/qcom/common/common.mk)
 PRODUCT_NAME := msm8960
 PRODUCT_DEVICE := msm8960
 
-PRODUCT_BOOT_JARS += qcom.fmradio:qcmediaplayer:WfdCommon:org.codeaurora.Performance
+PRODUCT_BOOT_JARS := core:conscrypt:okhttp:core-junit:bouncycastle:ext:framework:framework2:telephony-common:voip-common:mms-common:android.policy:services:apache-xml:webviewchromium:telephony-msim:qcom.fmradio:qcmediaplayer:WfdCommon:org.codeaurora.Performance
 
 # Bluetooth configuration files
 #PRODUCT_COPY_FILES += \
