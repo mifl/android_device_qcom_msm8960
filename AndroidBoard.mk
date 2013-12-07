@@ -19,7 +19,11 @@ endif
 # Compile Linux Kernel
 #----------------------------------------------------------------------
 ifeq ($(KERNEL_DEFCONFIG),)
+ifeq ($(AUTOPLAT_001),true)
+    KERNEL_DEFCONFIG := msm8960_autoplat001_defconfig
+else
     KERNEL_DEFCONFIG := msm8960_defconfig
+endif
 endif
 
 include kernel/AndroidKernel.mk
