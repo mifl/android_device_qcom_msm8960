@@ -131,3 +131,6 @@ persist.sys.wfd.virtual=0
 
 #system prop for setting rmnet mux mode
 persist.rmnet.mux=disabled
+
+#disable gapless mode by default
+audio.gapless.playback.disable=true
