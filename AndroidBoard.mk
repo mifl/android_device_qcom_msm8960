@@ -173,12 +173,27 @@ LOCAL_MODULE_PATH  := $(TARGET_OUT_KEYLAYOUT)
 include $(BUILD_PREBUILT)
 
 include $(CLEAR_VARS)
+ifeq ($(AUTOPLAT_001), true)
+LOCAL_MODULE       := gpio-keys-autoplat_001.kl
+else
 LOCAL_MODULE       := gpio-keys.kl
+endif # AUTOPLAT_001
 LOCAL_MODULE_TAGS  := optional
 LOCAL_MODULE_CLASS := ETC
 LOCAL_SRC_FILES    := $(LOCAL_MODULE)
 LOCAL_MODULE_PATH  := $(TARGET_OUT_KEYLAYOUT)
 include $(BUILD_PREBUILT)
+
+
+ifeq ($(AUTOPLAT_001_REV_CAM), true)
+include $(CLEAR_VARS)
+LOCAL_MODULE       := reverse.kl
+LOCAL_MODULE_TAGS  := optional
+LOCAL_MODULE_CLASS := ETC
+LOCAL_SRC_FILES    := $(LOCAL_MODULE)
+LOCAL_MODULE_PATH  := $(TARGET_OUT_KEYLAYOUT)
+include $(BUILD_PREBUILT)
+endif # AUTOPLAT_001_REV_CAM
 
 include $(CLEAR_VARS)
 LOCAL_MODULE       := Button_Jack.kl
