@@ -100,3 +100,9 @@ REDUCED_APPS := true
 # Configuration for Automotive platform
 #AUTOPLAT_001 := true
 AUTOPLAT_001 := false
+
+# Enabling Automotive Platform 001 specific features
+ifeq ($(AUTOPLAT_001), true)
+# Reverse Camera
+AUTOPLAT_001_REV_CAM := true
+endif # AUTOPLAT_001
