@@ -118,3 +118,5 @@ BOARD_SEPOLICY_UNION := \
        system.te \
        ueventd.te \
        wpa.te
+
+PRODUCT_BOOT_JARS := $(subst $(space),:,$(PRODUCT_BOOT_JARS))
