@@ -39,7 +39,11 @@ LOCAL_SRC_FILES    := $(LOCAL_MODULE)
 include $(BUILD_PREBUILT)
 
 include $(CLEAR_VARS)
+ifeq ($(AUTOPLAT_001),true)
+LOCAL_MODULE       := init.target.autoplat_001.rc
+else
 LOCAL_MODULE       := init.target.rc
+endif # AUTOPLAT_001
 LOCAL_MODULE_TAGS  := optional
 LOCAL_MODULE_CLASS := ETC
 LOCAL_SRC_FILES    := $(LOCAL_MODULE)
