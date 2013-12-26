@@ -90,7 +90,7 @@ ro.bluetooth.remote.autoconnect=true
 persist.gps.qmienabled=true
 
 # System property for cabl
-ro.qualcomm.cabl=1
+ro.qualcomm.cabl=0
 
 # System props for telephony
 # System prop to turn on CdmaLTEPhone always
