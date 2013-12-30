@@ -73,7 +73,7 @@ soc_id=`cat /sys/devices/system/soc/soc0/id`
             hrd_ver=`cat /sys/devices/system/soc/soc0/version`
             case "$hrd_ver" in
                "2.0")
-               start mpq_standby_app
+               #start mpq_standby_app
                ;;
             esac
             ;;
