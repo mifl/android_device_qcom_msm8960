@@ -134,3 +134,6 @@ persist.rmnet.mux=disabled
 
 #system prop for setting Auto related feautures
 AUTOPLATFORM=true
+
+#disable gapless mode by default
+audio.gapless.playback.disable=true
