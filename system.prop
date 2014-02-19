@@ -132,6 +132,8 @@ persist.sys.wfd.virtual=0
 #system prop for setting rmnet mux mode
 persist.rmnet.mux=disabled
 
+qcom.audio.init=complete
+
 #system prop for setting Auto related feautures
 AUTOPLATFORM=true
 
