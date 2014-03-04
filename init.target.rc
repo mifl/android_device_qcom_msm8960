@@ -191,11 +191,6 @@ service imsqmidaemon /system/bin/imsqmidaemon
     user system
     socket ims_qmid stream 0660 system radio
     group ims radio net_raw log qcom_diag
-    disabled
-
-on boot
-    start imsqmidaemon
-
 
 # imsdatadaemon starts with root and UID will be downgraded to SYSTEM.
 service imsdatadaemon /system/bin/imsdatadaemon
