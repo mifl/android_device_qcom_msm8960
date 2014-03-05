@@ -86,6 +86,9 @@ ro.bluetooth.remote.autoconnect=true
 # 0: Always discoverable
 #debug.bt.discoverable_time=0
 
+# System prop to disable a2dp sink which is enabled by default
+bluetooth.a2dp.sink.enabled=false
+
 #system prop for switching gps driver to qmi
 persist.gps.qmienabled=true
 

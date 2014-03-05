@@ -75,3 +75,8 @@ PRODUCT_PACKAGES += wcnss_service
 PRODUCT_COPY_FILES += \
    device/qcom/msm8960/package_scan_list.conf:system/etc/package_scan_list.conf
 
+#ANT+ stack
+PRODUCT_PACKAGES += \
+AntHalService \
+libantradio \
+antradio_app
