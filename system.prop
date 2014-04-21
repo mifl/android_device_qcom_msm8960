@@ -49,6 +49,11 @@ media.aac_51_output_enabled=true
 #Formats: AVI AC3 ASF AAC QCP DTS 3G2
 mm.enable.qcom_parser=33395
 
+#system prop for Bluetooth SOC type
+qcom.bluetooth.soc=rome
+
+ro.qualcomm.bt.hci_transport=uart
+
 #
 # system props for the data modules
 #
