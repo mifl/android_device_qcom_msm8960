@@ -7001,6 +7001,63 @@ SectionModifier
 EndSection
 
 SectionModifier
+        Name "Play Music2Pseudo"
+
+        EnableSequence
+		'PSEUDO Mixer MultiMedia2':1:1
+		'SEC_RX Audio Mixer Pseudo':1:1
+        EndSequence
+
+        DisableSequence
+		'PSEUDO Mixer MultiMedia2':1:0
+		'SEC_RX Audio Mixer Pseudo':1:0
+        EndSequence
+
+        # ALSA PCMs
+        PlaybackPCM 19
+
+EndSection
+
+SectionModifier
+        Name "Play Music2PseudoHDMI"
+
+        EnableSequence
+		'PSEUDO Mixer MultiMedia2':1:1
+		'HDMI Mixer Pseudo':1:1
+        EndSequence
+
+        DisableSequence
+		'PSEUDO Mixer MultiMedia2':1:0
+		'HDMI Mixer Pseudo':1:0
+        EndSequence
+
+        # ALSA PCMs
+        PlaybackPCM 19
+
+EndSection
+
+
+SectionModifier
+        Name "Play Music2PseudoSPDIF"
+
+        EnableSequence
+		'PSEUDO Mixer MultiMedia2':1:1
+		'SEC_RX Audio Mixer Pseudo':1:1
+        EndSequence
+
+        DisableSequence
+		'PSEUDO Mixer MultiMedia2':1:0
+		'SEC_RX Audio Mixer Pseudo':1:0
+        EndSequence
+
+        # ALSA PCMs
+        CapturePCM 19
+        PlaybackPCM 19
+
+EndSection
+
+
+SectionModifier
 	Name "Play Music3"
 
 	EnableSequence
@@ -7459,6 +7516,64 @@ SectionModifier
 EndSection
 
 SectionModifier
+        Name "Play Music3Pseudo"
+
+        EnableSequence
+		'PSEUDO Mixer MultiMedia5':1:1
+		'SEC_RX Audio Mixer Pseudo':1:1
+        EndSequence
+
+        DisableSequence
+		'PSEUDO Mixer MultiMedia5':1:0
+		'SEC_RX Audio Mixer Pseudo':1:0
+        EndSequence
+
+        # ALSA PCMs
+        CapturePCM 19
+        PlaybackPCM 19
+
+EndSection
+
+
+SectionModifier
+        Name "Play Music3PseudoHDMI"
+
+        EnableSequence
+		'PSEUDO Mixer MultiMedia5':1:1
+		'HDMI Mixer Pseudo':1:1
+        EndSequence
+
+        DisableSequence
+		'PSEUDO Mixer MultiMedia5':1:0
+		'HDMI Mixer Pseudo':1:0
+        EndSequence
+
+        # ALSA PCMs
+        CapturePCM 19
+        PlaybackPCM 19
+
+EndSection
+
+SectionModifier
+        Name "Play Music3PseudoSPDIF"
+
+        EnableSequence
+		'PSEUDO Mixer MultiMedia5':1:1
+		'SEC_RX Audio Mixer Pseudo':1:1
+        EndSequence
+
+        DisableSequence
+		'PSEUDO Mixer MultiMedia5':1:0
+		'SEC_RX Audio Mixer Pseudo':1:0
+        EndSequence
+
+        # ALSA PCMs
+        CapturePCM 19
+        PlaybackPCM 19
+
+EndSection
+
+SectionModifier
 	Name "Play Music5"
 
 	EnableSequence
@@ -7780,6 +7895,63 @@ SectionModifier
         # ALSA PCMs
         CapturePCM 15
         PlaybackPCM 15
+
+EndSection
+
+SectionModifier
+        Name "Play Music5Pseudo"
+
+        EnableSequence
+		'PSEUDO Mixer MultiMedia6':1:1
+		'HDMI Mixer Pseudo':1:1
+        EndSequence
+
+        DisableSequence
+		'PSEUDO Mixer MultiMedia6':1:0
+		'HDMI Mixer Pseudo':1:0
+        EndSequence
+
+        # ALSA PCMs
+        CapturePCM 19
+        PlaybackPCM 19
+
+EndSection
+
+SectionModifier
+        Name "Play Music5PseudoSPDIF"
+
+        EnableSequence
+		'PSEUDO Mixer MultiMedia6':1:1
+		'SEC_RX Audio Mixer Pseudo':1:1
+        EndSequence
+
+        DisableSequence
+		'PSEUDO Mixer MultiMedia6':1:0
+		'SEC_RX Audio Mixer Pseudo':1:0
+        EndSequence
+
+        # ALSA PCMs
+        CapturePCM 19
+        PlaybackPCM 19
+
+EndSection
+
+SectionModifier
+        Name "Play Music5PseudoHDMI"
+
+        EnableSequence
+		'PSEUDO Mixer MultiMedia6':1:1
+		'HDMI Mixer Pseudo':1:1
+        EndSequence
+
+        DisableSequence
+		'PSEUDO Mixer MultiMedia6':1:0
+		'HDMI Mixer Pseudo':1:0
+        EndSequence
+
+        # ALSA PCMs
+        CapturePCM 19
+        PlaybackPCM 19
 
 EndSection
 
@@ -8109,6 +8281,63 @@ SectionModifier
 EndSection
 
 SectionModifier
+        Name "Play Music6Pseudo"
+
+        EnableSequence
+		'PSEUDO Mixer MultiMedia9':1:1
+		'HDMI Mixer Pseudo':1:1
+        EndSequence
+
+        DisableSequence
+		'PSEUDO Mixer MultiMedia9':1:0
+		'HDMI Mixer Pseudo':1:0
+        EndSequence
+
+        # ALSA PCMs
+        CapturePCM 19
+        PlaybackPCM 19
+
+EndSection
+
+SectionModifier
+        Name "Play Music6PseudoSPDIF"
+
+        EnableSequence
+		'PSEUDO Mixer MultiMedia9':1:1
+		'SEC_RX Audio Mixer Pseudo':1:1
+        EndSequence
+
+        DisableSequence
+		'PSEUDO Mixer MultiMedia9':1:0
+		'SEC_RX Audio Mixer Pseudo':1:0
+        EndSequence
+
+        # ALSA PCMs
+        CapturePCM 19
+        PlaybackPCM 19
+
+EndSection
+
+SectionModifier
+        Name "Play Music6PseudoHDMI"
+
+        EnableSequence
+		'PSEUDO Mixer MultiMedia9':1:1
+		'HDMI Mixer Pseudo':1:1
+        EndSequence
+
+        DisableSequence
+		'PSEUDO Mixer MultiMedia9':1:0
+		'HDMI Mixer Pseudo':1:0
+        EndSequence
+
+        # ALSA PCMs
+        CapturePCM 19
+        PlaybackPCM 19
+
+EndSection
+
+SectionModifier
 	Name "Play Music7"
 
 	EnableSequence
@@ -8430,6 +8659,63 @@ SectionModifier
         # ALSA PCMs
         CapturePCM 21
         PlaybackPCM 21
+
+EndSection
+
+SectionModifier
+        Name "Play Music7Pseudo"
+
+        EnableSequence
+		'PSEUDO Mixer MultiMedia10':1:1
+		'HDMI Mixer Pseudo':1:1
+        EndSequence
+
+        DisableSequence
+		'PSEUDO Mixer MultiMedia10':1:0
+		'HDMI Mixer Pseudo':1:0
+        EndSequence
+
+        # ALSA PCMs
+        CapturePCM 19
+        PlaybackPCM 19
+
+EndSection
+
+SectionModifier
+        Name "Play Music7PseudoSPDIF"
+
+        EnableSequence
+		'PSEUDO Mixer MultiMedia10':1:1
+		'SEC_RX Audio Mixer Pseudo':1:1
+        EndSequence
+
+        DisableSequence
+		'PSEUDO Mixer MultiMedia10':1:0
+		'SEC_RX Audio Mixer Pseudo':1:0
+        EndSequence
+
+        # ALSA PCMs
+        CapturePCM 19
+        PlaybackPCM 19
+
+EndSection
+
+SectionModifier
+        Name "Play Music7PseudoHDMI"
+
+        EnableSequence
+		'PSEUDO Mixer MultiMedia10':1:1
+		'HDMI Mixer Pseudo':1:1
+        EndSequence
+
+        DisableSequence
+		'PSEUDO Mixer MultiMedia10':1:0
+		'HDMI Mixer Pseudo':1:0
+        EndSequence
+
+        # ALSA PCMs
+        CapturePCM 19
+        PlaybackPCM 19
 
 EndSection
 
