@@ -1,0 +1,339 @@
+# Master file for snd_soc_msm tabla 2.0 sound card
+# Lists all use case verbs
+SectionUseCase."HiFi" {
+Comment "Music playback use case"
+SectionVerb
+	Name "HiFi"
+
+	EnableSequence
+		'MI2S_RX Audio Mixer MultiMedia1':1:1
+	EndSequence
+
+	DisableSequence
+		'MI2S_RX Audio Mixer MultiMedia1':1:0
+	EndSequence
+
+	# ALSA PCMs
+	CapturePCM 0
+	PlaybackPCM 0
+
+EndSection
+
+SectionVerb
+	Name "HiFiBT SCO Rx"
+
+	EnableSequence
+		'AUX_PCM_RX Audio Mixer MultiMedia1':1:1
+	EndSequence
+
+	DisableSequence
+		'AUX_PCM_RX Audio Mixer MultiMedia1':1:0
+	EndSequence
+
+	# ALSA PCMs
+	CapturePCM 0
+	PlaybackPCM 0
+
+EndSection
+}
+SectionUseCase."HiFi Rec" {
+Comment "Recording use case"
+SectionVerb
+	Name "HiFi Rec"
+
+	EnableSequence
+		'MultiMedia1 Mixer PRI_TX':1:1
+	EndSequence
+
+	DisableSequence
+		'MultiMedia1 Mixer PRI_TX':1:0
+	EndSequence
+
+	# ALSA PCMs
+	CapturePCM 0
+	PlaybackPCM 0
+
+EndSection
+
+SectionVerb
+	Name "HiFi RecBT SCO Tx"
+
+	EnableSequence
+		'MultiMedia1 Mixer AUX_PCM_UL_TX':1:1
+	EndSequence
+
+	DisableSequence
+		'MultiMedia1 Mixer AUX_PCM_UL_TX':1:0
+	EndSequence
+
+	# ALSA PCMs
+	CapturePCM 0
+	PlaybackPCM 0
+
+EndSection
+}
+SectionUseCase."Voice Call" {
+Comment "Voice Call use case"
+SectionVerb
+	Name "Voice Call"
+
+	EnableSequence
+		'Voice Stub Tx Mixer PRIMARY_I2S_TX':1:1
+		'MI2S_RX_Voice Mixer Voice Stub':1:1
+		'Voice Stub Tx Mixer MI2S_TX':1:1
+		'PRI_RX_Voice Mixer Voice Stub':1:1
+		'MI2S_RX Port Mixer PRIMARY_I2S_TX':1:1
+		'PRI_I2S_RX Port Mixer MI2S_TX':1:1
+	EndSequence
+
+	DisableSequence
+		'Voice Stub Tx Mixer PRIMARY_I2S_TX':1:0
+		'MI2S_RX_Voice Mixer Voice Stub':1:0
+		'Voice Stub Tx Mixer MI2S_TX':1:0
+		'PRI_RX_Voice Mixer Voice Stub':1:0
+		'MI2S_RX Port Mixer PRIMARY_I2S_TX':1:0
+		'PRI_I2S_RX Port Mixer MI2S_TX':1:0
+	EndSequence
+
+	# ALSA PCMs
+	PlaybackPCM 11
+	CapturePCM 11
+
+EndSection
+}
+SectionDevice
+	Name "Earpiece"
+	Comment "Handset Rx device"
+
+	EnableSequence
+		'MI2S_RX Channels':0:Two
+	EndSequence
+
+	DisableSequence
+	EndSequence
+
+	ACDBID  7:1
+
+EndSection
+
+SectionDevice
+        Name "Voice Earpiece"
+        Comment "Handset Rx device"
+
+        EnableSequence
+                'MI2S_RX Channels':0:Two
+        EndSequence
+
+        DisableSequence
+                'MI2S_RX Channels':0:Two
+        EndSequence
+
+        ACDBID  7:1
+
+EndSection
+
+SectionDevice
+	Name "Speaker"
+	Comment "Speaker Rx device"
+
+	EnableSequence
+		'MI2S_RX Channels':0:Two
+	EndSequence
+
+	DisableSequence
+		'MI2S_RX Channels':0:Two
+	EndSequence
+
+	ACDBID	15:1
+
+EndSection
+
+SectionDevice
+	Name "Headphones"
+	Comment "Headset Rx device"
+
+	EnableSequence
+		'MI2S_RX Channels':0:Two
+	EndSequence
+
+	DisableSequence
+		'MI2S_RX Channels':0:Two
+	EndSequence
+
+	ACDBID	10:1
+
+EndSection
+
+SectionDevice
+	Name "Voice Headphones"
+	Comment "Headset Rx device for voice call"
+
+	EnableSequence
+		'MI2S_RX Channels':0:Two
+	EndSequence
+
+	DisableSequence
+		'MI2S_RX Channels':0:Two
+	EndSequence
+
+	ACDBID	10:1
+
+EndSection
+
+SectionDevice
+	Name "Speaker Headset"
+	Comment "Speaker Headset Rx combo device"
+
+	EnableSequence
+		'MI2S_RX Channels':0:Two
+	EndSequence
+
+	DisableSequence
+		'MI2S_RX Channels':0:Two
+	EndSequence
+
+	ACDBID	10:1
+
+EndSection
+
+SectionDevice
+	Name "Speaker ANC Headset"
+	Comment "Speaker ANC Headset Rx combo device"
+
+	EnableSequence
+		'MI2S_RX Channels':0:Two
+	EndSequence
+
+	DisableSequence
+		'MI2S_RX Channels':0:Two
+	EndSequence
+
+	ACDBID	26:1
+
+EndSection
+
+SectionDevice
+	Name "ANC Headset"
+	Comment "ANC Headset Rx device"
+
+	EnableSequence
+		'MI2S_RX Channels':0:Two
+	EndSequence
+
+	DisableSequence
+		'MI2S_RX Channels':0:Two
+	EndSequence
+
+	ACDBID	26:1
+
+EndSection
+
+SectionDevice
+	Name "Voice ANC Headset"
+	Comment "ANC Headset Rx device for voice call"
+
+	EnableSequence
+		'MI2S_RX Channels':0:Two
+	EndSequence
+
+	DisableSequence
+		'MI2S_RX Channels':0:Two
+	EndSequence
+
+	ACDBID	26:1
+
+EndSection
+
+SectionDevice
+	Name "Headset"
+	Comment "Headset Tx device"
+
+	EnableSequence
+		'I2S_TX Channels':0:Two
+	EndSequence
+
+	DisableSequence
+		'I2S_TX Channels':0:Two
+	EndSequence
+
+	ACDBID	8:2
+
+EndSection
+
+SectionDevice
+	Name "Handset"
+	Comment "Handset Tx device"
+
+	EnableSequence
+		'I2S_TX Channels':0:Two
+	EndSequence
+
+	DisableSequence
+		'I2S_TX Channels':0:Two
+	EndSequence
+
+	ACDBID	4:2
+
+EndSection
+
+SectionDevice
+	Name "Line"
+	Comment "Speaker Tx device"
+
+	EnableSequence
+		'I2S_TX Channels':0:Two
+	EndSequence
+
+	DisableSequence
+		'I2S_TX Channels':0:Two
+	EndSequence
+
+	ACDBID	4:2
+
+EndSection
+
+SectionModifier
+	Name "Play Music"
+	Comment "Modifier for music playback"
+
+	EnableSequence
+		'MI2S_RX Audio Mixer MultiMedia1':1:1
+	EndSequence
+
+	DisableSequence
+		'MI2S_RX Audio Mixer MultiMedia1':1:0
+	EndSequence
+
+	# ALSA PCMs
+	CapturePCM 0
+	PlaybackPCM 0
+
+EndSection
+
+SectionModifier
+	Name "Play Voice"
+
+	EnableSequence
+		'Voice Stub Tx Mixer PRIMARY_I2S_TX':1:1
+		'MI2S_RX_Voice Mixer Voice Stub':1:1
+		'Voice Stub Tx Mixer MI2S_TX':1:1
+		'PRI_RX_Voice Mixer Voice Stub':1:1
+		'MI2S_RX Port Mixer PRIMARY_I2S_TX':1:1
+		'PRI_I2S_RX Port Mixer MI2S_TX':1:1
+	EndSequence
+
+	DisableSequence
+		'Voice Stub Tx Mixer PRIMARY_I2S_TX':1:0
+		'MI2S_RX_Voice Mixer Voice Stub':1:0
+		'Voice Stub Tx Mixer MI2S_TX':1:0
+		'PRI_RX_Voice Mixer Voice Stub':1:0
+		'MI2S_RX Port Mixer PRIMARY_I2S_TX':1:0
+		'PRI_I2S_RX Port Mixer MI2S_TX':1:0
+	EndSequence
+
+	# ALSA PCMs
+	PlaybackPCM 11
+	CapturePCM 11
+
+EndSection
+# End of master file
