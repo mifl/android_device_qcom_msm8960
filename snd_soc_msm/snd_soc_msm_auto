@@ -1675,6 +1675,25 @@ SectionVerb
 
 EndSection
 }
+SectionUseCase."HFP" {
+Comment "HFP use case"
+SectionVerb
+        Name "HFP"
+
+        EnableSequence
+		 'PRI_I2S_RX Port Mixer AUX_PCM_UL_TX':1:1
+	         'AUXPCM_RX Port Mixer PRI_TX':1:1
+		 'Internal BTSCO SampleRate':1:8000
+        EndSequence
+
+        DisableSequence
+		 'PRI_I2S_RX Port Mixer AUX_PCM_UL_TX':1:0
+	         'AUXPCM_RX Port Mixer PRI_TX':1:0
+        EndSequence
+
+        # ALSA PCMs
+EndSection
+}
 
 SectionDevice
 	Name "Earpiece"
@@ -3641,6 +3660,24 @@ SectionModifier
         # ALSA PCMs
         CapturePCM 0
         PlaybackPCM 4
+
+EndSection
+
+SectionModifier
+        Name "hfp"
+
+        EnableSequence
+		 'PRI_I2S_RX Port Mixer AUX_PCM_UL_TX':1:1
+	         'AUXPCM_RX Port Mixer PRI_TX':1:1
+		 'Internal BTSCO SampleRate':1:8000
+        EndSequence
+
+        DisableSequence
+		 'PRI_I2S_RX Port Mixer AUX_PCM_UL_TX':1:0
+	         'AUXPCM_RX Port Mixer PRI_TX':1:0
+        EndSequence
+
+        # ALSA PCMs
 
 EndSection
 # End of master file
