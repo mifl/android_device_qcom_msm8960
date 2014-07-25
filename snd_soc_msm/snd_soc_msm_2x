@@ -5969,7 +5969,7 @@ SectionDevice
 
 	DisableSequence
 		'SLIM RX1 MUX':0:ZERO
-		'TTY Mode':0:ZERO
+		'TTY Mode':0:OFF
 		'RX1 MIX1 INP1':0:ZERO
 		'HPHL DAC Switch':1:0
 		'HPHL Volume':1:0
@@ -5995,7 +5995,7 @@ SectionDevice
 
 	DisableSequence
 		'AIF1_CAP Mixer SLIM TX7':1:0
-		'TTY Mode':0:ZERO
+		'TTY Mode':0:OFF
 		'SLIM TX7 MUX':0:ZERO
 		'DEC8 MUX':0:ZERO
 		'ADC2 Volume':1:0
@@ -6021,7 +6021,7 @@ SectionDevice
 
 	DisableSequence
 		'SLIM RX1 MUX':0:ZERO
-		'TTY Mode':0:ZERO
+		'TTY Mode':0:OFF
 		'RX1 MIX1 INP1':0:ZERO
 		'HPHL DAC Switch':1:0
 		'HPHL Volume':1:0
