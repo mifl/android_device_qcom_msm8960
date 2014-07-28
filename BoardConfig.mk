@@ -94,10 +94,10 @@ BOARD_HAS_ATH_ETH_ALX := true
 TARGET_USES_ION := true
 
 # Board specific SELinux policy variable definitions
-BOARD_SEPOLICY_DIRS := \
+#BOARD_SEPOLICY_DIRS := \
        device/qcom/common/sepolicy
 
-BOARD_SEPOLICY_UNION := \
+#BOARD_SEPOLICY_UNION := \
        app.te \
        bluetooth.te \
        compatibility.te \
@@ -119,4 +119,4 @@ BOARD_SEPOLICY_UNION := \
        ueventd.te \
        wpa.te
 
-PRODUCT_BOOT_JARS := $(subst $(space),:,$(PRODUCT_BOOT_JARS))
+#PRODUCT_BOOT_JARS := $(subst $(space),:,$(PRODUCT_BOOT_JARS))

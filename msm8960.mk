@@ -1,6 +1,6 @@
 DEVICE_PACKAGE_OVERLAYS := device/qcom/msm8960/overlay
 
-TARGET_USES_QCOM_BSP := true
+TARGET_USES_QCOM_BSP := false
 ifeq ($(TARGET_USES_QCOM_BSP),true)
     TARGET_ENABLE_QC_AV_ENHANCEMENTS := true
 #media
@@ -17,7 +17,11 @@ $(call inherit-product, device/qcom/common/common.mk)
 PRODUCT_NAME := msm8960
 PRODUCT_DEVICE := msm8960
 
-PRODUCT_BOOT_JARS += qcom.fmradio:qcmediaplayer:WfdCommon:org.codeaurora.Performance
+PRODUCT_BOOT_JARS += \
+    qcom.fmradio \
+    qcmediaplayer \
+    WfdCommon \
+    org.codeaurora.Performance
 
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.sensor.barometer.xml:system/etc/permissions/android.hardware.sensor.barometer.xml \
