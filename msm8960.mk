@@ -1,6 +1,6 @@
 DEVICE_PACKAGE_OVERLAYS := device/qcom/msm8960/overlay
 
-TARGET_USES_QCOM_BSP := false
+TARGET_USES_QCOM_BSP := true
 ifeq ($(TARGET_USES_QCOM_BSP),true)
     TARGET_ENABLE_QC_AV_ENHANCEMENTS := true
 #media
