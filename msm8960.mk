@@ -23,6 +23,9 @@ PRODUCT_BOOT_JARS += \
     WfdCommon \
     org.codeaurora.Performance
 
+PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
+    camera2.portability.force_api=1
+
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.sensor.barometer.xml:system/etc/permissions/android.hardware.sensor.barometer.xml \
 
