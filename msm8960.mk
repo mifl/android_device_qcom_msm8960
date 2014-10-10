@@ -21,7 +21,10 @@ PRODUCT_BOOT_JARS += \
     qcom.fmradio \
     qcmediaplayer \
     WfdCommon \
-    org.codeaurora.Performance
+    org.codeaurora.Performance \
+    services \
+    ethernet-service \
+    wifi-service
 
 PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
     camera2.portability.force_api=1
