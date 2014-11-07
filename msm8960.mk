@@ -24,7 +24,8 @@ PRODUCT_BOOT_JARS += \
     org.codeaurora.Performance \
     services \
     ethernet-service \
-    wifi-service
+    wifi-service \
+    tcmiface
 
 PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
     camera2.portability.force_api=1
