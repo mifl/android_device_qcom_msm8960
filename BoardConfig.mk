@@ -121,3 +121,5 @@ TARGET_USES_ION := true
        wpa.te
 
 #PRODUCT_BOOT_JARS := $(subst $(space),:,$(PRODUCT_BOOT_JARS))
+
+TARGET_LDPRELOAD := libNimsWrap.so

@@ -32,10 +32,6 @@ on early-init
     symlink /data/tombstones /tombstones
     mount debugfs debugfs /sys/kernel/debug
 
-# import cne init file
-on post-fs
-    export LD_PRELOAD /vendor/lib/libNimsWrap.so
-
 #on init
        # This is no longer supported from KK release.
        #export BOOTCLASSPATH ${BOOTCLASSPATH}:/system/framework/WfdCommon.jar:/system/framework/qcmediaplayer.jar
