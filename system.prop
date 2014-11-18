@@ -148,6 +148,8 @@ persist.rmnet.mux=disabled
 
 #system prop for setting Auto related feautures
 AUTOPLATFORM=true
+hw.hdmiON=1
+hw.underscan_supported=0
 
 #disable gapless mode by default
 audio.gapless.playback.disable=true
