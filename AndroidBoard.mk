@@ -219,7 +219,7 @@ LOCAL_MODULE_PATH  := $(TARGET_OUT_ETC)
 include $(BUILD_PREBUILT)
 
 
-LOCAL_PATH := $(call my-dir)
+#LOCAL_PATH := $(call my-dir)
 
 #----------------------------------------------------------------------
 # extra images

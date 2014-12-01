@@ -22,6 +22,7 @@ endif # TARGET_USE_HDMI_AS_PRIMARY
 #TODO: Fix-me: Setting TARGET_HAVE_HDMI_OUT to false
 # to get rid of compilation error.
 TARGET_HAVE_HDMI_OUT := false
+BOARD_USES_LEGACY_ALSA_AUDIO := true
 TARGET_USES_OVERLAY := true
 TARGET_NO_BOOTLOADER := false
 TARGET_NO_KERNEL := false
@@ -52,10 +53,10 @@ BOARD_CACHEIMAGE_FILE_SYSTEM_TYPE := ext4
 BOARD_PERSISTIMAGE_FILE_SYSTEM_TYPE := ext4
 
 ### ttyHSL0 for LIQUID & CDP
-# BOARD_KERNEL_CMDLINE := console=ttyHSL0,115200,n8 androidboot.hardware=qcom user_debug=31 msm_rtb.filter=0x3F ehci-hcd.park=3 maxcpus=2
+BOARD_KERNEL_CMDLINE := console=ttyHSL0,115200,n8 androidboot.hardware=qcom user_debug=31 msm_rtb.filter=0x3F ehci-hcd.park=3 maxcpus=2
 ### ttyHSL1 for AUTOMOTIVE_CUSTOMER_PLATFORM1
 # BOARD_KERNEL_CMDLINE := console=ttyHSL1,115200,n8 androidboot.hardware=qcom user_debug=31 msm_rtb.filter=0x3F ehci-hcd.park=3 maxcpus=2
-BOARD_KERNEL_CMDLINE := androidboot.hardware=qcom user_debug=31 msm_rtb.filter=0x3F ehci-hcd.park=3
+#BOARD_KERNEL_CMDLINE := androidboot.hardware=qcom user_debug=31 msm_rtb.filter=0x3F ehci-hcd.park=3
 BOARD_EGL_CFG := device/qcom/$(TARGET_PRODUCT)/egl.cfg
 
 BOARD_BOOTIMAGE_PARTITION_SIZE := 23068672 # 22M
@@ -97,10 +98,10 @@ BOARD_HAS_ATH_ETH_ALX := true
 TARGET_USES_ION := true
 
 # Board specific SELinux policy variable definitions
-BOARD_SEPOLICY_DIRS := \
+#BOARD_SEPOLICY_DIRS := \
        device/qcom/common/sepolicy
 
-BOARD_SEPOLICY_UNION := \
+#BOARD_SEPOLICY_UNION := \
        app.te \
        bluetooth.te \
        compatibility.te \
@@ -122,4 +123,4 @@ BOARD_SEPOLICY_UNION := \
        ueventd.te \
        wpa.te
 
-PRODUCT_BOOT_JARS := $(subst $(space),:,$(PRODUCT_BOOT_JARS))
+#PRODUCT_BOOT_JARS := $(subst $(space),:,$(PRODUCT_BOOT_JARS))
