@@ -22,7 +22,7 @@ endif # TARGET_USE_HDMI_AS_PRIMARY
 #TODO: Fix-me: Setting TARGET_HAVE_HDMI_OUT to false
 # to get rid of compilation error.
 TARGET_HAVE_HDMI_OUT := false
-BOARD_USES_LEGACY_ALSA_AUDIO := true
+BOARD_USES_LEGACY_ALSA_AUDIO := false
 TARGET_USES_OVERLAY := true
 TARGET_NO_BOOTLOADER := false
 TARGET_NO_KERNEL := false
