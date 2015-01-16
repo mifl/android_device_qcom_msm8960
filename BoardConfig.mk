@@ -96,3 +96,7 @@ TARGET_USES_ION := true
 #PRODUCT_BOOT_JARS := $(subst $(space),:,$(PRODUCT_BOOT_JARS))
 
 TARGET_LDPRELOAD := libNimsWrap.so
+
+#Use dlmalloc instead of jemalloc for mallocs
+MALLOC_IMPL := dlmalloc
+
