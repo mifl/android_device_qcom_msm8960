@@ -17,11 +17,7 @@ $(call inherit-product, device/qcom/common/common.mk)
 PRODUCT_NAME := msm8960
 PRODUCT_DEVICE := msm8960
 
-#PRODUCT_BOOT_JARS += qcom.fmradio \
-                     qcmediaplayer \
-                     WfdCommon \
-                     org.codeaurora.Performance \
-                     iviaidl \
+PRODUCT_BOOT_JARS += iviaidl \
                      vehiclefwk \
                      ivifwk
 
