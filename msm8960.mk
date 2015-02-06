@@ -18,14 +18,17 @@ PRODUCT_NAME := msm8960
 PRODUCT_DEVICE := msm8960
 
 PRODUCT_BOOT_JARS += \
-    qcom.fmradio \
     qcmediaplayer \
-    WfdCommon \
     org.codeaurora.Performance \
     services \
     ethernet-service \
     wifi-service \
     tcmiface
+
+ifeq ($(BOARD_USES_QCOM_HARDWARE),true)
+PRODUCT_BOOT_JARS += qcom.fmradio
+PRODUCT_BOOT_JARS += WfdCommon
+endif
 
 PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
     camera2.portability.force_api=1
