@@ -25,7 +25,7 @@ PRODUCT_BOOT_JARS += \
     wifi-service \
     tcmiface
 
-ifeq ($(BOARD_USES_QCOM_HARDWARE),true)
+ifneq ($(strip $(QCPATH)),)
 PRODUCT_BOOT_JARS += qcom.fmradio
 PRODUCT_BOOT_JARS += WfdCommon
 endif
