@@ -66,6 +66,8 @@ on post-fs-data
    mkdir /tombstones/dsps 0771 system system
    mkdir /tombstones/mdm 0771 system system
    mkdir /tombstones/mdm2 0771 system system
+   mkdir /persist/data/sfs 0700 system system
+   mkdir /persist/data/tz 0700 system system
 
 #start camera server as daemon
 service qcamerasvr /system/bin/mm-qcamera-daemon
