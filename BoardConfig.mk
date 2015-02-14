@@ -24,6 +24,7 @@ endif # TARGET_USE_HDMI_AS_PRIMARY
 TARGET_HAVE_HDMI_OUT := false
 BOARD_USES_LEGACY_ALSA_AUDIO := false
 TARGET_USES_OVERLAY := true
+NUM_FRAMEBUFFER_SURFACE_BUFFERS := 3
 TARGET_NO_BOOTLOADER := false
 TARGET_NO_KERNEL := false
 TARGET_NO_RADIOIMAGE := true
@@ -52,18 +53,13 @@ TARGET_USERIMAGES_USE_EXT4 := true
 BOARD_CACHEIMAGE_FILE_SYSTEM_TYPE := ext4
 BOARD_PERSISTIMAGE_FILE_SYSTEM_TYPE := ext4
 
-### ttyHSL0 for LIQUID & CDP
-#BOARD_KERNEL_CMDLINE := androidboot.hardware=qcom user_debug=31 msm_rtb.filter=0x3F ehci-hcd.park=3 maxcpus=2
-#BOARD_KERNEL_CMDLINE := console=ttyHSL0,115200,n8 androidboot.hardware=qcom user_debug=31 msm_rtb.filter=0x3F ehci-hcd.park=3 maxcpus=2
-### ttyHSL1 for AUTOMOTIVE_CUSTOMER_PLATFORM1
-# BOARD_KERNEL_CMDLINE := console=ttyHSL1,115200,n8 androidboot.hardware=qcom user_debug=31 msm_rtb.filter=0x3F ehci-hcd.park=3 maxcpus=2
 BOARD_KERNEL_CMDLINE := androidboot.hardware=qcom user_debug=31 msm_rtb.filter=0x3F ehci-hcd.park=3
 BOARD_EGL_CFG := device/qcom/$(TARGET_PRODUCT)/egl.cfg
 
 BOARD_BOOTIMAGE_PARTITION_SIZE := 23068672 # 22M
 BOARD_RECOVERYIMAGE_PARTITION_SIZE := 23068672 # 22M
 BOARD_SYSTEMIMAGE_PARTITION_SIZE := 536870912
-BOARD_USERDATAIMAGE_PARTITION_SIZE := 10737418240
+BOARD_USERDATAIMAGE_PARTITION_SIZE := 10737401856
 
 BOARD_CACHEIMAGE_PARTITION_SIZE := 33554432
 BOARD_PERSISTIMAGE_PARTITION_SIZE := 5242880
@@ -73,7 +69,6 @@ BOARD_FLASH_BLOCK_SIZE := 131072 # (BOARD_KERNEL_PAGESIZE * 64)
 # Use signed boot and recovery image
 #TARGET_BOOTIMG_SIGNED := true
 
-TARGET_USE_KRAIT_BIONIC_OPTIMIZATION := true
 TARGET_USE_KRAIT_PLD_SET := true
 TARGET_KRAIT_BIONIC_PLDOFFS := 10
 TARGET_KRAIT_BIONIC_PLDTHRESH := 10
@@ -98,30 +93,8 @@ BOARD_HAS_ATH_ETH_ALX := true
 
 TARGET_USES_ION := true
 
-# Board specific SELinux policy variable definitions
-#BOARD_SEPOLICY_DIRS := \
-       device/qcom/common/sepolicy
-
-#BOARD_SEPOLICY_UNION := \
-       app.te \
-       bluetooth.te \
-       compatibility.te \
-       device.te \
-       domain.te \
-       drmserver.te \
-       file.te \
-       file_contexts \
-       hci_init.te \
-       init_shell.te \
-       keystore.te \
-       mediaserver.te \
-       kickstart.te \
-       netd.te \
-       nfc.te \
-       rild.te \
-       surfaceflinger.te \
-       system.te \
-       ueventd.te \
-       wpa.te
-
 #PRODUCT_BOOT_JARS := $(subst $(space),:,$(PRODUCT_BOOT_JARS))
+
+#Use dlmalloc instead of jemalloc for mallocs
+MALLOC_IMPL := dlmalloc
+
