@@ -43,6 +43,8 @@
 	<!-- Finish initial settings -->
 
     <!-- These are audio route (FE to BE) specific mixer settings -->
+    <!-- The following use case uses MI2S_RX and maps to  -->
+    <!-- AUDIO_HAL_PLUGIN_USECASE_DEFAULT_PLAYBACK  -->
     <path name="deep-buffer-playback">
         <ctl name="MI2S_RX Audio Mixer MultiMedia1" value="1" />
         <ctl name="MI2S_RX Channels" value="Two" />
@@ -73,11 +75,15 @@
 		<ctl name="MI2S_RX Channels" value="Two" />
 	</path>
 
+	<!-- The following use case uses PRI_RX and maps to  -->
+	<!-- AUDIO_HAL_PLUGIN_USECASE_DRIVER_SIDE_PLAYBACK  -->
 	<path name="driver-side-playback">
 		<ctl name="PRI_RX Audio Mixer MultiMedia3" value="1" />
 		<ctl name="I2S_RX Channels" value="Two" />
 	</path>
 
+	<!-- The following use case uses PRI_TX and maps to  -->
+	<!-- AUDIO_HAL_PLUGIN_USECASE_DEFAULT_CAPTURE  -->
 	<path name="audio-record">
 		<ctl name="MultiMedia1 Mixer PRI_TX" value="1" />
 	</path>
@@ -98,6 +104,8 @@
         <ctl name="MultiMedia4 Mixer PRI_TX" value="1" />
     </path>
 
+    <!-- The following use case uses MI2S_RX_VOICE & PRI_TX_VOICE and -->
+    <!-- maps to AUDIO_HAL_PLUGIN_USECASE_CS_VOICE_CALL  -->
     <path name="voice-call">
         <ctl name="MI2S_RX_Voice Mixer CSVoice" value="1" />
 		<ctl name="Voice_Tx Mixer PRI_TX_Voice" value="1" />
@@ -109,11 +117,15 @@
 		<ctl name="Voice_Tx Mixer AUX_PCM_TX_Voice" value="1" />
     </path>
 
+    <!-- The following use case uses MI2S_RX and maps to  -->
+    <!-- AUDIO_HAL_PLUGIN_USECASE_DEFAULT_PLAYBACK  -->
     <path name="low-latency-playback">
         <ctl name="MI2S_RX Audio Mixer MultiMedia5" value="1" />
         <ctl name="MI2S_RX Channels" value="Two" />
     </path>
 
+    <!-- The following two use cases uses PRI_I2S_RX & PRI_TX and map to  -->
+    <!-- AUDIO_HAL_PLUGIN_USECASE_HFP_VOICE_CALL  -->
     <path name="hfp-sco">
         <ctl name="PRI_I2S_RX Port Mixer AUX_PCM_UL_TX" value="1" />
         <ctl name="AUXPCM_RX Port Mixer PRI_TX" value="1" />
