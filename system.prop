@@ -153,3 +153,9 @@ AUTOPLATFORM=true
 
 #disable gapless mode by default
 audio.gapless.playback.disable=true
+
+#Disable 16 bit PCM offload by default
+audio.offload.pcm.16bit.enable=false
+
+#Enable 24 bit PCM offload by default
+audio.offload.pcm.24bit.enable=true

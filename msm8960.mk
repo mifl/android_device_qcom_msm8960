@@ -1,15 +1,14 @@
 DEVICE_PACKAGE_OVERLAYS := device/qcom/msm8960/overlay
 
-TARGET_USES_QCOM_BSP := false 
+TARGET_USES_QCOM_BSP := false
+TARGET_ENABLE_QC_AV_ENHANCEMENTS := true
+
 ifeq ($(TARGET_USES_QCOM_BSP),true)
-    TARGET_ENABLE_QC_AV_ENHANCEMENTS := true
 #media
 PRODUCT_COPY_FILES += \
                       device/qcom/msm8960/media/media_profiles_8960.xml:system/etc/media_profiles.xml
 PRODUCT_COPY_FILES += \
                       device/qcom/msm8960/media/media_codecs_8960.xml:system/etc/media_codecs.xml
-else
-    TARGET_ENABLE_QC_AV_ENHANCEMENTS := false
 endif #TARGET_USES_QCOM_BSP
 
 $(call inherit-product, device/qcom/common/common.mk)
