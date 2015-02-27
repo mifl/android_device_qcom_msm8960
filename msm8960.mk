@@ -76,14 +76,3 @@ PRODUCT_PACKAGES += \
 AntHalService \
 libantradio \
 antradio_app
-
-#TIF
-PRODUCT_IS_ATV := true
-
-PRODUCT_PACKAGES := \
-    TvProvider \
-    TvSettings \
-    tv_input.default
-
-PRODUCT_COPY_FILES := \
-    device/google/atv/tv_core_hardware.xml:system/etc/permissions/tv_core_hardware.xml
