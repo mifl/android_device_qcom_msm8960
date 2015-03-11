@@ -46,7 +46,7 @@ TARGET_BOOTLOADER_BOARD_NAME := MSM8960
 
 # Change 'TARGET_USES_3GB_DDR' to 'true' to enable 3GB for ADP
 # requires kernel flag 'CONFIG_APQ8064_ADP2_ES2_3GB' set to 'y'
-#TARGET_USES_3GB_DDR := true
+TARGET_USES_3GB_DDR := true
 ifeq ($(TARGET_USES_3GB_DDR),true)
     BOARD_KERNEL_BASE    := 0x40200000
 else
