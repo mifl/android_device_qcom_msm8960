@@ -16,9 +16,11 @@ $(call inherit-product, device/qcom/common/common.mk)
 PRODUCT_NAME := msm8960
 PRODUCT_DEVICE := msm8960
 
-PRODUCT_BOOT_JARS += iviaidl \
-                     vehiclefwk \
-                     ivifwk
+ifdef $(QCPATH)
+ PRODUCT_BOOT_JARS += iviaidl
+ PRODUCT_BOOT_JARS += vehiclefwk
+ PRODUCT_BOOT_JARS += ivifwk
+endif
 
 PRODUCT_BOOT_JARS += tcmiface 
 
