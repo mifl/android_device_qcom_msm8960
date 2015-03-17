@@ -73,6 +73,11 @@
 		<ctl name="MI2S_RX Channels" value="Two" />
 	</path>
 
+	<path name="driver-side-playback">
+		<ctl name="PRI_RX Audio Mixer MultiMedia3" value="1" />
+		<ctl name="I2S_RX Channels" value="Two" />
+	</path>
+
 	<path name="audio-record">
 		<ctl name="MultiMedia1 Mixer PRI_TX" value="1" />
 	</path>
