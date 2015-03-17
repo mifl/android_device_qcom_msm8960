@@ -99,6 +99,8 @@ bluetooth.a2dp.sink.enabled=true
 #system prop for switching gps driver to qmi
 persist.gps.qmienabled=true
 
+#system prop for gps time update
+ro.qcom.gpstimeupdate.period=720
 # System property for cabl
 #ro.qualcomm.cabl=1
 
