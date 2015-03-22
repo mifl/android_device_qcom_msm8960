@@ -100,3 +100,4 @@ TARGET_LDPRELOAD := libNimsWrap.so
 #Use dlmalloc instead of jemalloc for mallocs
 MALLOC_IMPL := dlmalloc
 
+USE_OPENGL_RENDERER := true
