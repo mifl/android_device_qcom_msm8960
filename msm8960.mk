@@ -22,7 +22,7 @@ ifdef $(QCPATH)
  PRODUCT_BOOT_JARS += ivifwk
 endif
 
-PRODUCT_BOOT_JARS += tcmiface 
+PRODUCT_BOOT_JARS += tcmiface
 
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.sensor.barometer.xml:system/etc/permissions/android.hardware.sensor.barometer.xml \
@@ -77,3 +77,12 @@ PRODUCT_PACKAGES += \
 AntHalService \
 libantradio \
 antradio_app
+
+# TV Input Framework (TIF)
+PRODUCT_PACKAGES += \
+    TvProvider \
+    TvSettings \
+    tv_input.default
+
+PRODUCT_COPY_FILES += \
+    device/google/atv/tv_core_hardware.xml:system/etc/permissions/tv_core_hardware.xml
