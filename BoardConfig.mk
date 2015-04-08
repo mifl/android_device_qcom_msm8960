@@ -105,5 +105,4 @@ TARGET_USES_ION := true
 #Use dlmalloc instead of jemalloc for mallocs
 MALLOC_IMPL := dlmalloc
 
-#Use opengl
 USE_OPENGL_RENDERER := true
