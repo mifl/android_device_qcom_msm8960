@@ -80,8 +80,6 @@ antradio_app
 
 # TV Input Framework (TIF)
 PRODUCT_PACKAGES += \
-    TvProvider \
-    TvSettings \
     tv_input.default
 
 PRODUCT_COPY_FILES += \
