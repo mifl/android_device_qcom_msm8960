@@ -82,6 +82,3 @@ antradio_app
 # TV Input Framework (TIF)
 PRODUCT_PACKAGES += \
     tv_input.default
-
-PRODUCT_COPY_FILES += \
-    device/google/atv/tv_core_hardware.xml:system/etc/permissions/tv_core_hardware.xml
