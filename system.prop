@@ -156,6 +156,9 @@ persist.rmnet.mux=disabled
 #system prop for setting Auto related feautures
 AUTOPLATFORM=true
 
+#system prop for enabling boot optimization related changes
+AUTOPLATFORM_BOOT=true
+
 #disable gapless mode by default
 audio.gapless.playback.disable=true
 
