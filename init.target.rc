@@ -36,6 +36,13 @@ on early-init
 #on init
        # This is no longer supported from KK release.
        #export BOOTCLASSPATH ${BOOTCLASSPATH}:/system/framework/WfdCommon.jar:/system/framework/qcmediaplayer.jar
+
+on load_mediaserver
+    start media
+
+on load_earlyaudio
+    start media_earlyaudio
+
 on fs
     mount_all fstab.qcom
 
@@ -56,8 +63,15 @@ on fs
     mount vfat /dev/block/platform/msm_sdcc.1/by-name/bluetooth /bt_firmware ro shortname=lower,uid=1002,gid=1002,dmask=227,fmask=337
     bootchart
 
+#earlyaudio trigger
+on property:sys.mediaserver.ready=1
+    trigger load_earlyaudio
+
 on boot
    start qcamerasvr
+
+   #mediaserver trigger
+   trigger load_mediaserver
 
 on post-fs-data
    mkdir /data/tombstones 0771 system system
@@ -88,6 +102,12 @@ service thermal-engine /system/bin/thermal-engine
    user root
    group root
    disabled
+
+service media_earlyaudio /system/bin/earlyaudio
+   class main
+   critical
+   disabled
+   oneshot
 
 service mpdecision /system/bin/mpdecision --no_sleep --avg_comp
    class main
