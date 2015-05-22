@@ -159,9 +159,6 @@ AUTOPLATFORM=true
 #system prop for enabling boot optimization related changes
 AUTOPLATFORM_BOOT=true
 
-#Minimum duration for offload playback in secs
-audio.offload.min.duration.secs=0
-
 #disable gapless mode by default
 audio.gapless.playback.disable=true
 
