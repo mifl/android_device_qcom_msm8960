@@ -127,8 +127,12 @@
     <!-- The following two use cases uses PRI_I2S_RX & PRI_TX and map to  -->
     <!-- AUDIO_HAL_PLUGIN_USECASE_HFP_VOICE_CALL  -->
     <path name="hfp-sco">
-        <ctl name="PRI_I2S_RX Port Mixer AUX_PCM_UL_TX" value="1" />
-        <ctl name="AUXPCM_RX Port Mixer PRI_TX" value="1" />
+        <!--<ctl name="PRI_I2S_RX Port Mixer AUX_PCM_UL_TX" value="1" /> -->
+	<!--<ctl name="AUXPCM_RX Port Mixer PRI_TX" value="1" /> -->
+	<ctl name="PRI_I2S_RX Port Mixer AUX_PCM_UL_TX" value="1" />
+        <ctl name="AUX_PCM_RX Audio Mixer MultiMedia6" value="1" />
+	<ctl name="MultiMedia6 Mixer PRI_TX" value="1" />
+	<ctl name="EC_REF_RX" value="I2S_RX" />
     </path>
 
     <path name="hfp-sco-wb">
