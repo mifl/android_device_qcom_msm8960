@@ -168,6 +168,9 @@ audio.offload.pcm.16bit.enable=false
 #Enable 24 bit PCM offload by default
 audio.offload.pcm.24bit.enable=true
 
+#Enable offload audio video playback by default
+av.offload.enable=true
+
 #system prop for early audio feature
 early.audio.start=0
 early.audioapp.id=0
