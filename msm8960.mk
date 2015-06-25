@@ -56,6 +56,7 @@ PRODUCT_PACKAGES += PhaseBeam
 
 #fstab.qcom
 PRODUCT_PACKAGES += fstab.qcom
+PRODUCT_PACKAGES += fstab_early.qti
 
 #wlan driver, wifi_concurrency_cfg
 PRODUCT_COPY_FILES += \
