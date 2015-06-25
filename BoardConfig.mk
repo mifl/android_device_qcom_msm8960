@@ -7,6 +7,8 @@ ifeq ($(TARGET_ARCH),)
 TARGET_ARCH := arm
 endif
 
+TARGET_COMPILE_WITH_MSM_KERNEL := true
+TARGET_KERNEL_APPEND_DTB := true
 BOARD_USES_GENERIC_AUDIO := true
 USE_CAMERA_STUB := true
 
@@ -27,6 +29,8 @@ TARGET_USES_OVERLAY := true
 NUM_FRAMEBUFFER_SURFACE_BUFFERS := 3
 TARGET_NO_BOOTLOADER := false
 TARGET_NO_KERNEL := false
+BOOTLOADER_GCC_VERSION := arm-eabi-4.8
+BOOTLOADER_PLATFORM := msm8960 # use msm8960 LK configuration
 TARGET_NO_RADIOIMAGE := true
 TARGET_NO_RPC := true
 TARGET_CPU_VARIANT=krait
@@ -60,7 +64,7 @@ TARGET_USERIMAGES_USE_EXT4 := true
 BOARD_CACHEIMAGE_FILE_SYSTEM_TYPE := ext4
 BOARD_PERSISTIMAGE_FILE_SYSTEM_TYPE := ext4
 
-BOARD_KERNEL_CMDLINE := androidboot.hardware=qcom user_debug=31 msm_rtb.filter=0x3F ehci-hcd.park=3
+BOARD_KERNEL_CMDLINE := androidboot.hardware=qcom user_debug=31 msm_rtb.filter=0x3F ehci-hcd.park=3 androidboot.selinux=permissive
 BOARD_EGL_CFG := device/qcom/$(TARGET_PRODUCT)/egl.cfg
 
 BOARD_BOOTIMAGE_PARTITION_SIZE := 23068672 # 22M
@@ -90,7 +94,7 @@ HAVE_MXT_CFG := true
 ADD_RADIO_FILES ?= false
 
 # Added to indicate that protobuf-c is supported in this build
-PROTOBUF_SUPPORTED := true
+PROTOBUF_SUPPORTED := false
 
 # Add building support AR8151 ALX ethernet driver
 BOARD_HAS_ATH_ETH_ALX := true
