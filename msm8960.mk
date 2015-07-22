@@ -73,6 +73,9 @@ PRODUCT_PACKAGES += wcnss_service
 PRODUCT_COPY_FILES += \
    device/qcom/msm8960/package_scan_list.conf:system/etc/package_scan_list.conf
 
+#NativeHMI
+PRODUCT_PACKAGES += boot
+
 #ANT+ stack
 PRODUCT_PACKAGES += \
 AntHalService \
