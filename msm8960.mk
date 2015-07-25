@@ -75,7 +75,10 @@ PRODUCT_COPY_FILES += \
    device/qcom/msm8960/package_scan_list.conf:system/etc/package_scan_list.conf
 
 #NativeHMI
-PRODUCT_PACKAGES += boot
+PRODUCT_PACKAGES += boot \
+    disclaimer.bmp \
+    new_welcome_screen.bmp \
+    new_welcome_screen_loading.bmp
 
 #ANT+ stack
 PRODUCT_PACKAGES += \
