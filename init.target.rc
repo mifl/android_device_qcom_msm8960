@@ -28,22 +28,10 @@
 #
 
 on early-init
-    symlink /system/etc /etc
-    symlink /system/vendor /vendor
-    mkdir /system
-    mkdir /data 0771 system system
-    mkdir /data/property 0700 root root
     mkdir /firmware 0771 system system
     mkdir /bt_firmware 0771 system system
     symlink /data/tombstones /tombstones
     mount debugfs debugfs /sys/kernel/debug
-    mount_all fstab_early.qti
-    load_all_props
-    start surfaceflinger
-    start servicemanager
-    #set RLIMIT_NICE to allow priorities from 19 to -20
-    setrlimit 13 40 40
-    start media
 
 #on init
        # This is no longer supported from KK release.
@@ -95,7 +83,6 @@ on post-fs-data
    mkdir /tombstones/mdm2 0771 system system
    mkdir /persist/data/sfs 0700 system system
    mkdir /persist/data/tz 0700 system system
-   start zygote
 
 #start camera server as daemon
 service qcamerasvr /system/bin/mm-qcamera-daemon
