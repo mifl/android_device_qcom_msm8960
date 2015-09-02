@@ -17,10 +17,10 @@ PRODUCT_NAME := msm8960
 PRODUCT_DEVICE := msm8960
 
 ifdef QCPATH
-#PRODUCT_BOOT_JARS += iviaidl
-#PRODUCT_BOOT_JARS += vehiclefwk
-#PRODUCT_BOOT_JARS += ivifwk
-#PRODUCT_BOOT_JARS += distraction-service
+PRODUCT_BOOT_JARS += iviaidl
+PRODUCT_BOOT_JARS += vehiclefwk
+PRODUCT_BOOT_JARS += ivifwk
+PRODUCT_BOOT_JARS += distraction-service
 endif
 
 PRODUCT_BOOT_JARS += tcmiface
