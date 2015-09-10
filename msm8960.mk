@@ -49,6 +49,12 @@ PRODUCT_PACKAGES += \
     battery_monitor \
     battery_shutdown
 
+#NativeHMI
+PRODUCT_PACKAGES += boot \
+    disclaimer.bmp \
+    new_welcome_screen.bmp \
+    new_welcome_screen_loading.bmp
+
 # Wallpapers
 PRODUCT_PACKAGES += Galaxy4
 PRODUCT_PACKAGES += HoloSpiralWallpaper
