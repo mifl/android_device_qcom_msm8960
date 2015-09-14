@@ -46,8 +46,9 @@ media.stagefright.enable-scan=true
 mmp.enable.3g2=true
 media.aac_51_output_enabled=true
 #3310195 is sum of supported format flags in AAL
-#Formats: AVI AC3 ASF AAC QCP DTS 3G2 FLAC DIVX DIVXHD
-mm.enable.qcom_parser=3310195
+#Formats: AVI AC3 ASF AAC QCP DTS 3G2 WAV FLAC DIVX DIVXHD
+#3375731 => 0x338273. The bitwise map is definied in MMParserExtractor.h
+mm.enable.qcom_parser=3375731
 
 # Print clip name being played
 media.stagefright.log-uri=1
