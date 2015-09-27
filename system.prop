@@ -19,6 +19,7 @@ debug.sf.hw=1
 debug.egl.hw=1
 debug.composition.type=gpu
 dalvik.vm.heapsize=36m
+dalvik.vm.zygotemaxfailedboots=5
 debug.enable.wl_log=1
 persist.hwc.mdpcomp.enable=true
 debug.mdpcomp.logs=0
