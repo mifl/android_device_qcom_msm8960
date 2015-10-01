@@ -24,6 +24,7 @@ PRODUCT_BOOT_JARS += distraction-service
 endif
 
 PRODUCT_BOOT_JARS += tcmiface
+PRODUCT_BOOT_JARS += WfdCommon
 
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.sensor.barometer.xml:system/etc/permissions/android.hardware.sensor.barometer.xml \
