@@ -100,6 +100,9 @@ ro.bluetooth.remote.autoconnect=true
 # System prop to enable a2dp sink by default
 persist.service.bt.a2dp.sink=true
 
+# System prop to enable HFP client by default
+persist.service.bt.hfp.client=true
+
 #system prop for switching gps driver to qmi
 persist.gps.qmienabled=true
 
