@@ -23,6 +23,7 @@ debug.enable.wl_log=1
 persist.hwc.mdpcomp.enable=true
 debug.mdpcomp.logs=0
 sys.hwc.automotive_mode_enabled=true
+ro.sf.lcd_density=160
 #
 # system props for the cne module
 #
