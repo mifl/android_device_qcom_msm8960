@@ -119,3 +119,7 @@ TARGET_USES_AOSP := true
 MALLOC_IMPL := dlmalloc
 
 USE_OPENGL_RENDERER := true
+
+#add selinux specific folders
+BOARD_SEPOLICY_DIRS := \
+    device/qcom/msm8960/sepolicy
