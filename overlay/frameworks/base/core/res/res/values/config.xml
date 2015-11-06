@@ -20,7 +20,8 @@
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
 
     <!-- Configuration for automotive product... -->
-    <!-- <bool name="config_boot_opt">true</bool> -->
+    <bool name="config_boot_opt">true</bool>
+
     <!-- Whether a software navigation bar should be shown. NOTE: in the future this may be
          autodetected from the Configuration. -->
     <bool name="config_showNavigationBar">true</bool>
