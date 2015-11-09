@@ -111,7 +111,6 @@ BOARD_HAS_ATH_ETH_ALX := true
 #TARGET_RECOVERY_UI_LIB := librecovery_ui_qcom
 
 TARGET_USES_ION := true
-TARGET_USES_AOSP := true
 
 #PRODUCT_BOOT_JARS := $(subst $(space),:,$(PRODUCT_BOOT_JARS))
 
@@ -119,3 +118,7 @@ TARGET_USES_AOSP := true
 MALLOC_IMPL := dlmalloc
 
 USE_OPENGL_RENDERER := true
+
+#add selinux specific folders
+BOARD_SEPOLICY_DIRS := \
+    device/qcom/msm8960/sepolicy

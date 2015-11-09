@@ -93,3 +93,5 @@ antradio_app
 PRODUCT_PACKAGES += \
     TvProvider \
     tv_input.default
+
+PRODUCT_AAPT_CONFIG += xlarge large

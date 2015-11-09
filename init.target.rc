@@ -1,4 +1,4 @@
-# Copyright (c) 2012, 2014, The Linux Foundation. All rights reserved.
+# Copyright (c) 2012, 2014-2015 The Linux Foundation. All rights reserved.
 #
 # Redistribution and use in source and binary forms, with or without
 # modification, are permitted provided that the following conditions are
@@ -102,6 +102,8 @@ service thermal-engine /system/bin/thermal-engine
    class main
    user root
    group root
+   socket thermal-send-client stream 0666 system system
+   socket thermal-recv-client stream 0660 system system
    disabled
 
 service media_earlyaudio /system/bin/earlyaudio
@@ -113,6 +115,7 @@ service media_earlyaudio /system/bin/earlyaudio
 service mpdecision /system/bin/mpdecision --no_sleep --avg_comp
    class main
    user root
+   socket mpdecision stream 0660 root system
    disabled
 
 service rf4ce /system/bin/rf4ce
