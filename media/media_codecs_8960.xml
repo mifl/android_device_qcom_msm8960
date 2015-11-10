@@ -47,6 +47,7 @@
     <Settings>
         <Setting name="supports-secure-with-non-secure-codec" value="false" />
         <Setting name="supports-multiple-secure-codecs" value="false" />
+        <Setting name="max-video-encoder-input-buffers" value="11" />
     </Settings>
     <Encoders>
         <MediaCodec name="OMX.qcom.audio.encoder.evrc" type="audio/evrc" >
