@@ -84,6 +84,7 @@ on post-fs-data
    mkdir /tombstones/mdm2 0771 system system
    mkdir /persist/data/sfs 0700 system system
    mkdir /persist/data/tz 0700 system system
+   mkdir /data/misc/earlyaudio 0750 system system
 
 #start camera server as daemon
 service qcamerasvr /system/bin/mm-qcamera-daemon
@@ -108,9 +109,10 @@ service thermal-engine /system/bin/thermal-engine
 
 service media_earlyaudio /system/bin/earlyaudio
    class main
-   critical
    disabled
    oneshot
+   user system
+   group system media_rw sdcard_rw mount
 
 service mpdecision /system/bin/mpdecision --no_sleep --avg_comp
    class main
