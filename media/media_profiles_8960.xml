@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- Copyright (C) 2012-2014, The Linux Foundation. All rights reserved
+<!-- Copyright (C) 2012-2016, The Linux Foundation. All rights reserved
      Not a contribution.
 
      Copyright (C) 2010 The Android Open Source Project
@@ -528,7 +528,7 @@
 
     <AudioEncoderCap name="lpcm" enabled="true"
         minBitRate="768000" maxBitRate="4608000"
-        minSampleRate="48000" maxSampleRate="48000"
+        minSampleRate="8000" maxSampleRate="48000"
         minChannels="1" maxChannels="6" />
 
     <!--
