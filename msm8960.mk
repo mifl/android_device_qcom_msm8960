@@ -54,7 +54,7 @@ PRODUCT_PACKAGES += \
     battery_shutdown
 
 #NativeHMI
-PRODUCT_PACKAGES += boot \
+PRODUCT_PACKAGES += nativehmi \
     disclaimer.bmp \
     new_welcome_screen.bmp \
     new_welcome_screen_loading.bmp
