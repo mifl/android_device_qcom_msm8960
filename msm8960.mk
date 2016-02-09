@@ -18,6 +18,9 @@ endif #TARGET_USES_QCOM_BSP
 
 $(call inherit-product, device/qcom/common/common.mk)
 
+#msm8960/APQ8084 platform WLAN Chipset
+WLAN_CHIPSET := qca_cld
+
 PRODUCT_NAME := msm8960
 PRODUCT_DEVICE := msm8960
 
@@ -81,6 +84,10 @@ PRODUCT_PACKAGES += \
     p2p_supplicant_overlay.conf
 
 PRODUCT_PACKAGES += wcnss_service
+
+ifneq ($(WLAN_CHIPSET),)
+PRODUCT_PACKAGES += $(WLAN_CHIPSET)_wlan.ko
+endif
 
 PRODUCT_COPY_FILES += \
    device/qcom/msm8960/package_scan_list.conf:system/etc/package_scan_list.conf
