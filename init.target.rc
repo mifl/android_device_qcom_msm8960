@@ -62,6 +62,9 @@ on fs
 
     wait /dev/block/platform/msm_sdcc.1/by-name/bluetooth
     mount vfat /dev/block/platform/msm_sdcc.1/by-name/bluetooth /bt_firmware ro context=u:object_r:bt_firmware_file:s0,shortname=lower,uid=1002,gid=1002,dmask=227,fmask=337
+
+    restorecon /vnwconf.xml
+
     bootchart
 
 #earlyaudio trigger
