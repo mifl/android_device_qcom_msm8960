@@ -180,3 +180,4 @@ av.offload.enable=true
 early.audio.start=0
 early.audioapp.id=0
 early.audionative.id=0
+early.audio.volume=0
