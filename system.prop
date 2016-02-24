@@ -159,7 +159,7 @@ persist.sys.wfd.virtual=0
 persist.rmnet.mux=disabled
 
 #system prop for setting Auto related feautures
-AUTOPLATFORM=true
+ro.hardware.type=automotive
 
 #system prop for enabling boot optimization related changes
 AUTOPLATFORM_BOOT=true
