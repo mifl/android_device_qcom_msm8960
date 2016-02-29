@@ -145,13 +145,12 @@
         <!--<ctl name="AUXPCM_RX Port Mixer PRI_TX" value="1" /> -->
 
         <!-- bt_downlink to car_speakers using AFE loopback -->
-        <ctl name="PRI_I2S_RX Port Mixer AUX_PCM_UL_TX" value="1" />
-
-        <!-- bt_downlink to car_speakers using ASM loopback -->
         <!--
-           <ctl name="PRI_RX Audio Mixer MultiMedia9" value="1" />
-           <ctl name="MultiMedia9 Mixer AUX_PCM_UL_TX" value="1" />
+        <ctl name="PRI_I2S_RX Port Mixer AUX_PCM_UL_TX" value="1" />
         -->
+        <!-- bt_downlink to car_speakers using ASM loopback -->
+        <ctl name="PRI_RX Audio Mixer MultiMedia9" value="1" />
+        <ctl name="MultiMedia9 Mixer AUX_PCM_UL_TX" value="1" />
 
         <!-- car_microphone to bt_uplink -->
         <ctl name="AUX_PCM_RX Audio Mixer MultiMedia6" value="1" />
